@@ -1,0 +1,42 @@
+#N canvas 106 176 1489 528 12;
+#X obj 321 162 comment 40 9 helvetica ? 35584 0 0 0 m3;
+#X obj 413 161 comment 40 9 helvetica ? 35584 0 0 0 (#4);
+#X obj 109 183 comment 40 9 helvetica ? 35584 0 0 0 (b6);
+#X obj 285 160 + 15;
+#X obj 285 282 outlet;
+#X floatatom 285 193 0 0 0 0 - - -;
+#X obj 378 160 + 18;
+#X obj 196 162 + 12;
+#X obj 134 117 comment 40 9 helvetica ? 35584 0 0 0 up a m6;
+#X obj 98 122 + 8;
+#X obj 155 52 comment 305 18 helvetica ? 35584 0 0 0 Makes German Sixth
+Chords in Root Position;
+#X obj 98 285 outlet;
+#X floatatom 98 162 0 0 0 0 - - -;
+#X obj 491 164 comment 125 9 helvetica ? 35584 0 0 0 (c) 2008;
+#X obj 491 108 comment 125 9 helvetica ? 35584 0 0 0 part of the modal
+object library;
+#X obj 491 144 comment 125 9 helvetica ? 35584 0 0 0 www.vincemanzo.com
+;
+#X obj 378 278 outlet;
+#X obj 196 284 outlet;
+#X obj 98 81 inlet;
+#X floatatom 378 189 0 0 0 0 - - -;
+#X floatatom 196 195 0 0 0 0 - - -;
+#X obj 423 182 comment 70 9 helvetica ? 35584 0 0 0 Augmented 4th Up
+8va;
+#X obj 233 157 comment 40 9 helvetica ? 35584 0 0 0 tonic 8va;
+#X obj 493 75 comment 125 9 helvetica ? 35584 0 0 0 Simple Chord Builder
+by V.J. Manzo;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 6 0 19 0;
+#X connect 7 0 20 0;
+#X connect 9 0 12 0;
+#X connect 12 0 11 0;
+#X connect 18 0 9 0;
+#X connect 18 0 7 0;
+#X connect 18 0 3 0;
+#X connect 18 0 6 0;
+#X connect 19 0 16 0;
+#X connect 20 0 17 0;

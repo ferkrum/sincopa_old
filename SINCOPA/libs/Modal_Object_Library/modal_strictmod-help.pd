@@ -1,0 +1,60 @@
+#N canvas 184 77 531 428 12;
+#X obj 20 87 comment 609 12 helvetica ? -4.7104e+006 0 0 0 www.vincemanzo.com
+;
+#X floatatom 344 260 0 0 0 0 - - -;
+#X obj 344 231 + 0;
+#X floatatom 124 172 0 0 0 0 - - -;
+#X msg 95 172 F#;
+#X msg 65 172 C;
+#X msg 36 172 4;
+#X obj 344 319 noteout;
+#X obj 344 291 makenote 100 400;
+#X floatatom 391 202 0 0 0 0 - - -;
+#X floatatom 344 202 0 0 0 0 - - -;
+#X obj 344 175 stripnote;
+#X obj 328 125 unpack;
+#X floatatom 328 150 0 0 0 0 - - -;
+#X floatatom 365 150 0 0 0 0 - - -;
+#X obj 328 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 328 70 seq sample_ode.MID;
+#X obj 71 255 modal_strictmod;
+#X obj 328 97 midiparse;
+#X obj 348 47 comment 125 9 helvetica ? -4.7104e+006 0 0 0 start sequence
+;
+#X obj 21 105 comment 290 9 helvetica ? -4.7104e+006 0 0 0 takes current
+tonic (pitch class #) in right inlet and the tonic to be modulated
+to in the right inlet. the left outlet outputs the index of transposition
+to be added to incoming pitch data;
+#X obj 20 69 comment 609 12 helvetica ? -4.7104e+006 0 0 0 Part of
+the Modal Object Library by V.J. Manzo;
+#X obj 20 43 comment 571 20 helvetica ? -4.7104e+006 0 0 0 Modal_StrictModulation
+;
+#X obj 174 278 comment 83 9 helvetica ? -4.7104e+006 0 0 0 initial
+tonic (default is C);
+#X obj 35 286 comment 125 9 helvetica ? -4.7104e+006 0 0 0 new tonic
+(pitch class 0-11);
+#X obj 71 223 modal_change;
+#X obj 32 332 comment 118 18 helvetica ? 35584 0 0 0 see also:;
+#X text 31 355 http://www.vincemanzo.com | vj@vjmanzo.com;
+#X obj 109 337 Modal_Object_Library;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 3 0 25 0;
+#X connect 4 0 25 0;
+#X connect 5 0 25 0;
+#X connect 6 0 25 0;
+#X connect 8 0 7 0;
+#X connect 8 1 7 1;
+#X connect 10 0 2 0;
+#X connect 11 0 10 0;
+#X connect 11 1 9 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 1;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 2 1;
+#X connect 18 0 12 0;
+#X connect 25 0 17 0;

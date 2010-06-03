@@ -1,0 +1,66 @@
+#N canvas 106 176 750 440 12;
+#X obj 445 283 outlet;
+#X obj 385 283 outlet;
+#X floatatom 445 251 0 0 0 0 - - -;
+#X floatatom 385 251 0 0 0 0 - - -;
+#X floatatom 445 194 0 0 0 0 - - -;
+#X floatatom 385 194 0 0 0 0 - - -;
+#X obj 445 218 + 21;
+#X obj 385 218 + 17;
+#X obj 331 285 outlet;
+#X obj 271 285 outlet;
+#X floatatom 331 253 0 0 0 0 - - -;
+#X floatatom 271 253 0 0 0 0 - - -;
+#X floatatom 331 196 0 0 0 0 - - -;
+#X floatatom 271 196 0 0 0 0 - - -;
+#X obj 331 220 + 14;
+#X obj 271 220 + 11;
+#X obj 154 106 comment 293 18 helvetica ? 35584 0 0 0 Makes Augmented
+Triads;
+#X obj 98 285 outlet;
+#X floatatom 98 162 0 0 0 0 - - -;
+#X obj 454 149 comment 125 9 helvetica ? 35584 0 0 0 (c) 2008;
+#X obj 454 92 comment 125 9 helvetica ? 35584 0 0 0 part of the modal
+object library;
+#X obj 454 129 comment 125 9 helvetica ? 35584 0 0 0 www.vincemanzo.com
+;
+#X obj 213 285 outlet;
+#X obj 153 285 outlet;
+#X obj 98 81 inlet;
+#X floatatom 213 253 0 0 0 0 - - -;
+#X floatatom 153 253 0 0 0 0 - - -;
+#X floatatom 213 196 0 0 0 0 - - -;
+#X floatatom 153 196 0 0 0 0 - - -;
+#X obj 206 153 comment 51 9 helvetica ? 35584 0 0 0 Perfect 5th Up
+;
+#X obj 213 220 + 8;
+#X obj 153 220 + 4;
+#X obj 149 153 comment 40 9 helvetica ? 35584 0 0 0 Maj 3rd Up;
+#X obj 455 59 comment 125 9 helvetica ? 35584 0 0 0 Simple Chord Builder
+by V.J. Manzo;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 10 0;
+#X connect 15 0 11 0;
+#X connect 18 0 17 0;
+#X connect 18 0 28 0;
+#X connect 18 0 27 0;
+#X connect 18 0 13 0;
+#X connect 18 0 12 0;
+#X connect 18 0 5 0;
+#X connect 18 0 4 0;
+#X connect 24 0 18 0;
+#X connect 25 0 22 0;
+#X connect 26 0 23 0;
+#X connect 27 0 30 0;
+#X connect 28 0 31 0;
+#X connect 30 0 25 0;
+#X connect 31 0 26 0;

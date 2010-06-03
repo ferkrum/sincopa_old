@@ -1,0 +1,46 @@
+#N canvas 419 112 917 488 12;
+#X obj 429 387 outlet;
+#X obj 379 388 outlet;
+#X obj 330 388 outlet;
+#X obj 282 388 outlet;
+#X obj 250 174 comment 125 9 helvetica ? 35584 0 0 0 (c) 2007;
+#X obj 4 58 comment 414 14 helvetica ? 35584 0 0 0 send a number (1-7)
+or message to the far left inlet and connect the first 8 outlets of
+the modal_change object to the last 8 outlets of this object. Send
+a toggle to the second inlet to restrict to only pitch classes.;
+#X obj 108 134 comment 213 18 helvetica ? 35584 0 0 0 by Vincent J.
+Manzo;
+#X obj 48 174 comment 125 9 helvetica ? 35584 0 0 0 www.vincemanzo.com
+;
+#X obj 114 19 comment 179 20 helvetica ? 35584 0 0 0 Modal_Triad;
+#X obj 228 388 outlet;
+#X obj 163 387 outlet;
+#X obj 96 387 outlet;
+#X obj 714 35 inlet;
+#X obj 660 36 inlet;
+#X obj 573 36 inlet;
+#X obj 488 36 inlet;
+#X obj 396 36 inlet;
+#X obj 311 36 inlet;
+#X obj 224 36 inlet;
+#X obj 139 36 inlet;
+#X obj 14 36 inlet;
+#X obj 188 259 chromatic_chords;
+#X obj 769 39 inlet;
+#X connect 12 0 21 8;
+#X connect 13 0 21 7;
+#X connect 14 0 21 6;
+#X connect 15 0 21 5;
+#X connect 16 0 21 4;
+#X connect 17 0 21 3;
+#X connect 18 0 21 2;
+#X connect 19 0 21 1;
+#X connect 20 0 21 0;
+#X connect 21 0 11 0;
+#X connect 21 1 10 0;
+#X connect 21 2 9 0;
+#X connect 21 3 3 0;
+#X connect 21 4 2 0;
+#X connect 21 5 1 0;
+#X connect 21 6 0 0;
+#X connect 22 0 21 9;

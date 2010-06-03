@@ -1,0 +1,44 @@
+#N canvas 71 102 591 422 12;
+#X obj 320 358 outlet;
+#X obj 325 19 inlet;
+#X floatatom 325 50 0 0 0 0 - - -;
+#X obj 491 186 comment 61 9 helvetica ? 35584 0 0 0 mode data stored
+in list;
+#X floatatom 393 270 0 0 0 0 - - -;
+#X floatatom 393 145 0 0 0 0 - - -;
+#X floatatom 249 146 0 0 0 0 - - -;
+#X obj 249 217 * 12;
+#X obj 439 113 comment 125 9 helvetica ? 35584 0 0 0 pitch class;
+#X floatatom 320 335 0 0 0 0 - - -;
+#X obj 320 301 +;
+#X obj 393 111 % 12;
+#X obj 249 111 / 12;
+#X obj 296 112 comment 68 9 helvetica ? 35584 0 0 0 octave register
+;
+#X obj 16 86 comment 189 18 helvetica ? 35584 0 0 0 Modal_Filter;
+#X obj 16 116 comment 176 9 helvetica ? 35584 0 0 0 simple abstraction
+that filters all incoming notes to those specified by the Modal_Change
+object;
+#X obj 12 193 comment 196 12 helvetica ? 35584 0 0 0 Vincent J. Manzo
+(2007);
+#X obj 249 178 int;
+#X msg 436 167 clear;
+#X obj 393 217 coll modal_scale;
+#C restore;
+#X obj 4 303 comment 118 18 helvetica ? 35584 0 0 0 see also:;
+#X text 3 326 http://www.vincemanzo.com | vj@vjmanzo.com;
+#X obj 81 308 Modal_Object_Library;
+#X connect 1 0 2 0;
+#X connect 2 0 12 0;
+#X connect 2 0 11 0;
+#X connect 4 0 10 1;
+#X connect 5 0 19 0;
+#X connect 6 0 17 0;
+#X connect 7 0 10 0;
+#X connect 9 0 0 0;
+#X connect 10 0 9 0;
+#X connect 11 0 5 0;
+#X connect 12 0 6 0;
+#X connect 17 0 7 0;
+#X connect 18 0 19 0;
+#X connect 19 0 4 0;

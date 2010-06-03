@@ -1,0 +1,20 @@
+The Modal Object Library
+by Vincent Joseph Manzo
+
+
+The Modal Object Library is a collection of objects for Pure Data that control modality created by V.J. Manzo.
+
+This library is a port of the original Modal Object Library created by V.J. Manzo in 2006. 
+
+To install, copy this folder into the Pure Data file path. For added support copy the file, "Modal_Object_Library.pd" into the folder "...pd\doc". Then select Modal_Object_Library from "Browser" help menu [ctrl-b] when Pd is running.
+
+www.vincemanzo.com   | vj@vjmanzo.com | www.vincemanzo.com/modal_change
+
+
+(c) 2009
+
+
+
+
+
+

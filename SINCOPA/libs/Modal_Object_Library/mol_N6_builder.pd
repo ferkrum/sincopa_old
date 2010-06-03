@@ -1,0 +1,36 @@
+#N canvas 106 176 1489 528 12;
+#X obj 98 122 + 1;
+#X obj 149 88 comment 305 18 helvetica ? 35584 0 0 0 Makes Neopolitan
+Sixth Chords in Root Position;
+#X obj 98 285 outlet;
+#X floatatom 98 162 0 0 0 0 - - -;
+#X obj 491 164 comment 125 9 helvetica ? 35584 0 0 0 (c) 2008;
+#X obj 491 108 comment 125 9 helvetica ? 35584 0 0 0 part of the modal
+object library;
+#X obj 491 144 comment 125 9 helvetica ? 35584 0 0 0 www.vincemanzo.com
+;
+#X obj 213 285 outlet;
+#X obj 153 285 outlet;
+#X obj 98 81 inlet;
+#X floatatom 213 253 0 0 0 0 - - -;
+#X floatatom 153 253 0 0 0 0 - - -;
+#X floatatom 213 196 0 0 0 0 - - -;
+#X floatatom 153 196 0 0 0 0 - - -;
+#X obj 206 149 comment 51 9 helvetica ? 35584 0 0 0 Perfect 5th Up
+;
+#X obj 213 220 + 7;
+#X obj 153 220 + 4;
+#X obj 149 149 comment 40 9 helvetica ? 35584 0 0 0 Maj 3rd Up;
+#X obj 493 75 comment 125 9 helvetica ? 35584 0 0 0 Simple Chord Builder
+by V.J. Manzo;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 0 13 0;
+#X connect 3 0 12 0;
+#X connect 9 0 0 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 15 0;
+#X connect 13 0 16 0;
+#X connect 15 0 10 0;
+#X connect 16 0 11 0;

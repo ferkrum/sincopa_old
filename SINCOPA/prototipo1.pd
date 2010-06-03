@@ -1,0 +1,21 @@
+#N canvas 375 120 814 570 10;
+#X text 80 166 - introdução;
+#X text 79 188 - texto pra cada protótipo;
+#X text 84 213 - revisão bibliográfica (capitulo 2);
+#X text 82 229 - conclusão;
+#X text 82 247 - avaliação : como isso melhorou a musica \, trabalho
+com;
+#X text 94 263 musicos e a metodologia cientifica de avaliação;
+#X text 39 142 texto qualificativo;
+#X text -87 312 5 protótipos:;
+#X text 13 311 1) curto longo;
+#X text 48 170 banca: falar com bordini e paulo lima \, 17 de junho
+;
+#X text 468 365 de manhã;
+#X text 12 333 2) redes neurais;
+#X text 12 354 3) melodias;
+#X text 10 373 4) timbre;
+#X text 13 398 5) ?;
+#X text 495 138 orientação: 13/04 as 16:00;
+#X text 24 25 fazer o patch que diferencie impulsos longos e curtos
+e guarde padroes;

@@ -1,0 +1,37 @@
+#N canvas 106 176 750 440 12;
+#X obj 343 277 comment 125 9 helvetica ? 35584 0 0 0 (c) 2008;
+#X obj 343 221 comment 125 9 helvetica ? 35584 0 0 0 part of the modal
+object library;
+#X obj 343 257 comment 125 9 helvetica ? 35584 0 0 0 www.vincemanzo.com
+;
+#X obj 271 285 outlet;
+#X obj 213 285 outlet;
+#X obj 153 285 outlet;
+#X obj 154 110 inlet;
+#X floatatom 271 254 0 0 0 0 - - -;
+#X floatatom 213 253 0 0 0 0 - - -;
+#X floatatom 153 253 0 0 0 0 - - -;
+#X floatatom 271 197 0 0 0 0 - - -;
+#X floatatom 213 196 0 0 0 0 - - -;
+#X floatatom 153 196 0 0 0 0 - - -;
+#X obj 274 153 comment 43 9 helvetica ? 35584 0 0 0 min 7th Up;
+#X obj 271 219 + 10;
+#X obj 206 153 comment 51 9 helvetica ? 35584 0 0 0 Perfect 5th Up
+;
+#X obj 213 220 + 7;
+#X obj 153 220 + 4;
+#X obj 149 153 comment 40 9 helvetica ? 35584 0 0 0 Maj 3rd Up;
+#X obj 344 188 comment 125 9 helvetica ? 35584 0 0 0 Simple Chord Builder
+by V.J. Manzo;
+#X connect 6 0 12 0;
+#X connect 6 0 11 0;
+#X connect 6 0 10 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X connect 10 0 14 0;
+#X connect 11 0 16 0;
+#X connect 12 0 17 0;
+#X connect 14 0 7 0;
+#X connect 16 0 8 0;
+#X connect 17 0 9 0;

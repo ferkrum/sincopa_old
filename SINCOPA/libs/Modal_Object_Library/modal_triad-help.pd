@@ -1,0 +1,330 @@
+#N canvas 32 4 1081 726 12;
+#X obj 140 46 comment 218 10 helvetica ? -4.7104e+006 0 0 0 Part of
+the Modal Object Library by V.J. Manzo (c) 2006;
+#X obj 15 501 comment 174 9 helvetica ? -4.7104e+006 0 0 0 Case sensitive
+chord qualities (with pitch letters):;
+#X obj 13 342 comment 209 9 helvetica ? -4.7104e+006 0 0 0 Case sensitive
+chord qualities (with numerical chord functions):;
+#X obj 713 188 comment 105 9 helvetica ? -4.7104e+006 0 0 0 produces
+a iv borrowed chord tonicization;
+#X obj 163 295 t f b;
+#X obj 508 435 + 60;
+#X obj 376 399 comment 111 9 helvetica ? -4.7104e+006 0 0 0 Checking
+this toggle will allow these notes in;
+#X obj 631 302 comment 435 10 helvetica ? -4.7104e+006 0 0 0 The V
+Chord Tonicization Chords produce a Dominant 7th chord for each scale
+degree in the selected mode. That is \, the root \, 3rd \, 5th \, and
+7th will form a Dominant 7th Chord exactly one perfect 5th above a
+given scale degree. The 9th \, 11th \, 13th are inferred according
+to the selected mode and NOT the mode from which the tonicizing chord
+prevails.;
+#X obj 639 89 comment 424 10 helvetica ? -4.7104e+006 0 0 0 The chords
+built from chromatic roots create a weak tonicization. For example
+\, the 7/2 tonicizes the 2 chord of a selected mode It is \, in fact
+\, the 1 chord of the mode with a raised root. In some instances \,
+raising the root of a chord does not create a chromatic tone (for example
+the 7/4 in C Major is the same as the 3 in C Major). It should also
+be noted that the concept of tonicizing a diminished triad is even
+weaker. This collection is best used for light chromaticism.;
+#X obj 29 211 comment 135 9 helvetica ? -4.7104e+006 0 0 0 chords built
+from the scale (traditional tertian chords).;
+#X obj 468 411 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 490 411 gate 1 0;
+#X obj 539 380 comment 35 9 helvetica ? -4.7104e+006 0 0 0 13th;
+#X floatatom 530 361 0 0 0 0 - - -;
+#X obj 494 380 comment 35 9 helvetica ? -4.7104e+006 0 0 0 11th;
+#X obj 448 380 comment 35 9 helvetica ? -4.7104e+006 0 0 0 9th;
+#X floatatom 485 361 0 0 0 0 - - -;
+#X floatatom 440 361 0 0 0 0 - - -;
+#X floatatom 395 361 0 0 0 0 - - -;
+#X obj 402 382 comment 35 9 helvetica ? -4.7104e+006 0 0 0 7th;
+#X msg 124 266 8;
+#X obj 188 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 444 14 comment 458 10 helvetica ? -4.7104e+006 0 0 0 Chords
+qualities (major \, minor \, augmented \, diminished) are derived from
+the chord function of each number. For example \, in C major "4" will
+give an F Major chord. In C minor \, F will give an F minor chord because
+of the function of chord 4 in the selected mode. The 7th \, 9th \,
+11th \, and 13th are also inferred by the selected mode.;
+#X obj 22 51 comment 338 20 helvetica ? -4.7104e+006 0 0 0 modal_triad
+;
+#X msg 124 243 4;
+#X msg 93 271 7;
+#X msg 59 270 6;
+#X msg 28 271 5;
+#X msg 93 243 3;
+#X msg 61 244 2;
+#X msg 29 246 1;
+#X obj 239 486 noteout;
+#X obj 239 454 makenote 100 400;
+#X obj 239 414 + 48;
+#X obj 338 380 comment 35 9 helvetica ? -4.7104e+006 0 0 0 5th;
+#X obj 292 380 comment 35 9 helvetica ? -4.7104e+006 0 0 0 3rd;
+#X floatatom 329 361 0 0 0 0 - - -;
+#X floatatom 284 361 0 0 0 0 - - -;
+#X floatatom 239 361 0 0 0 0 - - -;
+#X floatatom 161 238 0 0 8 0 - - -;
+#X obj 241 322 modal_triad;
+#X obj 245 382 comment 35 9 helvetica ? -4.7104e+006 0 0 0 Root;
+#X obj 31 297 comment 180 9 helvetica ? -4.7104e+006 0 0 0 Key-related
+Chord Functions;
+#X obj 207 208 comment 93 9 helvetica ? -4.7104e+006 0 0 0 restrict
+to pitch classes;
+#X obj 482 246 comment 123 9 helvetica ? -4.7104e+006 0 0 0 produces
+a V7 chord tonicization;
+#X obj 52 616 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Augmented
+;
+#X obj 52 593 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Diminished
+;
+#X obj 78 565 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Minor;
+#X obj 78 539 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Major;
+#X obj 59 458 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Augmented
+;
+#X obj 59 435 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Diminished
+;
+#X obj 85 411 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Minor;
+#X obj 85 385 comment 110 9 helvetica ? -4.7104e+006 0 0 0 Major;
+#X msg 261 253 C;
+#X msg 303 252 major;
+#X obj 569 326 s chord;
+#X obj 202 296 r chord;
+#X obj 507 175 s chord;
+#X msg 506 113 7/1;
+#X msg 538 113 7/2;
+#X msg 571 113 7/3;
+#X msg 603 113 7/4;
+#X msg 506 131 7/5;
+#X msg 538 131 7/6;
+#X msg 568 132 7/7;
+#X msg 603 131 7/8;
+#X msg 613 251 V/2;
+#X msg 572 249 V/1;
+#X msg 647 251 V/3;
+#X msg 681 251 V/4;
+#X msg 572 274 V/5;
+#X msg 612 275 V/6;
+#X msg 652 274 V/7;
+#X msg 682 274 V/8;
+#X obj 843 256 s chord;
+#X msg 814 189 iv/1;
+#X msg 855 189 iv/2;
+#X msg 889 189 iv/3;
+#X msg 923 189 iv/4;
+#X msg 814 212 iv/5;
+#X msg 854 213 iv/6;
+#X msg 894 212 iv/7;
+#X msg 924 212 iv/8;
+#X msg 15 613 E+;
+#X msg 15 558 e;
+#X msg 16 531 E;
+#X msg 15 584 e0;
+#X msg 19 453 I+;
+#X msg 19 424 i0;
+#X msg 19 398 i;
+#X msg 20 371 I;
+#X obj 651 539 s chord;
+#X msg 650 477 N6;
+#X msg 687 477 N6/2;
+#X msg 731 477 N6/3;
+#X msg 771 477 N6/4;
+#X msg 650 501 N6/5;
+#X msg 687 501 N6/6;
+#X msg 731 501 N6/7;
+#X msg 771 501 N6/8;
+#X obj 844 536 s chord;
+#X msg 843 476 It6;
+#X msg 889 476 It6/2;
+#X msg 942 476 It6/3;
+#X msg 991 476 It6/4;
+#X msg 843 500 It6/5;
+#X msg 889 500 It6/6;
+#X msg 942 500 It6/7;
+#X msg 991 500 It6/8;
+#X obj 645 668 s chord;
+#X msg 644 606 Gr6;
+#X msg 690 606 Gr6/2;
+#X msg 743 606 Gr6/3;
+#X msg 792 606 Gr6/4;
+#X obj 844 668 s chord;
+#X msg 843 605 Fr6;
+#X msg 889 605 Fr6/2;
+#X msg 942 605 Fr6/3;
+#X msg 991 605 Fr6/4;
+#X msg 644 630 Fr6/5;
+#X msg 690 630 Fr6/6;
+#X msg 743 630 Fr6/7;
+#X msg 792 630 Fr6/8;
+#X msg 843 629 Fr6/5;
+#X msg 889 629 Fr6/6;
+#X msg 942 629 Fr6/7;
+#X msg 991 629 Fr6/8;
+#X obj 220 624 s chord;
+#X obj 422 626 s chord;
+#X msg 219 562 1#1;
+#X obj 256 285 modal_change;
+#X msg 421 562 1b1;
+#X msg 265 562 2#1;
+#X msg 318 562 3#1;
+#X msg 367 562 4#1;
+#X msg 219 586 5#1;
+#X msg 265 586 6#1;
+#X msg 318 586 7#1;
+#X msg 367 586 8#1;
+#X msg 467 562 2b1;
+#X msg 520 562 3b1;
+#X msg 556 562 4b1;
+#X msg 421 586 5b1;
+#X msg 467 586 6b1;
+#X msg 520 586 7b1;
+#X msg 556 586 8b1;
+#X text 363 667 comment;
+#X obj 215 535 comment 111 9 helvetica ? -4.7104e+006 0 0 0 Diatonic
+chords with a raised root;
+#X obj 421 535 comment 111 9 helvetica ? -4.7104e+006 0 0 0 Diatonic
+chords with a flatted root;
+#X obj 647 449 comment 111 9 helvetica ? -4.7104e+006 0 0 0 Neopolitan
+6th chords and tonicization;
+#X obj 841 445 comment 111 9 helvetica ? -4.7104e+006 0 0 0 Italian
+6th chords and tonicization;
+#X obj 644 577 comment 111 9 helvetica ? -4.7104e+006 0 0 0 German
+6th chords and tonicization;
+#X obj 841 574 comment 111 9 helvetica ? -4.7104e+006 0 0 0 French
+6th chords and tonicization;
+#X obj 22 76 comment 405 12 helvetica ? -4.7104e+006 0 0 0 the Modal_Triad
+object connects to the modal_change object to allow you to easily use
+root position chords. When the toggle is selected (2nd inlet) chords
+are restricted to pitchclasses \, thus inversions will be sounded.
+Formerly \, only a triad was yielded \, but the object has since been
+expanded to produce 7ths \, 9ths \, 11ths \, and 13ths.;
+#X obj 280 218 loadbang;
+#X text 647 411 Neopolitan and Augmented 6th Chords - outputs extended
+chord tones as well;
+#X obj 14 650 comment 118 18 helvetica ? 35584 0 0 0 see also:;
+#X text 13 673 http://www.vincemanzo.com | vj@vjmanzo.com;
+#X obj 91 655 Modal_Object_Library;
+#X connect 4 0 40 0;
+#X connect 5 0 32 0;
+#X connect 10 0 11 0;
+#X connect 11 0 5 0;
+#X connect 13 0 11 1;
+#X connect 16 0 11 1;
+#X connect 17 0 11 1;
+#X connect 18 0 11 1;
+#X connect 20 0 4 0;
+#X connect 21 0 40 1;
+#X connect 24 0 4 0;
+#X connect 25 0 4 0;
+#X connect 26 0 4 0;
+#X connect 27 0 4 0;
+#X connect 28 0 4 0;
+#X connect 29 0 4 0;
+#X connect 30 0 4 0;
+#X connect 32 0 31 0;
+#X connect 32 1 31 1;
+#X connect 33 0 32 0;
+#X connect 36 0 33 0;
+#X connect 37 0 33 0;
+#X connect 38 0 33 0;
+#X connect 39 0 4 0;
+#X connect 40 0 38 0;
+#X connect 40 1 37 0;
+#X connect 40 2 36 0;
+#X connect 40 3 18 0;
+#X connect 40 4 17 0;
+#X connect 40 5 16 0;
+#X connect 40 6 13 0;
+#X connect 53 0 130 0;
+#X connect 54 0 130 1;
+#X connect 56 0 40 0;
+#X connect 58 0 57 0;
+#X connect 59 0 57 0;
+#X connect 60 0 57 0;
+#X connect 61 0 57 0;
+#X connect 62 0 57 0;
+#X connect 63 0 57 0;
+#X connect 64 0 57 0;
+#X connect 65 0 57 0;
+#X connect 66 0 55 0;
+#X connect 67 0 55 0;
+#X connect 68 0 55 0;
+#X connect 69 0 55 0;
+#X connect 70 0 55 0;
+#X connect 71 0 55 0;
+#X connect 72 0 55 0;
+#X connect 73 0 55 0;
+#X connect 75 0 74 0;
+#X connect 76 0 74 0;
+#X connect 77 0 74 0;
+#X connect 78 0 74 0;
+#X connect 79 0 74 0;
+#X connect 80 0 74 0;
+#X connect 81 0 74 0;
+#X connect 82 0 74 0;
+#X connect 83 0 40 0;
+#X connect 84 0 40 0;
+#X connect 85 0 40 0;
+#X connect 86 0 40 0;
+#X connect 87 0 40 0;
+#X connect 88 0 40 0;
+#X connect 89 0 40 0;
+#X connect 90 0 40 0;
+#X connect 92 0 91 0;
+#X connect 93 0 91 0;
+#X connect 94 0 91 0;
+#X connect 95 0 91 0;
+#X connect 96 0 91 0;
+#X connect 97 0 91 0;
+#X connect 98 0 91 0;
+#X connect 99 0 91 0;
+#X connect 101 0 100 0;
+#X connect 102 0 100 0;
+#X connect 103 0 100 0;
+#X connect 104 0 100 0;
+#X connect 105 0 100 0;
+#X connect 106 0 100 0;
+#X connect 107 0 100 0;
+#X connect 108 0 100 0;
+#X connect 110 0 109 0;
+#X connect 111 0 109 0;
+#X connect 112 0 109 0;
+#X connect 113 0 109 0;
+#X connect 115 0 114 0;
+#X connect 116 0 114 0;
+#X connect 117 0 114 0;
+#X connect 118 0 114 0;
+#X connect 119 0 109 0;
+#X connect 120 0 109 0;
+#X connect 121 0 109 0;
+#X connect 122 0 109 0;
+#X connect 123 0 114 0;
+#X connect 124 0 114 0;
+#X connect 125 0 114 0;
+#X connect 126 0 114 0;
+#X connect 129 0 127 0;
+#X connect 130 0 40 2;
+#X connect 130 1 40 3;
+#X connect 130 2 40 4;
+#X connect 130 3 40 5;
+#X connect 130 4 40 6;
+#X connect 130 5 40 7;
+#X connect 130 6 40 8;
+#X connect 130 7 40 9;
+#X connect 131 0 128 0;
+#X connect 132 0 127 0;
+#X connect 133 0 127 0;
+#X connect 134 0 127 0;
+#X connect 135 0 127 0;
+#X connect 136 0 127 0;
+#X connect 137 0 127 0;
+#X connect 138 0 127 0;
+#X connect 139 0 128 0;
+#X connect 140 0 128 0;
+#X connect 141 0 128 0;
+#X connect 142 0 128 0;
+#X connect 143 0 128 0;
+#X connect 144 0 128 0;
+#X connect 145 0 128 0;
+#X connect 154 0 54 0;
+#X connect 154 0 53 0;

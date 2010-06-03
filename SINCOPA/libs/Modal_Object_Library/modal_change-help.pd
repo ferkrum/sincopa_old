@@ -1,0 +1,268 @@
+#N canvas 109 28 1144 514 12;
+#X obj 18 24 comment 205 12 helvetica ? 35584 0 0 0 control modality
+in Pure Data;
+#X obj 936 347 comment 154 9 helvetica ? 35584 0 0 0 or hook up a coll
+to this receive object to get the scale data into any coll you like
+;
+#X obj 706 323 comment 230 9 helvetica ? 35584 0 0 0 hard coded into
+the object. Give any coll the argument "modal_scale" to get scale data
+in a list. Look at these coll uses.;
+#X obj 245 87 comment 154 9 helvetica ? 35584 0 0 0 takes mode names
+as symbols to establish mode;
+#X obj 413 87 comment 154 9 helvetica ? 35584 0 0 0 even takes scale
+degree distances (in half steps);
+#X obj 522 324 % 12;
+#X obj 477 324 % 12;
+#X obj 432 324 % 12;
+#X obj 387 324 % 12;
+#X obj 342 324 % 12;
+#X obj 297 324 % 12;
+#X obj 252 324 % 12;
+#X floatatom 522 348 0 0 0 0 - - -;
+#X floatatom 477 348 0 0 0 0 - - -;
+#X floatatom 432 348 0 0 0 0 - - -;
+#X floatatom 387 348 0 0 0 0 - - -;
+#X floatatom 342 348 0 0 0 0 - - -;
+#X floatatom 297 348 0 0 0 0 - - -;
+#X floatatom 252 348 0 0 0 0 - - -;
+#X floatatom 207 348 0 0 0 0 - - -;
+#X obj 207 324 % 12;
+#X obj 936 327 receive modal_change_coll;
+#X msg 392 147 2 1 2 2 2 2 1;
+#X obj 1006 252 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
+#X obj 863 250 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
+#X obj 720 248 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
+#X obj 625 249 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
+#X obj 625 211 comment 125 9 helvetica ? 35584 0 0 0 Mode 6;
+#X obj 720 199 comment 125 9 helvetica ? 35584 0 0 0 Mode 6;
+#X obj 863 201 comment 125 9 helvetica ? 35584 0 0 0 Mode 6;
+#X obj 1006 203 comment 125 9 helvetica ? 35584 0 0 0 Mode 6;
+#X obj 1006 167 comment 125 9 helvetica ? 35584 0 0 0 Mode 5;
+#X obj 863 165 comment 125 9 helvetica ? 35584 0 0 0 Mode 5;
+#X obj 720 163 comment 125 9 helvetica ? 35584 0 0 0 Mode 5;
+#X obj 625 175 comment 125 9 helvetica ? 35584 0 0 0 Mode 5;
+#X obj 625 139 comment 125 9 helvetica ? 35584 0 0 0 Mode 4;
+#X obj 720 127 comment 125 9 helvetica ? 35584 0 0 0 Mode 4;
+#X obj 863 129 comment 125 9 helvetica ? 35584 0 0 0 Mode 4;
+#X obj 1006 131 comment 125 9 helvetica ? 35584 0 0 0 Mode 4;
+#X obj 1006 95 comment 125 9 helvetica ? 35584 0 0 0 Mode 3;
+#X obj 863 93 comment 125 9 helvetica ? 35584 0 0 0 Mode 3;
+#X obj 720 91 comment 125 9 helvetica ? 35584 0 0 0 Mode 3;
+#X obj 625 103 comment 125 9 helvetica ? 35584 0 0 0 Mode 3;
+#X obj 625 59 comment 125 9 helvetica ? 35584 0 0 0 Mode 2;
+#X obj 720 55 comment 125 9 helvetica ? 35584 0 0 0 Mode 2;
+#X obj 863 57 comment 125 9 helvetica ? 35584 0 0 0 Mode 2;
+#X obj 1006 59 comment 125 9 helvetica ? 35584 0 0 0 Mode 2;
+#X obj 1006 23 comment 129 9 helvetica ? 35584 0 0 0 Mode 1;
+#X obj 863 21 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
+#X obj 720 19 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
+#X obj 625 21 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
+#X obj 1004 -21 comment 168 12 helvetica ? 35584 0 0 0 Melodic Minor
+Modes;
+#X obj 864 -23 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Minor
+Modes;
+#X floatatom 157 142 0 0 11 0 - - -;
+#N canvas 188 148 435 482 coll_uses 0;
+#X obj 306 215 comment 40 9 helvetica ? 35584 0 0 0 data stored in
+list;
+#X obj 23 259 * 12;
+#X obj 244 190 comment 43 9 helvetica ? 35584 0 0 0 pitch class;
+#X obj 23 319 +;
+#X obj 184 156 % 12;
+#X obj 23 130 / 12;
+#X obj 58 37 notein;
+#X obj 119 77 comment 75 9 helvetica ? 35584 0 0 0 MIDI Note;
+#X obj 81 225 comment 50 9 helvetica ? 35584 0 0 0 octave register
+;
+#X obj 185 196 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 182 262 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 23 354 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 58 77 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 23 171 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 23 197 int;
+#X obj 23 233 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 23 291 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 184 224 coll modal_scale;
+#C restore;
+#X obj 23 383 makenote 100 200;
+#X obj 23 410 noteout;
+#X connect 1 0 16 0;
+#X connect 3 0 11 0;
+#X connect 4 0 9 0;
+#X connect 5 0 13 0;
+#X connect 6 0 12 0;
+#X connect 6 1 18 1;
+#X connect 9 0 17 0;
+#X connect 10 0 3 1;
+#X connect 11 0 18 0;
+#X connect 12 0 5 0;
+#X connect 12 0 4 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 1 0;
+#X connect 16 0 3 0;
+#X connect 17 0 10 0;
+#X connect 18 0 19 0;
+#X connect 18 1 19 1;
+#X restore 708 362 pd coll_uses;
+#X floatatom 522 290 0 0 0 0 - - -;
+#X floatatom 477 290 0 0 0 0 - - -;
+#X floatatom 432 290 0 0 0 0 - - -;
+#X floatatom 387 290 0 0 0 0 - - -;
+#X floatatom 342 290 0 0 0 0 - - -;
+#X floatatom 297 290 0 0 0 0 - - -;
+#X floatatom 252 290 0 0 0 0 - - -;
+#X floatatom 207 290 0 0 0 0 - - -;
+#X obj 566 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 120 137 4;
+#X obj 9 385 comment 646 9 helvetica ? 35584 0 0 0 next send a message
+box with a mode name in the right inlet. When sent \, a bang is sent
+from the outlet. The pitch class data is stored in a table called "table1"
+\, so put a table in your patch called [table table1] and you'll be
+able to see the pitch classes from the mode you've just selected. The
+pitch class data is also stored in a coll file named scale \, so put
+a coll file in your patch called [coll scale]. The coll file includes
+a filter which bumps all of the unused pitch classes to a usable (from
+the mode) pitch class.;
+#X obj 12 52 comment 570 9 helvetica ? 35584 0 0 0 send a MIDI pitch
+class number (C=0 \, C#=1 \, etc) in the left inlet or simply send
+a message box with a capital letter. This will determine the tonic
+of the 7 note mode;
+#X obj 584 294 comment 79 9 helvetica ? 35584 0 0 0 bangs when done
+;
+#X obj 7 438 comment 645 9 helvetica ? 35584 0 0 0 modes are named
+using traditional Greek names and variations of these names that reflect
+the least amount of chromatic inflections for the 7 modes of the Major
+Scale \, the Harmonic Minor Scale \, the Harmonic Major Scale \, and
+the Melodic Minor Scale;
+#X obj 190 0 comment 200 10 helvetica ? 35584 0 0 0 Part of the Modal
+Object Library by V.J. Manzo (c) 20067 / ported to Pure Data by V.J.
+Manzo (c) 2009;
+#X obj 152 8 comment 125 9 helvetica ? 35584 0 0 0 1;
+#X obj 634 -22 comment 168 12 helvetica ? 35584 0 0 0 Major Modes;
+#X obj 22 327 comment 240 9 helvetica ? 35584 0 0 0 pitch classes only
+(reduced to one octave);
+#X obj 45 102 comment 125 9 helvetica ? 35584 0 0 0 takes numbers or
+capital letters to establish tonic;
+#X obj 17 1 comment 571 20 helvetica ? 35584 0 0 0 modal_change;
+#X obj 402 258 comment 204 9 helvetica ? 35584 0 0 0 mode names in
+right inlet;
+#X obj 310 256 modal_change;
+#X obj 708 301 coll modal_scale;
+#C restore;
+#X obj 706 400 comment 118 18 helvetica ? 35584 0 0 0 see also:;
+#X obj 720 -24 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Major
+Modes;
+#X text 705 423 http://www.vincemanzo.com | vj@vjmanzo.com;
+#X obj 213 257 comment 204 9 helvetica ? 35584 0 0 0 tonic goes in
+left inlet;
+#X obj 77 293 comment 204 9 helvetica ? 35584 0 0 0 pitches at each
+scale degrees;
+#X msg 244 117 major;
+#X msg 63 136 C;
+#X msg 102 175 F#;
+#X msg 251 146 lydian_b7;
+#X msg 625 1 ionian;
+#X msg 625 39 dorian;
+#X msg 625 82 phrygian;
+#X msg 310 118 minor;
+#X msg 420 120 2 2 1 2 2 2 1;
+#X msg 625 119 lydian;
+#X msg 625 154 mixolydian;
+#X msg 625 192 aeolian;
+#X msg 625 229 locrian;
+#X msg 720 -1 harmonic_major;
+#X msg 720 35 dorian_b5;
+#X msg 720 71 phrygian_b4;
+#X msg 720 107 lydian_b3;
+#X msg 720 143 mixolydian_b2;
+#X msg 720 179 aeolian_b1;
+#X msg 720 228 locrian_b7;
+#X msg 863 230 mixolydian_#1;
+#X msg 863 181 lydian_#2;
+#X msg 863 145 phrygian_#3;
+#X msg 863 109 dorian_#4;
+#X msg 863 73 ionian_#5;
+#X msg 863 37 locrian_#6;
+#X msg 863 1 harmonic_minor;
+#X msg 1006 3 melodic_minor;
+#X msg 1006 39 dorian_b2;
+#X msg 1006 75 lydian_#5;
+#X msg 1006 111 lydian_b7;
+#X msg 1006 147 mixolydian_b6;
+#X msg 1006 183 locrian_#2;
+#X msg 1006 232 locrian_b4;
+#X msg 67 166 Eb;
+#X obj 783 405 Modal_Object_Library;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 14 0;
+#X connect 8 0 15 0;
+#X connect 9 0 16 0;
+#X connect 10 0 17 0;
+#X connect 11 0 18 0;
+#X connect 20 0 19 0;
+#X connect 22 0 76 1;
+#X connect 53 0 76 0;
+#X connect 55 0 5 0;
+#X connect 56 0 6 0;
+#X connect 57 0 7 0;
+#X connect 58 0 8 0;
+#X connect 59 0 9 0;
+#X connect 60 0 10 0;
+#X connect 61 0 11 0;
+#X connect 62 0 20 0;
+#X connect 64 0 76 0;
+#X connect 76 0 62 0;
+#X connect 76 1 61 0;
+#X connect 76 2 60 0;
+#X connect 76 3 59 0;
+#X connect 76 4 58 0;
+#X connect 76 5 57 0;
+#X connect 76 6 56 0;
+#X connect 76 7 55 0;
+#X connect 76 8 63 0;
+#X connect 83 0 76 1;
+#X connect 84 0 76 0;
+#X connect 85 0 76 0;
+#X connect 86 0 76 1;
+#X connect 87 0 76 1;
+#X connect 88 0 76 1;
+#X connect 89 0 76 1;
+#X connect 90 0 76 1;
+#X connect 91 0 76 1;
+#X connect 92 0 76 1;
+#X connect 93 0 76 1;
+#X connect 94 0 76 1;
+#X connect 95 0 76 1;
+#X connect 96 0 76 1;
+#X connect 97 0 76 1;
+#X connect 98 0 76 1;
+#X connect 99 0 76 1;
+#X connect 100 0 76 1;
+#X connect 101 0 76 1;
+#X connect 102 0 76 1;
+#X connect 103 0 76 1;
+#X connect 104 0 76 1;
+#X connect 105 0 76 1;
+#X connect 106 0 76 1;
+#X connect 107 0 76 1;
+#X connect 108 0 76 1;
+#X connect 109 0 76 1;
+#X connect 110 0 76 1;
+#X connect 111 0 76 1;
+#X connect 112 0 76 1;
+#X connect 113 0 76 1;
+#X connect 114 0 76 1;
+#X connect 115 0 76 1;
+#X connect 116 0 76 1;
+#X connect 117 0 76 0;
+#X coords 0 0 1 1 85 60 0;

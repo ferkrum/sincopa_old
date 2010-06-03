@@ -1,0 +1,40 @@
+#N canvas 19 61 723 417 12;
+#X obj 312 250 comment 208 9 helvetica ? -4.7104e+006 0 0 0 (c) 2008
+;
+#X obj 312 236 comment 208 9 helvetica ? -4.7104e+006 0 0 0 www.vincemanzo.com
+;
+#X obj 254 48 inlet;
+#X obj 201 48 inlet;
+#X obj 270 349 outlet;
+#X obj 200 347 outlet;
+#X obj 266 165 comment 125 9 helvetica ? -4.7104e+006 0 0 0 strict
+modulation;
+#X floatatom 200 318 0 0 0 0 - - -;
+#X obj 200 278 + 0;
+#X obj 179 118 t f f;
+#X floatatom 254 87 0 0 0 0 - - -;
+#X floatatom 201 87 0 0 0 0 - - -;
+#X obj 200 155 - 0;
+#X floatatom 200 216 0 0 0 0 - - -;
+#X obj 301 88 comment 125 9 helvetica ? -4.7104e+006 0 0 0 initial
+tonic;
+#X obj 145 87 comment 125 9 helvetica ? -4.7104e+006 0 0 0 new tonic
+;
+#X obj 194 371 comment 80 9 helvetica ? -4.7104e+006 0 0 0 new tonic
+;
+#X obj 269 373 comment 143 9 helvetica ? -4.7104e+006 0 0 0 index of
+transposition;
+#X obj 312 218 comment 208 9 helvetica ? -4.7104e+006 0 0 0 V.J. Manzo
+;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 9 1 12 0;
+#X connect 10 0 12 1;
+#X connect 10 0 8 1;
+#X connect 11 0 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 4 0;
+#X connect 13 0 8 0;

@@ -1,0 +1,87 @@
+#N canvas 6 51 723 548 10;
+#N canvas 0 0 600 431 entendendo 0;
+#X floatatom 44 134 5 0 0 0 - - -;
+#X obj 74 313 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 173 247 5 0 0 0 - - -;
+#X text 230 248 interval;
+#X text 59 40 tilt :: meassure 'tilt' of input;
+#X text 246 206 trip point :: alert when exceeding;
+#X text 359 223 this value;
+#X text 235 148 low limit :: reset 'start tilt' in case;
+#X text 339 163 value is below this for a;
+#X text 339 180 longer time;
+#X text 204 100 high limit :: ignore chnages higher than this;
+#X text 183 76 tilt :: maximum value change within one interval;
+#X obj 74 270 tilt 0.78 100;
+#X msg 146 101 hi 230;
+#X msg 159 147 low 17.3;
+#X msg 159 206 trip 173;
+#X msg 120 75 tilt 25;
+#X obj 46 99 counter;
+#X obj 46 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 12 0;
+#X connect 2 0 12 1;
+#X connect 12 0 1 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 17 0 0 0;
+#X connect 18 0 17 0;
+#X restore 272 311 pd entendendo tilt --> inclinacao;
+#N canvas 0 0 723 560 entendendo 0;
+#X text 147 18 gestalt :: gestalt detection for monophonic melodies
+;
+#X floatatom 68 342 5 0 0 0 - - -;
+#X obj 68 186 makenote 100 100;
+#X obj 68 63 tgl 20 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 68 86 metro 100;
+#X obj 68 110 random 24;
+#X obj 68 134 + 60;
+#X obj 68 288 gestalt 100;
+#X obj 152 110 random 24;
+#X obj 152 134 select 0;
+#X msg 211 156 100;
+#X msg 152 156 400;
+#X floatatom 78 164 5 0 0 0 - - -;
+#X text 170 292 CREATION ARGUMENT: reference time;
+#X obj 229 230 beat;
+#X floatatom 242 255 5 0 0 0 - - -;
+#X text 97 64 click to play random melody;
+#X text 122 360 one could use 'tilt' to detect abrupt changes that
+;
+#X text 122 377 indicate the start of a new segment;
+#X text 121 342 the higher the output the more the gestalt changes
+\;;
+#X text 171 308 i.e. time in ms expected to be the duration of the
+;
+#X text 171 324 shortest note (also setable via rightmost inlet);
+#X text 291 210 use 'beat' (maxlib) to get the real;
+#X text 291 227 reference time from input \, especially;
+#X text 292 244 when using;
+#X obj 382 245 notein;
+#X text 235 36 written by <olaf.matthes@gmx.de>;
+#X obj 37 371 tilt;
+#X connect 2 0 7 0;
+#X connect 2 0 14 0;
+#X connect 2 1 7 1;
+#X connect 2 1 14 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 6 0 12 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 9 1 10 0;
+#X connect 10 0 2 2;
+#X connect 11 0 2 2;
+#X connect 14 1 15 0;
+#X connect 14 1 7 2;
+#X restore 271 167 pd entendendo gestalt ----;
+#X text 160 44 identificador de frases e cadencias;

@@ -1,0 +1,28 @@
+#N canvas 217 14 603 504 10;
+#X obj 64 85 modal_change-help;
+#X obj 64 117 modal_triad-help;
+#X text 173 83 modal_change - an object to define and control modality
+;
+#X text 174 117 modal_triad - an object to realize chords;
+#X text 174 147 modal_cprog - an object for using chord progressions
+;
+#X text 175 206 modal_filter - an abstraction for filter notes to specified
+key;
+#X text 194 234 modal_strictmod - measures the index of transposition
+from one key to another and modulates incoming notes accordingly;
+#X obj 66 29 comment 205 12 helvetica ? 35584 0 0 0 vincemanzo.com/modal_change
+;
+#X obj 288 6 comment 200 10 helvetica ? 35584 0 0 0 Part of the Modal
+Object Library by V.J. Manzo (c) 2006 / ported to Pure Data by V.J.
+Manzo (c) 2009;
+#X obj 200 13 comment 125 9 helvetica ? 35584 0 0 0 1;
+#X obj 65 6 comment 571 20 helvetica ? 35584 0 0 0 the Modal Object
+Library;
+#X obj 62 182 comment 205 12 helvetica ? 35584 0 0 0 untilities / abstractions
+;
+#X obj 63 60 comment 205 12 helvetica ? 35584 0 0 0 objects;
+#X text 116 481 vj@vjmanzo.com | www.vincemanzo.com | www.vjmanzo.com
+;
+#X obj 64 146 modal_prog-help;
+#X obj 64 212 modal_filter-help;
+#X obj 64 241 modal_strictmod-help;
