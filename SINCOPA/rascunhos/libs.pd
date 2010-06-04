@@ -1,4 +1,4 @@
-#N canvas 142 78 1138 681 10;
+#N canvas 136 83 1138 681 10;
 #N canvas 0 25 1257 716 maxlib 0;
 #X obj 317 270 average;
 #X obj 28 160 beat;
@@ -126,7 +126,7 @@
 #X obj 163 46 comment 0 10 helvetica ? 0 0 0 0 comment;
 #X obj 255 44 comment 0 20 Times ? 0 0 0 0 Estudo de libs a serem usadas
 20/04/2010;
-#N canvas 0 0 450 300 mjlib 0;
+#N canvas 6 51 450 300 mjlib 0;
 #X obj 99 41 metroplus;
 #X obj 95 75 monorhythm;
 #X obj 102 124 morse;
@@ -138,7 +138,7 @@
 #X text 153 125 gera curtos e longos;
 #X text 149 156 nome de nota > midi;
 #X restore 577 134 pd mjlib;
-#N canvas 0 25 1259 721 windowing 0;
+#N canvas 6 51 1255 713 windowing 0;
 #X obj 23 80 hanning~;
 #X obj 23 106 tabsend~ hanning;
 #X obj 23 57 sig~ 1;
@@ -249,16 +249,20 @@
 #X connect 40 0 19 0;
 #X connect 41 0 23 0;
 #X restore 580 260 pd windowing;
-#N canvas 0 0 450 300 cyclone 0;
+#N canvas 6 51 450 300 cyclone 0;
 #X restore 577 94 pd cyclone;
 #N canvas 0 0 450 300 ekext 0;
 #X obj 77 77 steady;
 #X text 128 77 parecido com changemorethan;
 #X obj 67 131 simile;
 #X restore 561 319 pd ekext;
-#N canvas 0 0 450 300 ggee 0;
+#N canvas 6 51 450 300 ggee 0;
 #X restore 551 373 pd ggee;
-#N canvas 0 0 450 300 rtc 0;
+#N canvas 6 51 450 300 rtc 0;
 #X restore 560 410 pd rtc;
 #N canvas 0 0 450 300 pdmtl 0;
 #X restore 562 467 pd pdmtl;
+#N canvas 6 51 450 300 iem/tab 0;
+#X restore 283 263 pd iem/tab;
+#N canvas 6 51 450 300 iemlib 0;
+#X restore 274 166 pd iemlib;

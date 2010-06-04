@@ -1,2 +1,116 @@
-#N canvas 6 51 450 300 10;
-#X text 79 23 dueto monofonico;
+#N canvas 243 65 1012 659 10;
+#X text 242 47 dueto monofonico;
+#X text 385 40 1) como pegar uma lista e popular um array;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 12 float 3;
+#A 0 3.71429 3.71429 3.62858 3.62858 3.62858 3.62858 3.71429 3.80001
+3.88572 3.97144 4.22858 4.22858;
+#X coords 0 12 12 0 200 140 1;
+#X restore 475 187 graph;
+#X msg 52 315 \; array1 0 1 2 3 4 5 6 7 8 9 10 11 12;
+#X msg 50 275 \; array1 0 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10
+\$11 \$12;
+#X obj 50 227 pack f f f f f f f f f f f f;
+#X msg 32 99 12 11 10 9 8 7 6 5 4 3 2 1;
+#X floatatom 46 133 5 0 0 0 - - -;
+#X obj 59 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 80 142 5 0 0 0 - - -;
+#X floatatom 118 145 5 0 0 0 - - -;
+#X floatatom 152 146 5 0 0 0 - - -;
+#X floatatom 187 145 5 0 0 0 - - -;
+#X floatatom 221 145 5 0 0 0 - - -;
+#X floatatom 258 144 5 0 0 0 - - -;
+#X text 387 70 2) gerar uma sequencia randomico dentro desse array
+;
+#X text 391 97 3) popular outro array com essa sequencia randomica
+;
+#X text 396 124 4) interpolar o original com o randomico e tocar o
+resultado;
+#X text 421 146 interpolado;
+#X obj 128 510 tabread array1;
+#X obj 128 487 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
+-1 -1 4;
+#X floatatom 129 535 5 0 0 0 - - -;
+#X obj 128 453 random 12;
+#X obj 197 550 prepend add2;
+#N canvas 24 129 450 300 counter 0;
+#X obj 118 115 metro 10;
+#X msg 105 81 1;
+#X msg 143 82 0;
+#X obj 118 138 counter 12;
+#X obj 175 178 sel 12;
+#X obj 175 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 105 48 inlet;
+#X obj 118 234 outlet;
+#X obj 231 49 inlet;
+#X obj 118 209 b;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 8 0 3 0;
+#X connect 9 0 7 0;
+#X restore 128 422 pd counter;
+#X obj 128 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 185 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 148 369 randomiza uma nova serie com as mesmas notas;
+#X text 203 396 randomiza uma por uma;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array2 12 float 3;
+#A 0 9.84616 8.46154 6.92308 4.30769 2.30769 0.307693 0 5.84615 7.07692
+10.4615 12 10.4615;
+#X coords 0 12 12 0 200 140 1;
+#X restore 476 345 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array interpol 12 float 3;
+#A 0 10.9143 10.1429 9.28575 7.8286 6.71431 5.60002 5.42859 8.68574
+9.37146 11.2572 12.1143 11.2572;
+#X coords 0 12 12 0 200 140 1;
+#X restore 726 185 graph;
+#N canvas 12 77 450 300 operacao_arrays 0;
+#X obj 128 197 tabletool interpol;
+#X msg 147 78 set array1;
+#X msg 156 101 set array2;
+#X msg 130 54 add array1 array2;
+#X msg 170 150 normalize 0 12;
+#X msg 167 123 set interpol;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X restore 745 471 pd operacao_arrays;
+#X msg 197 575 1.8857 1.8857 0.685709 1 0.685709 7 3.17141 6 7 1 6
+5 3;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 0;
+#X connect 9 0 5 6;
+#X connect 10 0 5 1;
+#X connect 10 0 8 0;
+#X connect 11 0 5 2;
+#X connect 11 0 8 0;
+#X connect 12 0 5 3;
+#X connect 12 0 8 0;
+#X connect 13 0 5 4;
+#X connect 13 0 8 0;
+#X connect 14 0 5 5;
+#X connect 14 0 8 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 23 0;
+#X connect 22 0 20 0;
+#X connect 23 0 32 0;
+#X connect 24 0 22 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 1;
