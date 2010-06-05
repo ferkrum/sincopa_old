@@ -1,5 +1,5 @@
-#N canvas 140 81 904 611 16;
-#N canvas 48 104 1078 660 um 0;
+#N canvas 278 51 904 611 16;
+#N canvas 60 104 1078 660 um 0;
 #X msg 240 158 i VI iv;
 #X symbolatom 240 275 10 0 0 0 - - -;
 #X symbolatom 298 250 10 0 0 0 - - -;
@@ -33,6 +33,7 @@
 -1;
 #X obj 239 17 inlet;
 #X obj 442 594 outlet;
+#X obj 692 108 receive oito;
 #X connect 0 0 4 0;
 #X connect 1 0 8 0;
 #X connect 2 0 16 0;
@@ -152,7 +153,7 @@
 #X msg 289 330 iv6 ii VII;
 #X msg 256 364 i VI iv;
 #X obj 184 67 hradio 30 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 7;
 #X obj 184 104 sel 0 1 2 3 4 5 6 7;
 #N canvas 302 66 685 698 tres 0;
 #X obj 390 45 receive segundo;
@@ -282,7 +283,7 @@
 #X connect 44 1 41 0;
 #X restore 230 295 pd tres;
 #X obj 457 484 prepend set;
-#X msg 457 515 VI;
+#X msg 457 515 V;
 #X msg 314 296 i v III;
 #N canvas 60 104 1078 660 quatro 0;
 #X symbolatom 241 332 10 0 0 0 - - -;
@@ -456,7 +457,7 @@
 #X connect 27 0 3 0;
 #X restore 277 233 pd cinco;
 #X msg 365 232 ii VII iv6;
-#N canvas 24 121 869 643 seis 0;
+#N canvas 30 121 869 643 seis 0;
 #X obj 400 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 445 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -594,7 +595,7 @@
 #X connect 45 0 22 0;
 #X restore 300 199 pd seis;
 #X msg 381 200 V bII vii;
-#N canvas 30 121 869 643 sete 0;
+#N canvas 36 121 869 643 sete 0;
 #X obj 400 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 442 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -701,7 +702,7 @@
 #X restore 324 167 pd sete;
 #X msg 405 168 i VI III;
 #X msg 429 135 I7 iii# V;
-#N canvas 54 104 1078 660 oito 0;
+#N canvas 72 104 1078 660 oito 0;
 #X symbolatom 240 275 10 0 0 0 - - -;
 #X symbolatom 298 250 10 0 0 0 - - -;
 #X symbolatom 357 225 10 0 0 0 - - -;
@@ -778,7 +779,7 @@
 #X connect 25 0 24 0;
 #X connect 27 0 3 0;
 #X restore 347 135 pd oito;
-#N canvas 108 77 1095 667 chords 0;
+#N canvas 114 97 1095 667 chords 0;
 #X msg 34 155 III iv i VI;
 #X msg 37 121 ii VII iv6;
 #X msg 32 89 V bII vii;
