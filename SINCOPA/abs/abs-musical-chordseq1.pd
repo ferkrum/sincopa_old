@@ -1,4 +1,4 @@
-#N canvas 278 51 904 611 16;
+#N canvas 296 129 904 611 16;
 #N canvas 60 104 1078 660 um 0;
 #X msg 240 158 i VI iv;
 #X symbolatom 240 275 10 0 0 0 - - -;
@@ -153,8 +153,8 @@
 #X msg 289 330 iv6 ii VII;
 #X msg 256 364 i VI iv;
 #X obj 184 67 hradio 30 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 7;
-#X obj 184 104 sel 0 1 2 3 4 5 6 7;
+-1 1;
+#X obj 184 109 sel 0 1 2 3 4 5 6 7;
 #N canvas 302 66 685 698 tres 0;
 #X obj 390 45 receive segundo;
 #X obj 390 96 sel iv6 ii VII;
@@ -283,7 +283,7 @@
 #X connect 44 1 41 0;
 #X restore 230 295 pd tres;
 #X obj 457 484 prepend set;
-#X msg 457 515 V;
+#X msg 456 518 iv6;
 #X msg 314 296 i v III;
 #N canvas 60 104 1078 660 quatro 0;
 #X symbolatom 241 332 10 0 0 0 - - -;
@@ -779,7 +779,7 @@
 #X connect 25 0 24 0;
 #X connect 27 0 3 0;
 #X restore 347 135 pd oito;
-#N canvas 114 97 1095 667 chords 0;
+#N canvas 120 97 1095 667 chords 0;
 #X msg 34 155 III iv i VI;
 #X msg 37 121 ii VII iv6;
 #X msg 32 89 V bII vii;
@@ -823,6 +823,7 @@
 #X obj 573 174 abs-musical-chord 7 11 2 8;
 #X obj 607 141 abs-musical-chord 8 0 3 7;
 #X obj 642 111 abs-musical-chord 10 2 5 8;
+#X obj 296 559 outlet~;
 #X connect 8 0 9 0;
 #X connect 9 0 32 0;
 #X connect 9 1 31 0;
@@ -841,6 +842,7 @@
 #X connect 12 0 13 0;
 #X connect 15 0 12 0;
 #X connect 27 0 30 0;
+#X connect 29 0 42 0;
 #X connect 30 0 29 0;
 #X connect 30 1 29 1;
 #X connect 30 2 29 2;
@@ -856,7 +858,10 @@
 #X connect 39 0 30 0;
 #X connect 40 0 30 0;
 #X connect 41 0 30 0;
-#X restore 285 487 pd chords;
+#X restore 269 452 pd chords;
+#X obj 269 492 outlet~;
+#X obj 430 47 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
 #X connect 0 0 7 0;
 #X connect 0 0 20 0;
 #X connect 1 0 7 0;
@@ -883,3 +888,5 @@
 #X connect 16 0 20 0;
 #X connect 19 0 7 0;
 #X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X coords 0 -1 1 1 350 70 1 160 40;

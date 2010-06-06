@@ -1,9 +1,5 @@
-#N canvas 76 51 1057 684 16;
+#N canvas 88 80 1057 684 16;
 #X text 289 -73 spines;
-#N canvas 0 0 450 300 (subpatch) 0;
-#X array \$0-sample 8 float 2;
-#X coords 0 1 8 -1 500 70 1;
-#X restore 387 109 graph;
 #X obj 72 129 soundfiler;
 #X obj 72 37 openpanel;
 #X obj 72 12 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -11,8 +7,6 @@
 #X floatatom 72 161 20 0 0 0 - - -;
 #X obj 247 191 bng 15 250 50 0 empty empty toca 17 7 0 10 -262144 -1
 -1;
-#X obj 390 183 hsl 495 20 0 1 0 0 empty posicao empty -2 -8 0 10 -257985
--1 -1 0 1;
 #N canvas 0 0 1041 578 audioin 0;
 #X obj 29 23 inlet~;
 #X obj 128 22 inlet;
@@ -201,11 +195,11 @@
 #X connect 14 0 8 0;
 #X connect 15 0 4 0;
 #X restore 502 54 pd index;
-#X obj 638 396 nbx 10 30 -1e+37 1e+37 0 0 empty time sample_n 0 -15
+#X obj 572 460 nbx 10 30 -1e+37 1e+37 0 0 empty time sample_n 0 -15
 0 20 -262144 -1 -1 0 256;
-#X obj 639 465 nbx 5 30 -1e+37 1e+37 0 0 empty amplitude amplitude
+#X obj 573 529 nbx 5 30 -1e+37 1e+37 0 0 empty amplitude amplitude
 0 -15 0 20 -262144 -1 -1 0 256;
-#N canvas 262 25 664 620 canvas 0;
+#N canvas 268 51 664 620 canvas 0;
 #X obj 84 241 f;
 #X msg 33 200 bang;
 #X floatatom 183 221 3 0 1000 0 - - -;
@@ -218,7 +212,7 @@
 #X text 498 199 y;
 #X obj 430 139 unpack;
 #X obj 407 251 metro 100;
-#X obj 407 229 tgl 15 1 empty empty empty 20 8 0 10 -262144 -1 -1 1
+#X obj 407 229 tgl 15 1 empty empty empty 20 8 0 10 -262144 -1 -1 0
 1;
 #X msg 84 310 \; to_K pos \$1 \$2;
 #X floatatom 127 140 5 378 877 0 - - -;
@@ -261,10 +255,8 @@
 #X connect 28 0 25 0;
 #X connect 29 0 28 0;
 #X restore 608 52 pd canvas;
-#X obj 634 294 cnv 15 100 60 empty cifra F3 20 12 0 40 -233017 -66577
+#X obj 568 358 cnv 15 100 60 empty cifra F3 20 12 0 40 -233017 -66577
 0;
-#X obj 388 110 cnv 1 1 93 from_K1 to_K empty 1 13 2 14 -1 -123526 0
-;
 #X obj 292 238 bng 15 250 50 0 empty empty grava_txt 17 7 0 10 -262144
 -1 -1;
 #X obj 304 266 bng 15 250 50 0 empty empty le_txt 17 7 0 10 -262144
@@ -273,46 +265,33 @@
 -1 -1;
 #X obj 338 321 bng 15 250 50 0 empty empty linha_por_linha_txt 17 7
 0 10 -262144 -1 -1;
-#X text 616 288 nota;
+#X text 550 352 nota;
 #X obj 153 218 abs-sampler-table;
 #X msg 23 -47 read -resize /home/livre/pd-externals/a_patchs_doc/sample1.wav
 \$0-sample;
-#X obj 803 -66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 803 -48 f \$0;
-#X msg 803 4 set \$1;
-#X obj 803 -91 loadbang;
-#X obj 803 58 send idsample;
 #X obj 176 37 receive idsample;
 #X obj 72 66 pack s f;
 #X msg 72 98 read -resize \$1 \$2-sample;
-#X obj 803 -22 makefilename %d;
-#X msg 803 32 1055;
-#X connect 2 0 5 0;
-#X connect 3 0 38 0;
-#X connect 4 0 3 0;
-#X connect 5 0 30 0;
-#X connect 6 0 30 1;
-#X connect 8 0 10 1;
-#X connect 8 1 10 2;
-#X connect 10 0 13 0;
-#X connect 12 0 10 0;
-#X connect 13 0 11 0;
-#X connect 13 0 17 0;
-#X connect 15 0 14 0;
-#X connect 17 0 18 0;
-#X connect 25 0 17 1;
-#X connect 26 0 17 2;
-#X connect 27 0 17 3;
-#X connect 28 0 17 4;
-#X connect 30 0 8 0;
-#X connect 31 0 2 0;
-#X connect 32 0 33 0;
-#X connect 33 0 40 0;
-#X connect 34 0 41 0;
-#X connect 35 0 32 0;
-#X connect 37 0 38 1;
-#X connect 38 0 39 0;
-#X connect 39 0 2 0;
-#X connect 40 0 34 0;
-#X connect 41 0 36 0;
+#X obj 474 104 abs-sampler-tableid;
+#X connect 1 0 4 0;
+#X connect 2 0 30 0;
+#X connect 3 0 2 0;
+#X connect 4 0 27 0;
+#X connect 5 0 27 1;
+#X connect 6 0 8 1;
+#X connect 6 1 8 2;
+#X connect 8 0 11 0;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 11 0 15 0;
+#X connect 13 0 12 0;
+#X connect 15 0 16 0;
+#X connect 22 0 15 1;
+#X connect 23 0 15 2;
+#X connect 24 0 15 3;
+#X connect 25 0 15 4;
+#X connect 27 0 6 0;
+#X connect 28 0 1 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 1 0;

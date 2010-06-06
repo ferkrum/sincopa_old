@@ -1,10 +1,10 @@
-#N canvas 243 65 1012 659 10;
+#N canvas 249 91 1012 659 10;
 #X text 242 47 dueto monofonico;
 #X text 385 40 1) como pegar uma lista e popular um array;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array array1 12 float 3;
-#A 0 3.71429 3.71429 3.62858 3.62858 3.62858 3.62858 3.71429 3.80001
-3.88572 3.97144 4.22858 4.22858;
+#A 0 4.31429 4.65714 4.91428 5 4.91428 4.65714 4.48571 8.94283 8.08569
+7.05713 6.37142 4.91428;
 #X coords 0 12 12 0 200 140 1;
 #X restore 475 187 graph;
 #X msg 52 315 \; array1 0 1 2 3 4 5 6 7 8 9 10 11 12;
@@ -30,11 +30,11 @@ resultado;
 #X text 421 146 interpolado;
 #X obj 128 510 tabread array1;
 #X obj 128 487 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 9;
 #X floatatom 129 535 5 0 0 0 - - -;
 #X obj 128 453 random 12;
 #X obj 197 550 prepend add2;
-#N canvas 24 129 450 300 counter 0;
+#N canvas 30 155 450 300 counter 0;
 #X obj 118 115 metro 10;
 #X msg 105 81 1;
 #X msg 143 82 0;
@@ -71,11 +71,11 @@ resultado;
 #X restore 476 345 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array interpol 12 float 3;
-#A 0 10.9143 10.1429 9.28575 7.8286 6.71431 5.60002 5.42859 8.68574
-9.37146 11.2572 12.1143 11.2572;
+#A 0 8.36089 7.4606 6.35328 4.16714 2.36467 0.414055 0 8.90406 9.22695
+11.263 12 9.41118;
 #X coords 0 12 12 0 200 140 1;
 #X restore 726 185 graph;
-#N canvas 12 77 450 300 operacao_arrays 0;
+#N canvas 24 129 450 300 operacao_arrays 0;
 #X obj 128 197 tabletool interpol;
 #X msg 147 78 set array1;
 #X msg 156 101 set array2;
@@ -88,8 +88,7 @@ resultado;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X restore 745 471 pd operacao_arrays;
-#X msg 197 575 1.8857 1.8857 0.685709 1 0.685709 7 3.17141 6 7 1 6
-5 3;
+#X msg 197 575;
 #X connect 5 0 4 0;
 #X connect 6 0 4 0;
 #X connect 7 0 5 0;
