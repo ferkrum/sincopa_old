@@ -1,0 +1,17 @@
+#N canvas 278 179 701 552 12;
+#X floatatom 280 -41 10 0 0 0 - - -;
+#X obj 280 -12 average;
+#X obj 280 -65 speedlim 300;
+#X obj 281 13 int;
+#X floatatom 281 51 5 0 0 0 - - -;
+#X obj 278 -95 inlet;
+#X obj 280 101 outlet;
+#X floatatom 107 105 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 2 0;
+#X coords 0 -1 1 1 50 30 2 100 100;

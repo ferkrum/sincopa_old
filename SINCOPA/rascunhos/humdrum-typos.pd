@@ -1,0 +1,105 @@
+#N canvas 457 77 450 685 24;
+#X msg 51 23 #;
+#X msg 126 27 $;
+#X msg 38 80;
+#X text 105 83 espaco;
+#X msg 215 29 =;
+#X msg 288 30 [;
+#X msg 219 78 ];
+#X msg 289 76 _;
+#X msg 46 138 (;
+#X msg 125 136 );
+#X msg 214 132 \;;
+#X text 12 546 o q nao tem:;
+#X text 24 581 * phrase mark (start e end);
+#X msg 298 141 ';
+#X msg 51 190 ";
+#X msg 130 194 `;
+#X msg 220 185 ~;
+#X msg 310 191 ^;
+#X msg 42 249 :;
+#X msg 134 250 ´;
+#X obj 326 346 key;
+#X floatatom 324 395 5 0 0 0 - - -;
+#X text 192 250 acento agudo;
+#X msg 49 298 /;
+#X obj 173 371 keyname;
+#X symbolatom 171 426 10 0 0 0 - - -;
+#X obj 190 468 prepend set;
+#X msg 209 517 Space;
+#X text 23 609 * down-stem;
+#X msg 137 298 &;
+#N canvas 197 51 950 713 teste 1;
+#X msg -118 -13 **kern *MM120 =1 4e 4f 4g 4a 4cc 4ee;
+#X obj 325 379 textfile;
+#X msg 185 306 add \$1;
+#X msg 334 306 print;
+#X obj 327 426 print;
+#X obj 185 244 symbol;
+#X msg 237 39 **kern;
+#X obj 185 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 266 198 l2s;
+#X msg 259 76 =1;
+#X msg 277 115 4a 4cc 4ee;
+#X msg 324 257 clear;
+#X obj -58 521 shell;
+#X msg 439 312 write kern.krn cr;
+#X obj -58 572 print;
+#X obj 39 566 prepend add;
+#X msg 39 606 1317 \; 1514 \; 1545 \; 1545 \; HUMDRUM DATA \; Number
+of data tokens: 4 \; Number of null tokens: 0 \; Number of multiple-stops:
+3 \; Number of data records: 4 \; Number of comments: 0 \; Number of
+interpretations: 1 \; Number of records: 5 \; HUMDRUM DATA \; Number
+of data tokens: 4 \; Number of null tokens: 0 \; Number of multiple-stops:
+3 \; Number of data records: 4 \; Number of comments: 0 \; Number of
+interpretations: 1 \; Number of records: 5 \; KERN DATA \; Number of
+note-heads: 9 \; Number of notes: 9 \; Longest note: 4 \; Shortest
+note: 4 \; Highest note: ee \; Lowest note: a \; Number of rests: 0
+\; Maximum number of voices: 3 \; Number of single barlines: 1 \; Number
+of double barlines: 0 \; HUMDRUM DATA \; Number of data tokens: 5 \;
+Number of null tokens: 0 \; Number of multiple-stops: 1 \; Number of
+data records: 6 \; Number of comments: 3 \; Number of interpretations:
+3 \; Number of records: 12 \; KERN DATA \; Number of note-heads: 6
+\; Number of notes: 6 \; Longest note: 4 \; Shortest note: 4 \; Highest
+note: ee \; Lowest note: e \; Number of rests: 0 \; Maximum number
+of voices: 3 \; Number of single barlines: 1 \; Number of double barlines:
+0 \; HUMDRUM DATA \; Number of data tokens: 5 \; Number of null tokens:
+0 \; Number of multiple-stops: 1 \; Number of data records: 6 \; Number
+of comments: 3 \; Number of interpretations: 3 \; Number of records:
+12 \; KERN DATA \; Number of note-heads: 6 \; Number of notes: 6 \;
+Longest note: 4 \; Shortest note: 4 \; Highest note: ee \; Lowest note:
+e \; Number of rests: 0 \; Maximum number of voices: 3 \; Number of
+single barlines: 1 \; Number of double barlines: 0 \;;
+#X msg -72 422 date +%k%M;
+#X text -123 24 krn do compasso1;
+#X msg 32 516 gedit /home/livre/pesquisa/SINCOPA/rascunhos/kern.krn
+;
+#X msg -85 628 ./usr/local/humdrum/bin/census /home/livre/pesquisa/SINCOPA/rascunhos/kern.krn
+;
+#X msg -58 476 census -k /home/livre/pesquisa/SINCOPA/rascunhos/compasso1.krn
+;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 1;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 1 0;
+#X connect 12 0 14 0;
+#X connect 12 0 15 0;
+#X connect 12 1 14 0;
+#X connect 13 0 1 0;
+#X connect 15 0 16 0;
+#X connect 17 0 12 0;
+#X connect 19 0 12 0;
+#X connect 20 0 12 0;
+#X connect 21 0 12 0;
+#X restore 17 374 pd teste;
+#X connect 20 0 21 0;
+#X connect 24 1 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
