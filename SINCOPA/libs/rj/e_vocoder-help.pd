@@ -34,7 +34,7 @@
 #X connect 11 0 12 0;
 #X connect 12 0 2 0;
 #X restore 207 283 pd play;
-#X obj 253 262 tgl 15 0 empty empty loop 17 7 1 10 -262144 -1 -1 0
+#X obj 253 262 tgl 15 0 empty empty loop 17 7 1 10 -262144 -1 -1 1
 1;
 #X obj 207 218 bng 15 250 50 0 empty empty load_sample 17 7 1 10 -4034
 -1 -1;
@@ -96,11 +96,11 @@
 #X connect 24 0 16 0;
 #X connect 25 0 24 0;
 #X restore 142 452 pd chord;
-#X msg 142 426 40 50 55;
-#X msg 142 406 40 45 59;
-#X msg 142 386 40 49 57;
-#X obj 142 356 select 0 1 2;
-#X obj 142 334 random 3;
+#X msg 188 406 40 50 55;
+#X msg 188 386 40 45 59;
+#X msg 188 366 40 49 57;
+#X obj 188 336 select 0 1 2;
+#X obj 188 314 random 3;
 #X text 49 58 This is a Fourier-based "vocoder" (perhaps better called
 a "timbre stamp") like the one the Convolution brothers use. The "control
 source" is analyzed to get its spectral envelope \, which is then stamped
@@ -112,13 +112,20 @@ for the filter input and the control source.;
 #X text 398 285 check with soundinput as well!;
 #X obj 307 320 *~ 0;
 #X obj 353 321 hsl 50 15 0 1 0 0 empty empty volume 5 8 1 10 -4034
--1 -1 0 1;
+-1 -1 4900 1;
+#X floatatom 3 230 5 0 0 0 - - -;
+#X floatatom 57 231 5 0 0 0 - - -;
+#X floatatom 111 233 5 0 0 0 - - -;
+#X obj 4 298 pack f f f;
+#X obj 14 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 13 342 prepend set;
+#X msg 13 370 132 35 85;
 #X connect 0 0 4 0;
 #X connect 0 0 4 1;
 #X connect 1 0 0 2;
 #X connect 2 0 1 0;
 #X connect 6 0 0 1;
-#X connect 6 1 15 0;
 #X connect 7 0 6 2;
 #X connect 8 0 6 0;
 #X connect 9 0 6 1;
@@ -134,3 +141,12 @@ for the filter input and the control source.;
 #X connect 17 1 19 0;
 #X connect 19 0 0 1;
 #X connect 20 0 19 1;
+#X connect 21 0 24 0;
+#X connect 22 0 24 1;
+#X connect 22 0 25 0;
+#X connect 23 0 24 2;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 27 0 10 0;
