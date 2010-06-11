@@ -1,6 +1,6 @@
-#N canvas 9 31 615 165 12;
-#X obj 25 21 cnv 15 550 120 tritri empty empty 20 12 128 14 -66577
--66577 0;
+#N canvas 9 31 1040 228 12;
+#X obj 25 21 cnv 15 550 120 tritri empty empty 20 12 0 14 -66577 -66577
+0;
 #X obj 137 41 cnv 15 20 80 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 160 41 cnv 15 20 80 empty empty empty 20 12 0 14 -262144 -66577
@@ -25,30 +25,30 @@
 ;
 #X obj 176 41 cnv 14 14 55 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 49 103 tgl 12 0 \$0-c1-s \$0-c1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 59 82 tgl 12 0 \$0-c+1-s \$0-c+1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 72 103 tgl 12 0 \$0-d1-s \$0-d1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 85 82 tgl 12 0 \$0-d+1-s \$0-d+1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 95 103 tgl 12 0 \$0-e1-s \$0-e1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 118 103 tgl 12 0 \$0-f1-s \$0-f1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 141 103 tgl 12 0 \$0-g1-s \$0-g1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 164 103 tgl 12 0 \$0-a1-s \$0-a1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 128 82 tgl 12 0 \$0-f+1-s \$0-f+1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 152 82 tgl 12 0 \$0-g+1-s \$0-g+1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 177 82 tgl 12 0 \$0-a+1-s \$0-a+1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 187 103 tgl 12 0 \$0-b1-s \$0-b1-r empty 20 8 1728 8 -262144
--1 -1 0 1;
+#X obj 49 103 tgl 12 0 \$0-c1-s \$0-c1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 59 82 tgl 12 0 \$0-c+1-s \$0-c+1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 72 103 tgl 12 0 \$0-d1-s \$0-d1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 85 82 tgl 12 0 \$0-d+1-s \$0-d+1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 95 103 tgl 12 0 \$0-e1-s \$0-e1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 118 103 tgl 12 0 \$0-f1-s \$0-f1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 141 103 tgl 12 0 \$0-g1-s \$0-g1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 164 103 tgl 12 0 \$0-a1-s \$0-a1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 128 82 tgl 12 0 \$0-f+1-s \$0-f+1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 152 82 tgl 12 0 \$0-g+1-s \$0-g+1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 177 82 tgl 12 0 \$0-a+1-s \$0-a+1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 187 103 tgl 12 0 \$0-b1-s \$0-b1-r empty 20 8 0 8 -262144 -1
+-1 0 1;
 #X obj 298 41 cnv 15 20 80 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 321 41 cnv 15 20 80 empty empty empty 20 12 0 14 -262144 -66577
@@ -73,33 +73,33 @@
 ;
 #X obj 337 41 cnv 14 14 55 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 210 103 tgl 12 0 \$0-c2-s \$0-c2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 220 82 tgl 12 0 \$0-c+2-s \$0-c+2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 233 103 tgl 12 0 \$0-d2-s \$0-d2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 246 82 tgl 12 0 \$0-d+2-s \$0-d+2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 256 103 tgl 12 0 \$0-e2-s \$0-e2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 279 103 tgl 12 0 \$0-f2-s \$0-f2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 302 103 tgl 12 0 \$0-g2-s \$0-g2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 325 103 tgl 12 0 \$0-a2-s \$0-a2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 289 82 tgl 12 0 \$0-f+2-s \$0-f+2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 313 82 tgl 12 0 \$0-g+2-s \$0-g+2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 338 82 tgl 12 0 \$0-a+2-s \$0-a+2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 348 103 tgl 12 0 \$0-b2-s \$0-b2-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#N canvas -14 19 973 539 inside 0;
+#X obj 210 103 tgl 12 0 \$0-c2-s \$0-c2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 220 82 tgl 12 0 \$0-c+2-s \$0-c+2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 233 103 tgl 12 0 \$0-d2-s \$0-d2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 246 82 tgl 12 0 \$0-d+2-s \$0-d+2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 256 103 tgl 12 0 \$0-e2-s \$0-e2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 279 103 tgl 12 0 \$0-f2-s \$0-f2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 302 103 tgl 12 0 \$0-g2-s \$0-g2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 325 103 tgl 12 0 \$0-a2-s \$0-a2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 289 82 tgl 12 0 \$0-f+2-s \$0-f+2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 313 82 tgl 12 0 \$0-g+2-s \$0-g+2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 338 82 tgl 12 0 \$0-a+2-s \$0-a+2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 348 103 tgl 12 0 \$0-b2-s \$0-b2-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#N canvas 0 19 973 539 inside 0;
 #X obj 481 437 key;
-#X floatatom 481 466 5 0 0;
+#X floatatom 481 466 5 0 0 0 - - -;
 #X text 445 492 show keynumber;
 #X obj 182 433 r \$0-output;
 #X obj 182 458 outlet;
@@ -171,46 +171,33 @@
 ;
 #X obj 498 41 cnv 14 14 55 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 371 103 tgl 12 0 \$0-c3-s \$0-c3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 381 82 tgl 12 0 \$0-c+3-s \$0-c+3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 394 103 tgl 12 0 \$0-d3-s \$0-d3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 407 82 tgl 12 0 \$0-d+3-s \$0-d+3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 417 103 tgl 12 0 \$0-e3-s \$0-e3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 440 103 tgl 12 0 \$0-f3-s \$0-f3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 463 103 tgl 12 0 \$0-g3-s \$0-g3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 486 103 tgl 12 0 \$0-a3-s \$0-a3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 450 82 tgl 12 0 \$0-f+3-s \$0-f+3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 474 82 tgl 12 0 \$0-g+3-s \$0-g+3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 499 82 tgl 12 0 \$0-a+3-s \$0-a+3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
-#X obj 509 103 tgl 12 0 \$0-b3-s \$0-b3-r empty 20 8 1728 8 -262144
--1 -1 0 1;
+#X obj 371 103 tgl 12 0 \$0-c3-s \$0-c3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 381 82 tgl 12 0 \$0-c+3-s \$0-c+3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 394 103 tgl 12 0 \$0-d3-s \$0-d3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 407 82 tgl 12 0 \$0-d+3-s \$0-d+3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 417 103 tgl 12 0 \$0-e3-s \$0-e3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 440 103 tgl 12 0 \$0-f3-s \$0-f3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 463 103 tgl 12 0 \$0-g3-s \$0-g3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 486 103 tgl 12 0 \$0-a3-s \$0-a3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 450 82 tgl 12 0 \$0-f+3-s \$0-f+3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 474 82 tgl 12 0 \$0-g+3-s \$0-g+3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 499 82 tgl 12 0 \$0-a+3-s \$0-a+3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
+#X obj 509 103 tgl 12 0 \$0-b3-s \$0-b3-r empty 20 8 0 8 -262144 -1
+-1 0 1;
 #X obj 528 41 cnv 15 20 80 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 532 103 tgl 12 0 \$0-c4-s \$0-c4-r empty 20 8 1728 8 -262144
--1 -1 0 1;
+#X obj 532 103 tgl 12 0 \$0-c4-s \$0-c4-r empty 20 8 0 8 -262144 -1
+-1 0 1;
 #X obj 639 129 outlet;
-#N canvas 0 0 843 316 keyb-help 0;
-#X text 36 166 lower rows c1-e2;
-#X text 287 185 |Q||W||E||R||T||Z||U||I||O||P|UE||+|;
-#X text 572 163 upper rows f2-c4;
-#X text 23 219 |Y||X||C||V||B||N||M|| \, ||.||-|;
-#X text 60 52 use the mouse or the computer-keyboard to play midinotes.
-;
-#X text 59 28 GERMAN VERSION;
-#X text 35 199 |S||D| |G||H||J| |L||OE|;
-#X text 302 163 |2||3||4| |6||7| |9||0|ss|;
-#X restore 743 95 pd keyb-help;
-#X text 635 24 todo: on/off \, transpose \, spacebar for all off;
-#X text 687 41 conversion to english layout;
 #X connect 49 0 76 0;
