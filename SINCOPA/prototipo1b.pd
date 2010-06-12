@@ -1,0 +1,8 @@
+#N canvas 39 43 1209 713 10;
+#X obj 678 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 678 674 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 54 82 s_tablert;
+#X text 103 14 Prototipo 1;
+#X connect 0 0 1 0;
