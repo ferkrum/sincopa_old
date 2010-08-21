@@ -1,4 +1,4 @@
-#N canvas 164 48 995 484 10;
+#N canvas 175 101 995 484 10;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-table 5000 float 2;
 #X coords 0 1 5000 -1 500 70 1 0 0;
@@ -125,11 +125,11 @@
 #X obj 294 156 adc~;
 #X obj 312 -98 hsl 128 15 0 0.1 0 0 empty empty empty -2 -8 0 10 -73679
 -1 -1 0 1;
-#X obj 408 -75 hsl 128 15 40 53 0 0 empty empty empty -2 -8 0 10 -122584
+#X obj 333 -74 hsl 128 15 40 53 0 0 empty empty empty -2 -8 0 10 -122584
 -1 -1 0 1;
 #X text 449 -104 volume de entrada;
 #X text 561 -103 (0 - 0.1);
-#X text 550 -75 sensibilidade do onset (40 - 53);
+#X text 466 -76 sensibilidade do onset (40 - 53);
 #X text 119 145 envelope;
 #X text 125 125 bang de silencio;
 #X text 135 99 tempo entre;
@@ -143,11 +143,16 @@
 #X obj 293 235 *~;
 #X obj 377 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 656 -106 tgl 30 0 empty empty liga_audioin 30 7 0 10 -204786
+#X obj 643 -106 tgl 30 0 empty empty liga_audioin 30 7 0 10 -204786
 -1 -1 0 1;
 #X obj 214 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 212 197 metro 150;
+#X floatatom 791 -59 8 0 0 0 - - -;
+#X floatatom 771 -88 8 0 0 0 - - -;
+#X obj 830 -93 comment 0 10 helvetica ? 0 0 0 0 tempo entre;
+#X obj 831 -82 comment 0 10 helvetica ? 0 0 0 0 onsets;
+#X obj 807 -40 comment 0 10 helvetica ? 0 0 0 0 tempo decay;
 #X connect 1 0 2 0;
 #X connect 1 1 21 0;
 #X connect 1 2 22 0;
@@ -171,4 +176,4 @@
 #X connect 29 0 30 0;
 #X connect 30 0 31 0;
 #X connect 31 0 3 0;
-#X coords 0 -1 1 1 500 150 2 300 -110;
+#X coords 0 -1 1 1 600 150 2 300 -110;

@@ -1,0 +1,42 @@
+#N canvas 196 34 994 643 16;
+#X obj 254 118 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 665 281 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 747 282 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 203 399 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 303 404 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 116 117 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 838 282 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 115 184 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 483 141 inlet;
+#X obj 612 139 inlet;
+#X obj 434 412 outlet;
+#X obj 522 413 outlet;
+#X obj 614 412 outlet;
+#X obj 702 413 outlet;
+#X text 738 310 gerador;
+#X text 838 311 audio;
+#X text 192 433 modo-loop;
+#X text 293 433 salva midi;
+#X text 294 450 a cada 12 notas;
+#X text 216 37 playback:;
+#X text 107 45 entrada:;
+#X text 659 311 midi;
+#X text 107 149 abre-midi;
+#X obj 114 241 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 113 265 acordes mais usados;
+#X text 113 210 6 notas mais usadas;
+#X text 250 147 loop humdrum;
+#X symbolatom 108 342 30 0 0 0 - - -;
+#X text 104 311 comandos humdrum:;
+#X text 478 331 (usando o mesmo;
+#X text 484 350 nome do midi);
+#X coords 0 -1 1 1 350 270 2 100 100;

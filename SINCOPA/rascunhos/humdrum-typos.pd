@@ -1,4 +1,4 @@
-#N canvas 457 77 450 685 16;
+#N canvas 711 25 450 685 16;
 #X msg 51 23 #;
 #X msg 126 27 $;
 #X msg 38 80;
@@ -29,51 +29,18 @@
 #X msg 209 517 Control_L;
 #X text 23 609 * down-stem;
 #X msg 137 298 &;
-#N canvas 70 25 1186 713 teste 0;
-#X msg -90 17 **kern *MM120 =1 4e 4f 4g 4a 4cc 4ee;
-#X obj 460 247 textfile;
-#X msg 381 197 add \$1;
-#X msg 469 197 print;
-#X obj 460 278 print;
-#X obj 381 163 symbol;
-#X msg 412 15 **kern;
-#X obj 381 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 438 130 l2s;
-#X msg 434 52 =1;
-#X msg 452 91 4a 4cc 4ee;
-#X msg 460 162 clear;
+#N canvas 65 25 1186 713 teste 0;
 #X obj -58 521 shell;
-#X msg 551 199 write kern.krn cr;
-#X msg -92 301 date +%k%M;
-#X text -95 54 krn do compasso1;
-#X msg -37 403 gedit /home/livre/pesquisa/SINCOPA/rascunhos/kern.krn
-;
-#X msg -1 440 ./usr/local/humdrum/bin/census /home/livre/pesquisa/SINCOPA/rascunhos/kern.krn
-;
-#X text 24 513 objeto shell so funciona qnd se inicia o pd a partir
-do shell;
-#X msg 430 584 set;
-#X obj 430 552 loadbang;
-#N canvas 176 35 1064 633 simbolos 0;
-#X msg 166 16 Maximum number of voices: 3 \; Number of single barlines:
-1 \; Number of double barlines: 0 \;;
-#X obj 734 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X symbolatom 445 196 10 0 0 0 - - -;
-#X msg 513 290 1;
-#X msg 536 323 0;
-#X obj 456 319 spigot;
-#X msg 581 11 Maximum number of voices: 3 4 5 \;;
-#X obj 446 258 t b b b;
-#X floatatom 633 519 5 0 0 0 - - -;
-#X obj 456 352 delay 5;
-#X obj 456 381 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 87 167 print;
-#X obj 36 443 makesymbol %s %s %s %s %s %s %s %s %s %s %s %s %s;
-#X symbolatom 36 487 10 0 0 0 - - -;
-#N canvas -42 25 1268 713 msg 0;
+#X msg -39 443 set;
+#X obj -39 411 loadbang;
+#X obj -58 549 prepend add2;
+#X msg -58 580;
+#X text 609 277 1) gravar o midi com seq;
+#X text 616 308 2) midi2hum;
+#X text 620 344 3);
+#X text 494 346 ----------->;
+#X text 612 378 4) abrir com msgfile e parsear;
+#N canvas 0 25 1268 713 msg 0;
 #X obj 79 247 msgfile;
 #X msg 110 204 bang;
 #X obj 70 320 prepend set;
@@ -88,7 +55,6 @@ cr;
 #X obj 438 350 print;
 #X obj 561 322 prepend add2;
 #X msg 566 357;
-#X msg 104 102 read compasso1.txt;
 #X msg 305 220 set;
 #X obj 218 496 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -104,122 +70,145 @@ cr;
 #X obj 572 504 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 276 27 AGORA SIM \; );
+#X obj 64 30 inlet;
+#N canvas 0 0 474 353 montando 0;
+#X obj 170 247 textfile;
+#X msg 91 197 add \$1;
+#X msg 179 197 print;
+#X obj 170 278 print;
+#X obj 91 163 symbol;
+#X msg 122 15 **kern;
+#X obj 91 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 148 130 l2s;
+#X msg 144 52 =1;
+#X msg 162 91 4a 4cc 4ee;
+#X msg 170 162 clear;
+#X msg 261 199 write kern.krn cr;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 1;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X restore 706 44 pd montando kern;
+#X msg 104 102 read compasso1.txt cr;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
-#X connect 0 0 15 0;
+#X connect 0 0 14 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;
-#X connect 2 0 20 0;
+#X connect 2 0 19 0;
 #X connect 3 0 4 0;
 #X connect 5 0 0 0;
 #X connect 7 0 9 0;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
 #X connect 10 0 11 0;
-#X connect 12 0 0 0;
-#X connect 13 0 20 0;
-#X connect 13 0 11 0;
-#X connect 15 0 19 0;
-#X connect 19 0 14 0;
-#X connect 19 1 16 0;
-#X connect 19 2 17 0;
-#X connect 19 3 18 0;
-#X connect 19 4 21 0;
-#X restore 215 542 pd msg;
-#X obj 445 228 sel voices: Lowest;
-#X msg 673 320 1;
-#X msg 696 353 0;
-#X obj 616 349 spigot;
-#X obj 606 288 t b b b;
-#X obj 616 382 delay 5;
-#X obj 616 411 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X connect 12 0 19 0;
+#X connect 12 0 11 0;
+#X connect 14 0 18 0;
+#X connect 18 0 13 0;
+#X connect 18 1 15 0;
+#X connect 18 2 16 0;
+#X connect 18 3 17 0;
+#X connect 18 4 20 0;
+#X connect 24 0 0 0;
+#X restore 161 420 pd msg;
+#X text 649 346 aqui descobrir comando pra acordes;
+#X msg -72 218 mid2hum \$1 > m2h.krn;
+#X obj -72 189 openpanel;
+#X obj -72 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 705 465 5 0 0 0 - - -;
-#X obj 826 60 inlet;
-#X obj 602 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj -72 246 prepend set;
+#X obj 29 161 closebang;
+#X msg 29 188 set;
+#X obj 199 97 msgfile;
+#X msg 217 62 bang;
+#X obj 199 190 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 446 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 199 127 list-drip;
+#X obj 286 190 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 803 215 print;
-#X obj 721 546 count;
-#X obj 804 547 count;
-#X floatatom 726 583 5 0 0 0 - - -;
-#X floatatom 807 583 5 0 0 0 - - -;
-#X obj 738 136 list-dripslow;
-#X obj 610 83 metro 250;
-#X obj 610 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 298 531 esse aqui funciona;
-#X connect 0 0 11 0;
-#X connect 0 0 12 0;
-#X connect 1 0 31 0;
-#X connect 2 0 15 0;
-#X connect 3 0 5 1;
-#X connect 4 0 5 1;
-#X connect 5 0 8 0;
-#X connect 5 0 9 0;
-#X connect 7 0 25 0;
-#X connect 7 2 3 0;
-#X connect 9 0 10 0;
-#X connect 10 0 4 0;
-#X connect 12 0 13 0;
-#X connect 15 0 7 0;
-#X connect 15 1 19 0;
-#X connect 16 0 18 1;
-#X connect 17 0 18 1;
-#X connect 18 0 20 0;
-#X connect 18 0 22 0;
-#X connect 19 0 24 0;
-#X connect 19 2 16 0;
-#X connect 20 0 21 0;
-#X connect 21 0 17 0;
-#X connect 23 0 31 1;
-#X connect 24 0 28 0;
-#X connect 25 0 27 0;
-#X connect 27 0 29 0;
-#X connect 28 0 30 0;
-#X connect 31 0 2 0;
-#X connect 31 0 5 0;
-#X connect 31 0 18 0;
-#X connect 31 0 26 0;
-#X connect 32 0 1 0;
-#X connect 33 0 32 0;
-#X restore 68 135 pd simbolos;
-#X msg -62 329 census -k /home/livre/pesquisa/SINCOPA/rascunhos/compasso1.krn
-> /home/livre/pesquisa/SINCOPA/rascunhos/compasso1.txt;
-#X obj 39 566 prepend add2;
-#X msg -182 219 census -k /home/livre/pesquisa/SINCOPA/rascunhos/compasso1.krn
-;
-#X msg 39 606;
-#X obj -58 572 print raw;
-#X text 609 277 1) gravar o midi com seq;
-#X text 616 308 2) midi2hum;
-#X text 620 344 3);
-#X text 494 346 ----------->;
-#X text 612 378 4) abrir com msgfile e parsear;
+#X obj 373 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 2 476 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg -51 346 census -k /home/livre/pesquisa/SINCOPA/rascunhos/m2h.krn
+> /home/livre/pesquisa/SINCOPA/rascunhos/m2h.txt;
+#X msg -72 281 mid2hum /home/livre/pesquisa/SINCOPA/rascunhos/ravelgmaj.mid
+> m2h.krn;
+#X obj 486 92 prepend set;
+#X msg 199 30 read m2h.txt;
+#X obj 199 157 select notes: voices:;
+#X msg 489 123;
+#N canvas 0 100 1200 473 parser 0;
+#X obj 495 70 msgfile;
+#X msg 513 35 bang;
+#X obj 496 102 prepend set;
+#X msg 495 3 read m2h.txt;
+#X msg 496 132 HUMDRUM DATA Number of data tokens: 2510 Number of null
+tokens: 0 Number of multiple-stops: 470 Number of data records: 2511
+Number of comments: 817 Number of interpretations: 301 Number of records:
+3629 KERN DATA Number of note-heads: 2491 Number of notes: 2209 Longest
+note: 2 Shortest note: 384 Highest note: gggg# Lowest note: FFF Number
+of rests: 310 Maximum number of voices: 4 Number of single barlines:
+237 Number of double barlines: 0;
+#X obj 110 126 list-find;
+#X msg 110 17 notes:;
+#X msg 186 18 voices:;
+#X obj 198 269 list-seek;
+#X obj 186 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 110 157 + 1;
+#X floatatom 110 188 5 0 0 0 - - -;
+#X msg 198 239 set \$1;
+#X floatatom 198 299 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 0 0 5 1;
+#X connect 0 0 8 1;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 6 0 9 0;
+#X connect 7 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 13 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 8 0;
+#X restore 757 44 pd parser;
+#X connect 0 0 3 0;
+#X connect 0 0 10 0;
+#X connect 0 1 24 0;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
-#X connect 3 0 1 0;
-#X connect 5 0 2 0;
-#X connect 6 0 8 0;
-#X connect 7 0 5 0;
-#X connect 8 0 5 1;
-#X connect 9 0 8 0;
-#X connect 10 0 8 0;
-#X connect 11 0 1 0;
-#X connect 12 0 23 0;
-#X connect 12 0 26 0;
-#X connect 12 0 21 0;
-#X connect 12 1 26 0;
-#X connect 13 0 1 0;
-#X connect 14 0 12 0;
-#X connect 16 0 12 0;
-#X connect 17 0 12 0;
-#X connect 19 0 25 0;
-#X connect 20 0 19 0;
-#X connect 22 0 12 0;
-#X connect 23 0 25 0;
-#X connect 24 0 12 0;
+#X connect 3 0 4 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X connect 15 0 26 0;
+#X connect 16 0 17 0;
+#X connect 17 0 26 0;
+#X connect 18 0 21 0;
+#X connect 18 0 27 0;
+#X connect 19 0 18 0;
+#X connect 21 0 29 0;
+#X connect 25 0 0 0;
+#X connect 26 0 0 0;
+#X connect 27 0 30 0;
+#X connect 28 0 18 0;
+#X connect 29 0 20 0;
+#X connect 29 1 22 0;
+#X connect 29 2 23 0;
 #X restore 17 374 pd teste;
 #X connect 20 0 21 0;
 #X connect 24 1 25 0;

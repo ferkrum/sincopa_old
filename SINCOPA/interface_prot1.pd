@@ -1,0 +1,48 @@
+#N canvas 117 25 1137 677 16;
+#X obj 593 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 593 679 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 49 60 comment 0 10 helvetica ? 0 0 0 0 Dialogo melodico baseado
+na analise do audio de entrada;
+#X obj 44 0 comment 0 32 Typewriter ? 0 0 0 0 Prototipo 1;
+#X obj 22 120 s_tablert;
+#X obj 136 400 hradio 20 1 0 12 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 22 437 tabwrite entrada;
+#X obj 136 350 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 136 371 counter 11;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array entrada 11 float 1;
+#A 0 41 44 36 57 40 38 44 51 46 35 30;
+#X coords 0 127 10 0 400 160 1 0 0;
+#X restore 22 489 graph;
+#X obj 391 334 bng 40 250 50 0 empty empty Silencio 17 7 0 20 -262144
+-1 -1;
+#X obj 136 322 spigot;
+#X obj 193 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 631 94 tgl 40 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 632 164 tgl 40 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 686 99 comment 0 16 helvetica ? 0 0 0 0 Modo Loop;
+#X obj 687 166 comment 0 16 helvetica ? 0 0 0 0 Grava Loop;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array saida 11 float 1;
+#A 0 40 109.881 111.469 105.119 81.3062 15.425 70.9875 109.881 84.4812
+79.7187 83.6874;
+#X coords 0 127 10 0 400 160 1 0 0;
+#X restore 629 421 graph;
+#N canvas 0 0 450 300 gerador 0;
+#X restore 729 268 pd gerador melodico;
+#X connect 0 0 1 0;
+#X connect 4 0 6 0;
+#X connect 4 3 10 0;
+#X connect 4 4 11 0;
+#X connect 5 0 6 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 1;

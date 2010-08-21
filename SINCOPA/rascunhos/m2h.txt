@@ -1,0 +1,22 @@
+HUMDRUM DATA
+
+Number of data tokens:     2510
+Number of null tokens:     0
+Number of multiple-stops:  470
+Number of data records:    2511
+Number of comments:        817
+Number of interpretations: 301
+Number of records:         3629
+
+KERN DATA
+
+Number of note-heads:      2491
+Number of notes:           2209
+Longest note:              2
+Shortest note:             384
+Highest note:              gggg#
+Lowest note:               FFF
+Number of rests:           310
+Maximum number of voices:  4
+Number of single barlines: 237
+Number of double barlines: 0

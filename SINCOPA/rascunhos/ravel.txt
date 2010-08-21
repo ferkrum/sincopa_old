@@ -1,0 +1,3629 @@
+.
+.
+.
+!! Converted from MIDI with mid2hum
+!! Ticks Per Quarter Note = 480
+!! Track count: 3
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+**hint
+*MM35
+*M3/4
+*MM36
+*MM35
+*MM35
+=1
+-
+*MM38
+r
+-
+*MM39
+*MM40
+-
+*MM37
+!funny timing: -1
+-
+=2
+-
+*MM33
+-
+*MM36
+-
+*MM35
+-
+-
+*MM38
+r
+-
+=3
+-
+-
+*MM38
+*MM40
+*MM39
+-
+*MM37
+*MM36
+!funny timing: -1
+-
+*MM34
+-
+*MM35
+-
+*MM37
+*MM40
+r
+-
+=4
+-
+-
+*MM38
+-
+-
+*MM38
+*MM37
+r
+-
+r
+-
+*MM38
+r
+-
+*MM37
+!funny timing: -1
+-
+-
+*MM34
+-
+-
+=5
+-
+*MM41
+r
+-
+*MM42
+-
+*MM38
+-
+-
+*MM41
+-
+=6
+-
+*MM37
+!funny timing: -121
+-
+-
+-
+*MM41
+r
+-
+*MM39
+*MM39
+-
+=7
+-
+*MM36
+!funny timing: -1
+-
+*MM37
+-
+=8
+-
+*MM38
+*MM37
+!funny timing: -120
+-
+-
+-
+*MM37
+-
+*MM36
+-
+*MM32
+-
+*MM31
+!funny timing: -1
+-
+=9
+-
+-
+-
+*MM44
+*MM37
+r
+-
+-
+*MM41
+r
+-
+*MM40
+-
+=10
+-
+*MM37
+!funny timing: -121
+-
+-
+-
+*MM37
+-
+-
+*MM41
+r
+-
+-
+=11
+-
+*MM36
+!funny timing: -1
+-
+-
+-
+*MM40
+r
+-
+*MM38
+*MM32
+*MM35
+*MM36
+*MM35
+*MM32
+*MM37
+*MM41
+!funny timing: -3949
+-
+*MM35
+-
+-
+*MM35
+r
+-
+=12
+-
+*MM32
+*MM40
+-
+*MM39
+-
+*MM37
+-
+=13
+-
+*MM39
+-
+*MM39
+-
+-
+*MM37
+-
+*MM35
+-
+=14
+-
+*MM40
+-
+*MM37
+!funny timing: -1
+-
+*MM41
+-
+*MM37
+-
+-
+*MM35
+-
+-
+=15
+-
+*MM37
+-
+-
+-
+*MM40
+-
+*MM34
+-
+=16
+-
+*MM43
+-
+*MM41
+*MM38
+r
+-
+!funny timing: -2
+-
+=17
+-
+*MM40
+*MM38
+*MM36
+-
+r
+-
+*MM39
+-
+-
+=18
+-
+*MM39
+*MM32
+*MM37
+*MM33
+*MM33
+*MM37
+-
+*MM34
+*MM32
+*MM35
+*MM39
+*MM31
+*MM39
+*MM31
+*MM33
+*MM33
+*MM37
+*MM39
+*MM39
+*MM31
+*MM29
+*MM35
+*MM39
+*MM35
+*MM34
+*MM36
+*MM37
+*MM34
+*MM37
+*MM35
+*MM37
+*MM36
+*MM34
+r
+=19
+r
+r
+=20
+r
+r
+=21
+r
+r
+=22
+r
+r
+=23
+r
+r
+=24
+r
+r
+=25
+r
+r
+-
+-
+-
+-
+*MM38
+*MM35
+!funny timing: -1
+-
+*MM35
+r
+-
+=26
+-
+-
+-
+-
+*MM37
+-
+!funny timing: -1
+-
+-
+-
+*MM37
+-
+-
+-
+-
+=27
+-
+r
+-
+!funny timing: -1
+-
+*MM37
+-
+-
+*MM34
+-
+=28
+-
+r
+-
+-
+-
+-
+*MM40
+*MM38
+!funny timing: -1
+-
+*MM42
+r
+-
+-
+-
+-
+=29
+-
+*MM36
+-
+!funny timing: -1
+-
+*MM42
+-
+r
+-
+*MM40
+-
+-
+-
+-
+=30
+-
+*MM36
+*MM37
+!funny timing: -120
+-
+-
+-
+!funny timing: -1
+-
+*MM36
+-
+-
+-
+r
+-
+*MM42
+-
+*MM35
+-
+=31
+-
+*MM33
+-
+-
+*MM37
+-
+*MM39
+-
+-
+*MM43
+-
+!funny timing: -1
+-
+=32
+-
+*MM37
+-
+*MM41
+r
+-
+-
+*MM41
+*MM36
+!funny timing: -1
+-
+-
+r
+-
+=33
+-
+*MM38
+!funny timing: -1
+-
+*MM39
+-
+r
+-
+*MM40
+!funny timing: -1
+-
+=34
+-
+*MM36
+*MM39
+*MM41
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM39
+r
+-
+r
+=35
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM41
+r
+-
+r
+-
+r
+-
+r
+-
+r
+=36
+r
+-
+r
+-
+*MM38
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM40
+r
+-
+=37
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM33
+r
+-
+r
+-
+r
+-
+=38
+-
+r
+-
+r
+-
+r
+-
+*MM39
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+=39
+-
+r
+-
+*MM38
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM32
+r
+-
+=40
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM39
+r
+-
+r
+-
+r
+-
+=41
+-
+r
+-
+r
+-
+r
+-
+*MM32
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+=42
+-
+r
+-
+*MM38
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM34
+-
+=43
+-
+r
+m7
+*MM37
+m7
+*MM41
+m7
+m6
+*MM46
+P4
+!funny timing: -236
+-
+*MM42
+M6
+*MM43
+r
+M3
+m2
+*MM40
+!funny timing: -1
+m3
+*MM40
+m3
+=44
+m3
+*MM38
+r
+M6
+r
+M6
+*MM42
+M6
+*MM41
+M6
+*MM43
+r
+-
+r
+-
+r
+-
+r
+=45
+r
+-
+r
+-
+r
+-
+*MM40
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM36
+r
+=46
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM40
+r
+-
+r
+-
+r
+-
+=47
+-
+r
+-
+r
+-
+r
+-
+*MM41
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+=48
+-
+r
+-
+*MM41
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM41
+r
+-
+=49
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM37
+r
+-
+r
+-
+r
+-
+=50
+-
+r
+-
+r
+-
+r
+-
+*MM40
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM38
+r
+=51
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM34
+r
+-
+r
+-
+r
+=52
+r
+-
+r
+-
+r
+-
+r
+-
+*MM31
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+=53
+-
+r
+-
+*MM35
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM37
+r
+-
+r
+=54
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM42
+r
+-
+r
+-
+r
+-
+r
+=55
+r
+-
+r
+-
+r
+-
+*MM41
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+*MM45
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+*MM43
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -159
+-
+*MM40
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+*MM42
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+*MM41
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -160
+-
+!funny timing: -156
+-
+*MM43
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM44
+r
+=56
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+r
+-
+*MM42
+r
+-
+r
+-
+r
+-
+=57
+-
+r
+-
+r
+-
+r
+-
+*MM43
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=58
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM44
+!funny timing: -240
+-
+!funny timing: -240
+-
+=59
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=60
+-
+*MM42
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=61
+-
+!funny timing: -241
+-
+*MM43
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=62
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM44
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=63
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM43
+!funny timing: -240
+-
+!funny timing: -240
+-
+=64
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+=65
+-
+*MM42
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=66
+-
+!funny timing: -240
+-
+*MM41
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=67
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM45
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=68
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM44
+!funny timing: -240
+-
+!funny timing: -240
+-
+=69
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+=70
+-
+*MM46
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=71
+-
+!funny timing: -241
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=72
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM41
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=73
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM33
+!funny timing: -240
+-
+!funny timing: -240
+-
+=74
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=75
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=76
+-
+!funny timing: -240
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=77
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=78
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+=79
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=80
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=81
+-
+!funny timing: -239
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=82
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=83
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+=84
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=85
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=86
+-
+!funny timing: -241
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=87
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=88
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+=89
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+=90
+-
+*MM41
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=91
+-
+!funny timing: -241
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=92
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=93
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+=94
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=95
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=96
+-
+!funny timing: -241
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=97
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=98
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+=99
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+=100
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=101
+-
+!funny timing: -240
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=102
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=103
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+=104
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=105
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=106
+-
+!funny timing: -240
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=107
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=108
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+=109
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=110
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=111
+-
+!funny timing: -240
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=112
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=113
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+=114
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+=115
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=116
+-
+!funny timing: -241
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=117
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=118
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM40
+!funny timing: -240
+-
+!funny timing: -240
+-
+=119
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=120
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=121
+-
+!funny timing: -240
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=122
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM33
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=123
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+=124
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM37
+-
+!funny timing: -240
+-
+=125
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=126
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=127
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=128
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=129
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+=130
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+=131
+-
+*MM39
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=132
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=133
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM28
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=134
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+=135
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=136
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=137
+-
+!funny timing: -241
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=138
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=139
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM38
+!funny timing: -240
+-
+!funny timing: -240
+-
+=140
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=141
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=142
+-
+!funny timing: -241
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=143
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=144
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -239
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+=145
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -241
+-
+=146
+-
+*MM33
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=147
+-
+!funny timing: -240
+-
+*MM31
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=148
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM33
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=149
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+=150
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=151
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=152
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=153
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM36
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=154
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM31
+!funny timing: -240
+-
+!funny timing: -240
+-
+=155
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=156
+-
+*MM35
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=157
+-
+!funny timing: -240
+-
+*MM37
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=158
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM34
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+=159
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM26
+!funny timing: -240
+-
+!funny timing: -240
+-
+=160
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+!funny timing: -240
+-
+*MM32
+*MM39
+*MM37
+*MM37
+*MM37
+*MM36
+*MM34
+*MM35
+*MM35
+*MM36
+*MM37
+!funny timing: -3312
+-
+*MM34
+m6
+m6
+=161
+m6
+*MM36
+-
+m6
+*MM32
+r
+m6
+-
+*MM31
+m6
+m6
+*MM32
+-
+m6
+*MM33
+!funny timing: -1
+d6
+-
+=162
+-
+*MM26
+P4
+P4
+*MM34
+-
+d4
+d4
+-
+r
+d4
+d4
+=163
+d4
+-
+d4
+d4
+-
+d4
+d4
+!funny timing: -1
+-
+P5
+=164
+P5
+P5
+-
+*MM35
+P5
+P5
+-
+P5
+P5
+-
+=165
+-
+r
+P5
+d5
+-
+d5
+d5
+-
+!funny timing: -1
+M3
+M3
+=166
+M3
+r
+-
+M3
+r
+M3
+r
+-
+P4
+m3
+r
+-
+m3
+m3
+-
+=167
+-
+M3
+M3
+-
+M3
+!funny timing: -1
+P4
+-
+r
+P5
+P5
+-
+P4
+=168
+P4
+P4
+-
+!funny timing: -1
+M6
+M6
+-
+d5
+r
+M3
+-
+=169
+-
+!funny timing: -1
+M2
+M2
+-
+M6
+P5
+-
+m3
+m3
+=170
+m3
+!funny timing: -1
+M13 P15
+!funny timing: -240
+d7
+r
+d7
+-
+!funny timing: -2
+d4
+d4
+r
+-
+P4
+=171
+P4
+A2
+-
+!funny timing: -1
+A2
+P4
+-
+P4
+r
+P4
+-
+r
+m2 m6
+m3 d7
+=172
+m3 d7
+r
+-
+A4
+A4
+-
+!funny timing: -1
+A4
+A4
+-
+m7
+=173
+m7
+d6
+-
+m6
+m6
+-
+d4
+d5
+-
+=174
+-
+r
+d4
+d5
+!funny timing: -1
+-
+P5
+M6
+-
+A5
+A4
+=175
+A4
+r
+-
+d6
+P4
+-
+!funny timing: -1
+P4
+-
+r
+-
+P5
+=176
+P5
+-
+-
+!funny timing: -1
+P5
+P5
+-
+P5
+r
+P5
+-
+=177
+-
+!funny timing: -1
+P4
+P4
+r
+-
+P4
+r
+P4
+r
+-
+P4
+-
+-
+P4
+=178
+P4
+r
+P4
+-
+!funny timing: -1
+M3
+M3
+r
+-
+A5
+-
+-
+=179
+-
+P5
+P5
+-
+P4
+d5
+-
+!funny timing: -1
+m6
+m6
+=180
+m6
+r
+-
+m6
+m6
+-
+!funny timing: -1
+m6
+m6
+-
+m6
+=181
+m6
+m7
+-
+m6
+m7
+-
+m7
+m7
+-
+=182
+-
+m7
+-
+-
+P4 m6
+r
+P4 d7
+-
+!funny timing: -2
+P4 M6
+A3 A5
+=183
+A3 A5
+r
+-
+m6
+!funny timing: -2
+A5
+-
+r
+M6
+d7
+-
+P5
+=184
+P5
+P5
+-
+r
+d5
+d5
+-
+P4
+r
+P4
+r
+-
+d5
+=185
+d5
+d5
+r
+-
+P4
+r
+P5
+-
+!funny timing: -1
+M6
+M6
+-
+=186
+-
+P4
+P4
+-
+P4
+P4
+-
+M6
+M6
+=187
+M6
+-
+M6
+M6
+-
+A3
+P5
+-
+M6
+=188
+M6
+M6
+-
+P4
+P4
+-
+A4
+A4
+-
+=189
+-
+d4 M6
+r
+d4 M6
+-
+!funny timing: -1
+d4 M6
+d4 M6
+-
+d4 M6
+d4 M6
+=190
+d4 M6
+-
+d4 M6
+d4 M6
+-
+P4 P8
+P4 P8
+-
+A3 A5
+=191
+A3 A5
+A3 A5
+-
+P5 P8
+P5 P8
+-
+P5 P8
+P5 P8
+-
+=192
+-
+M6
+r
+M6
+-
+-
+M6
+-
+m7
+r
+m7
+r
+-
+r
+-
+=193
+-
+m7
+-
+m7
+!funny timing: -1
+d6
+-
+-
+d6
+-
+m6
+r
+m6
+=194
+m6
+-
+!funny timing: -1
+m6
+m6
+-
+m6
+m6
+-
+r
+-
+=195
+-
+M6
+-
+m7
+r
+m7
+r
+-
+r
+-
+m7
+-
+m7
+!funny timing: -1
+P5
+-
+r
+-
+=196
+-
+P5
+-
+m6
+m6
+-
+!funny timing: -1
+m6
+m6
+r
+-
+=197
+-
+m6
+m6
+-
+m6
+m6
+-
+m7
+m7
+=198
+m7
+-
+m7
+-
+!funny timing: -1
+-
+P4
+r
+P5
+-
+M6
+=199
+M6
+M6
+!funny timing: -1
+-
+M3
+r
+m2
+-
+!funny timing: -1
+m3
+m3
+r
+-
+=200
+-
+P5
+!funny timing: -1
+M6
+-
+M6
+M6
+-
+A5
+r
+A5
+-
+r
+A5
+=201
+A5
+A5
+!funny timing: -1
+-
+A5
+A5
+-
+P4
+A4
+-
+=202
+-
+m6
+m6
+-
+m6
+m6
+-
+m6
+m6
+=203
+m6
+-
+A5
+M6
+!funny timing: -1
+-
+m6
+r
+m6
+P8
+=204
+P8
+P8
+P8
+P8
+P8
+=205
+P8
+P8
+!funny timing: -2
+P8
+=206
+P8
+r
+P8
+r
+-
+A4
+A4
+-
+r
+A4
+=207
+A4
+A4
+!funny timing: -1
+-
+M2
+M2
+-
+M2
+M2
+-
+=208
+-
+m7
+m7
+-
+r
+m7
+m7
+!funny timing: -1
+-
+m7
+M3 M6
+=209
+M3 M6
+-
+r
+M3 M6
+M3 M6
+!funny timing: -1
+-
+M3 M6
+M3 M6
+-
+M3 M6
+=210
+M3 M6
+M3 M6
+-
+M3 M6
+M3 M6
+-
+m3 d6 P8
+m3 d6 P8
+r
+P8
+=211
+P8
+m3 d6 P8
+m3 d6 P8
+P8
+m3 d6 P8
+m3 d6 P8
+!funny timing: -1
+P8
+m3 d6 P8
+m3 d6 P8
+=212
+m3 d6 P8
+P8
+!funny timing: -1
+m3 d6 P8
+m3 d6 P8
+-
+m6
+r
+m6
+-
+m6
+=213
+m6
+m6
+!funny timing: -1
+-
+m6
+d6
+-
+r
+P4
+P4
+!funny timing: -1
+-
+=214
+-
+d4
+d4
+-
+d4
+d4
+-
+d4
+r
+d4
+=215
+d4
+-
+!funny timing: -1
+d4
+d4
+r
+-
+P5
+P5
+-
+P5
+=216
+P5
+P5
+-
+P5
+P5
+-
+!funny timing: -1
+P5
+d5
+-
+=217
+-
+d5
+r
+d5
+-
+!funny timing: -1
+M3
+M3
+r
+-
+M3
+P4
+=218
+P4
+-
+!funny timing: -1
+P4
+m3
+r
+-
+m3
+!funny timing: -1
+P4
+-
+r
+M3
+M3
+!funny timing: -1
+-
+=219
+-
+M3
+P4
+-
+r
+P5
+P5
+-
+m6
+!funny timing: -1
+A5
+=220
+A5
+-
+M6
+M6
+-
+d5
+r
+M3
+-
+M2
+=221
+M2
+M2
+-
+M6
+!funny timing: -1
+P5
+-
+-
+m3
+-
+d7
+d7
+=222
+d7
+-
+d7
+d7
+-
+P4
+A2
+-
+A2
+=223
+A2
+-
+r
+-
+-
+!funny timing: -1
+P4
+-
+r
+m2 m6
+m3 d7
+r
+-
+A4
+A4
+=224
+A4
+-
+-
+A4
+-
+m6
+r
+m6
+-
+!funny timing: -1
+m6
+=225
+m6
+m6
+-
+m6
+m7
+-
+m6
+d7
+-
+=226
+-
+m7
+r
+m7
+r
+-
+r
+m7
+-
+-
+P4 m6
+P4 d7
+-
+P4
+=227
+P4
+A3 A5
+-
+-
+!funny timing: -1
+A5
+-
+r
+M6
+d7
+-
+=228
+-
+P5
+P5
+-
+!funny timing: -1
+d5
+d5
+r
+-
+P4 d7
+r
+P4 d7
+=229
+P4 d7
+-
+!funny timing: -1
+m3 d6
+m3 d6
+-
+P4 d7
+P4 d7
+-
+m3 d6
+=230
+m3 d6
+m3 d6
+-
+P4 d7
+P4 d7
+-
+m3 d6
+m3 d6
+-
+=231
+-
+P4 M6
+P4 M6
+-
+P4 M6
+P4 M6
+-
+P4 M6
+P4 M6
+=232
+P4 M6
+-
+!funny timing: -1
+P4 M6
+P4 M6
+r
+-
+A3
+A3
+-
+!funny timing: -1
+P4
+=233
+P4
+-
+r
+-
+m3
+m3
+-
+m3
+m3
+-
+=234
+-
+m3
+P4
+-
+P5
+A5
+-
+A5
+P5
+=235
+P5
+-
+m3
+m3
+-
+m3
+m3
+-
+m3
+=236
+m3
+m3
+-
+m3
+m3
+-
+=237
+-
+*-
+.

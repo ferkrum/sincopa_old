@@ -1,0 +1,80 @@
+#N canvas 0 25 1143 685 16;
+#X obj -13 25 comment 0 32 Typewriter ? 0 0 0 0 Prototipo 4;
+#X obj 267 49 comment 0 14 Typewriter ? 0 0 0 0 Analise Humdrum;
+#X obj -15 134 m_midiin;
+#X obj 340 148 comment 0 16 Typewriter ? 0 0 0 0 modulo midi;
+#X obj 502 132 m_humdrum;
+#X obj 857 141 comment 0 16 Typewriter ? 0 0 0 0 modulo humdrum;
+#N canvas 57 56 1008 563 gerador 0;
+#X obj 251 114 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 675 291 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 757 292 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 213 409 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 313 414 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 848 292 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 493 151 inlet;
+#X obj 622 149 inlet;
+#X obj 444 422 outlet;
+#X obj 532 423 outlet;
+#X obj 624 422 outlet;
+#X obj 712 423 outlet;
+#X text 748 320 gerador;
+#X text 848 321 audio;
+#X text 202 443 modo-loop;
+#X text 303 443 salva midi;
+#X text 304 460 a cada 12 notas;
+#X text 226 47 playback:;
+#X text 117 55 entrada:;
+#X text 669 321 midi;
+#X text 488 341 (usando o mesmo;
+#X text 494 360 nome do midi);
+#X text 247 143 automatico;
+#X text 104 145 manual;
+#X obj 111 197 hsl 200 25 0 127 0 0 empty empty timbre -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 112 237 hsl 200 25 0 127 0 0 empty empty tempo -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 112 279 hsl 200 25 0 127 0 0 empty empty estabilidade__________instabilidade
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 110 116 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X coords 0 0 1 1 300 220 2 100 100;
+#X restore 502 450 pd gerador sonoro;
+#N canvas 509 123 1008 563 visualiza 0;
+#X obj 14 8 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 88 9 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 493 151 inlet;
+#X obj 622 149 inlet;
+#X text 596 46 playback:;
+#X text 487 54 entrada:;
+#X text 5 37 janela;
+#X text 82 37 liga;
+#X obj 12 72 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 89 70 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 8 101 notas;
+#X text 83 101 acordes;
+#X obj 176 69 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 167 101 gerador;
+#X coords 0 -1 1 1 250 130 2 0 0;
+#X restore 181 465 pd visualiza Gem;
+#X obj 242 426 comment 0 16 Typewriter ? 0 0 0 0;
+#X obj 178 431 comment 0 16 Typewriter ? 0 0 0 0 visualiza Gem;
+#X obj 816 466 comment 253 16 Typewriter ? 0 0 0 0 gerador sonoro;
+#N canvas 0 0 450 300 probabilidades 0;
+#X obj 145 186 outlet;
+#X obj 146 29 inlet;
+#X restore 502 416 pd probabilidades;
+#X connect 4 0 7 1;
+#X connect 4 0 11 0;
+#X connect 11 0 6 0;

@@ -1,0 +1,103 @@
+#N canvas 23 25 1268 700 16;
+#X obj 589 17 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 589 673 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 30 16 comment 0 32 Typewriter ? 0 0 0 0 Prototipo 2;
+#X obj 29 83 comment 0 14 Typewriter ? 0 0 0 0 Harmonizador automatico
+em 4 modos;
+#X obj 22 136 s_tablert;
+#X obj 136 416 hradio 20 1 0 12 empty empty empty 0 -8 0 10 -262144
+-1 -1 8;
+#X obj 22 453 tabwrite entrada;
+#X obj 136 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 136 387 counter 11;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array entrada 11 float 1;
+#A 0 43 35 47 46 35 52 49 35 36 48 44;
+#X coords 0 127 10 0 400 160 1 0 0;
+#X restore 22 505 graph;
+#X obj 391 350 bng 40 250 50 0 empty empty Silencio 17 7 0 20 -262144
+-1 -1;
+#X obj 136 338 spigot;
+#X obj 193 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 366 68 580 423 controle_modos 0;
+#X obj 107 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 107 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 127 101 manual;
+#X text 129 126 automatico;
+#X obj 211 233 random 4;
+#X obj 209 203 metro;
+#X obj 302 168 random 1000;
+#X obj 39 302 outlet;
+#X obj 129 305 outlet;
+#X obj 214 306 outlet;
+#X obj 298 308 outlet;
+#X obj 381 305 outlet;
+#X connect 1 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 1;
+#X coords 0 -1 1 1 200 60 2 100 100;
+#X restore 649 90 pd controle_modos;
+#N canvas 0 0 450 300 modo1 0;
+#X obj 76 20 inlet;
+#X obj 79 250 outlet;
+#X restore 649 256 pd modo1;
+#N canvas 0 0 450 300 modo2 0;
+#X obj 76 20 inlet;
+#X obj 79 250 outlet;
+#X restore 697 225 pd modo2;
+#N canvas 0 0 450 300 modo3 0;
+#X obj 76 20 inlet;
+#X obj 79 250 outlet;
+#X restore 745 195 pd modo3;
+#N canvas 0 0 450 300 modo4 0;
+#X obj 76 20 inlet;
+#X obj 79 250 outlet;
+#X restore 793 169 pd modo4;
+#N canvas 0 0 450 300 gerador_acordes 0;
+#X obj 28 25 inlet;
+#X obj 275 29 inlet;
+#X obj 249 235 outlet;
+#X restore 649 342 pd gerador_acordes;
+#X obj 826 291 tgl 40 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
+1;
+#X obj 871 286 comment 0 10 Typewriter ? 0 0 0 0 salva texto com lista
+de quais notas;
+#X obj 871 305 comment 0 10 Typewriter ? 0 0 0 0 foram harmonizadas
+com quais acordes;
+#X obj 793 470 cnv 15 100 60 empty cifra Db 20 12 0 70 -233017 -66577
+0;
+#X obj 631 432 cnv 15 100 60 empty cifra F 20 12 0 70 -233017 -66577
+0;
+#X obj 598 501 comment 0 10 Typewriter ? 0 0 0 0 Nota a ser harmonizada
+;
+#X obj 798 533 comment 0 10 Typewriter ? 0 0 0 0 Acorde;
+#N canvas 0 0 450 300 decide_nota 0;
+#X obj 169 191 outlet;
+#X restore 936 85 pd decide_nota;
+#X obj 936 134 send nota_harm;
+#X connect 0 0 1 0;
+#X connect 4 0 6 0;
+#X connect 4 3 10 0;
+#X connect 4 4 11 0;
+#X connect 5 0 6 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 1;
+#X connect 13 0 14 0;
+#X connect 13 1 15 0;
+#X connect 13 2 16 0;
+#X connect 13 3 17 0;
+#X connect 14 0 18 0;
+#X connect 15 0 18 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 19 0 18 1;
+#X connect 26 0 27 0;

@@ -1,0 +1,48 @@
+#N canvas 184 25 994 643 16;
+#X obj 134 130 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 220 130 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 302 131 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 222 294 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 303 294 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 136 224 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 359 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 359 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 359 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 275 223 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 393 131 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 139 296 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 483 141 inlet;
+#X obj 612 139 inlet;
+#X obj 434 412 outlet;
+#X obj 522 413 outlet;
+#X obj 614 412 outlet;
+#X obj 702 413 outlet;
+#X text 130 159 teclado;
+#X text 293 159 gerador;
+#X text 393 160 audio;
+#X text 127 256 abre-arquivo;
+#X text 383 214 play;
+#X text 385 235 stop;
+#X text 383 258 rewind;
+#X text 274 255 rec;
+#X text 297 326 salva midi;
+#X text 294 344 a cada 12 notas;
+#X text 216 37 playback:;
+#X text 102 100 entrada:;
+#X text 214 160 midi;
+#X text 125 328 salvar;
+#X text 101 191 controles:;
+#X text 216 326 loop;
+#X coords 0 -1 1 1 350 270 2 100 100;
