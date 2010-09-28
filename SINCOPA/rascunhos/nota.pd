@@ -1,4 +1,4 @@
-#N canvas 367 45 913 604 16;
+#N canvas 99 74 913 604 16;
 #X obj 185 90 gemhead;
 #X msg 246 255 font \$1;
 #X obj 246 226 openpanel;
@@ -8,18 +8,18 @@
 #X floatatom 302 132 5 -10 10 0 - - -;
 #X floatatom 319 80 3 -3.5 3.5 0 - - -;
 #X obj 185 471 text2d;
-#X floatatom 407 184 5 0 0 0 - - -;
+#X floatatom 499 542 5 0 0 0 - - -;
 #X obj 242 439 r size;
-#X obj 407 147 inlet;
+#X obj 403 40 inlet;
 #X obj 319 43 inlet;
 #X floatatom 525 204 5 0 0 0 - - -;
 #X symbolatom 515 108 10 0 0 0 - - -;
 #X text 628 107 notas;
 #X text 517 153 posicao;
 #X msg 460 438 0.015;
-#X msg 487 412 0.11;
-#X msg 515 386 0.236;
-#X msg 542 360 0.33;
+#X msg 485 413 0.11;
+#X msg 509 386 0.236;
+#X msg 533 360 0.33;
 #X obj 460 291 sel e f g a b c;
 #X msg 626 491 text \$1;
 #X symbolatom 625 340 10 0 0 0 - - -;
@@ -29,7 +29,11 @@
 #X obj 762 312 loadbang;
 #X obj 97 323 r fonte;
 #X obj 521 142 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4467 1;
+#X text 146 534 notas : 0.015 - 1;
+#X obj 206 -7 hsl 128 15 0.015 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 6400 1;
+#X floatatom 119 31 5 0 0 0 - - -;
 #X connect 0 0 4 0;
 #X connect 1 0 7 0;
 #X connect 2 0 1 0;
@@ -39,7 +43,7 @@
 #X connect 6 0 4 1;
 #X connect 8 0 4 2;
 #X connect 9 0 7 1;
-#X connect 10 0 8 0;
+#X connect 10 0 4 2;
 #X connect 11 0 6 0;
 #X connect 12 0 6 0;
 #X connect 13 0 20 0;
@@ -60,4 +64,6 @@
 #X connect 26 0 23 0;
 #X connect 27 0 7 0;
 #X connect 28 0 12 0;
+#X connect 30 0 31 0;
+#X connect 30 0 4 2;
 #X coords 0 -1 1 1 200 80 2 500 100;

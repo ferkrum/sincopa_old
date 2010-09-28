@@ -1,20 +1,42 @@
-#N canvas 351 89 707 478 10;
-#X obj 109 314 * 2;
-#X obj 109 349 - 1;
+#N canvas 96 63 707 478 10;
+#X obj 114 295 * 2;
+#X obj 114 330 - 1;
 #X obj 114 144 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X floatatom 109 393 5 0 0 0 - - -;
+#X floatatom 114 374 5 0 0 0 - - -;
 #X obj 168 153 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4000 1;
-#X obj 169 311 + 1;
-#X floatatom 172 392 5 0 0 0 - - -;
-#X obj 171 349 * 0.5;
+-1 -1 0 1;
+#X obj 168 295 + 1;
+#X floatatom 168 374 5 0 0 0 - - -;
+#X obj 168 333 * 0.5;
 #X obj 57 42 comment 0 10 helvetica ? 0 0 0 0 como transformar fluxo
 de numeros positivos ( 0 a 1) em fluxo de numeros centrados em zero
 (- 1 a 1);
+#X obj 416 113 vsl 15 128 53 85 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 473 272 5 0 0 0 - - -;
+#X floatatom 350 338 5 0 0 0 - - -;
+#X obj 350 271 / 10;
+#X obj 350 317 * 2.8;
+#X obj 416 271 / 53;
+#X floatatom 416 370 5 0 0 0 - - -;
+#X obj 416 302 - 1;
+#X obj 416 331 * 1.65;
+#X obj 350 295 - 7;
+#X floatatom 296 311 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
 #X connect 4 0 5 0;
 #X connect 5 0 7 0;
 #X connect 7 0 6 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 0;
+#X connect 9 0 14 0;
+#X connect 12 0 18 0;
+#X connect 12 0 19 0;
+#X connect 13 0 11 0;
+#X connect 14 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X connect 18 0 13 0;
