@@ -1,4 +1,4 @@
-#N canvas 0 70 810 596 16;
+#N canvas 128 25 810 681 16;
 #X obj 464 110 coll;
 #C restore;
 #X obj 417 24 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
@@ -52,7 +52,7 @@
 #X obj 464 149 prepend set;
 #X msg 464 181 0 1 0 1;
 #X obj 283 158 prepend set;
-#X msg 283 190 0 0 1 0;
+#X msg 283 190 1 0 1 1;
 #X obj 167 220 list-compare;
 #X obj 167 261 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -71,7 +71,7 @@
 -1 -1;
 #X obj 216 50 count 4;
 #X obj 216 82 sel 3;
-#N canvas 9 636 801 637 ocorrencia_padroes 0;
+#N canvas 128 25 801 637 ocorrencia_padroes 0;
 #X obj 247 120 sel 1 2 3 4 5 6 7 8 9 10 11;
 #X obj 131 20 inlet;
 #X obj 21 226 tabwrite padroes;
@@ -99,6 +99,12 @@
 #X obj 465 190 count 10;
 #X obj 489 161 count 10;
 #X obj 402 0 r reset_padroes;
+#X floatatom 181 492 5 0 0 0 - - -;
+#N canvas 185 54 556 460 (subpatch) 0;
+#X array padroes 12 float 1;
+#A 0 10 0 7 6 8 8 8 6 6 0 0 6;
+#X coords 0 15 11 1 200 140 1 0 0;
+#X restore 554 286 graph;
 #X connect 0 0 14 0;
 #X connect 0 1 15 0;
 #X connect 0 2 16 0;
@@ -117,6 +123,7 @@
 #X connect 7 0 13 0;
 #X connect 12 0 7 0;
 #X connect 14 0 4 0;
+#X connect 14 0 26 0;
 #X connect 15 0 4 0;
 #X connect 16 0 4 0;
 #X connect 17 0 4 0;
@@ -128,7 +135,7 @@
 #X connect 23 0 4 0;
 #X connect 24 0 4 0;
 #X connect 25 0 7 0;
-#X restore 167 442 pd ocorrencia_padroes;
+#X restore -19 561 pd ocorrencia_padroes;
 #X obj 579 248 metro 100;
 #X obj 579 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -139,14 +146,15 @@ ritmica;
 #X obj 188 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 188 83 prepend set;
-#X msg 188 118 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 188 118 10 0 7 6 8 8 8 6 6 0 0 6;
 #X obj 59 36 r clock;
 #X obj 188 216 list-mean;
 #X floatatom 188 249 5 0 0 0 - - -;
 #X obj 81 487 list-drip;
 #X obj 81 308 list-math -;
 #X obj 81 337 prepend set;
-#X msg 81 366 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 81 366 4.58333 -5.41667 1.58333 0.583333 2.58333 2.58333 2.58333
+0.583333 0.583333 -5.41667 -5.41667 0.583333;
 #X obj 30 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 81 527 moses 15;
@@ -213,11 +221,6 @@ o indice de instabilidade;
 #X obj 579 279 send clock;
 #X msg 635 211 100;
 #X msg 689 211 1000;
-#N canvas 233 174 556 460 (subpatch) 0;
-#X array padroes 12 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 10 12 0 200 140 1 0 0;
-#X restore 346 264 graph;
 #N canvas 96 86 803 641 audio 0;
 #X obj 28 94 adc~;
 #X obj 28 167 *~ 0.015;
@@ -307,9 +310,13 @@ o indice de instabilidade;
 #X obj -11 121 sel 3;
 #X obj -11 152 s reset_padroes;
 #X obj 6 -46 metro 100;
-#X obj 6 -75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 6 -75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 6 -13 random 2;
+#X obj 283 328 probalizer 200 200 12 100 1 0 28 1 33 2 34 3 33 4 33
+5 25 6 41 7 23 8 32 9 35 10 23 11 28;
+#X obj 166 452 + 1;
+#X msg 303 268 zero;
 #X connect 0 0 6 0;
 #X connect 1 0 18 0;
 #X connect 2 0 0 0;
@@ -327,6 +334,7 @@ o indice de instabilidade;
 #X connect 16 0 15 0;
 #X connect 16 1 14 1;
 #X connect 17 0 26 0;
+#X connect 17 0 42 0;
 #X connect 18 0 7 0;
 #X connect 18 1 0 0;
 #X connect 18 2 15 1;
@@ -338,15 +346,16 @@ o indice de instabilidade;
 #X connect 23 0 22 0;
 #X connect 24 0 25 0;
 #X connect 25 0 23 0;
-#X connect 25 0 36 0;
 #X connect 27 0 31 0;
 #X connect 28 0 27 0;
 #X connect 32 0 27 1;
 #X connect 33 0 27 1;
-#X connect 35 0 4 0;
-#X connect 35 1 5 0;
+#X connect 34 0 4 0;
+#X connect 34 1 5 0;
+#X connect 35 0 36 0;
 #X connect 36 0 37 0;
-#X connect 37 0 38 0;
-#X connect 39 0 41 0;
-#X connect 40 0 39 0;
-#X connect 41 0 20 0;
+#X connect 38 0 40 0;
+#X connect 39 0 38 0;
+#X connect 40 0 20 0;
+#X connect 42 0 41 0;
+#X connect 43 0 41 0;
