@@ -1,15 +1,15 @@
-#N canvas 109 28 1144 514 12;
-#X obj 18 24 comment 205 12 helvetica ? 35584 0 0 0 control modality
+#N canvas 364 26 1219 606 10;
+#X obj -25 17 comment 205 12 helvetica ? 35584 0 0 0 control modality
 in Pure Data;
-#X obj 936 347 comment 154 9 helvetica ? 35584 0 0 0 or hook up a coll
+#X obj 992 356 comment 154 9 helvetica ? 35584 0 0 0 or hook up a coll
 to this receive object to get the scale data into any coll you like
 ;
-#X obj 706 323 comment 230 9 helvetica ? 35584 0 0 0 hard coded into
+#X obj 738 343 comment 230 9 helvetica ? 35584 0 0 0 hard coded into
 the object. Give any coll the argument "modal_scale" to get scale data
 in a list. Look at these coll uses.;
-#X obj 245 87 comment 154 9 helvetica ? 35584 0 0 0 takes mode names
+#X obj 234 93 comment 154 9 helvetica ? 35584 0 0 0 takes mode names
 as symbols to establish mode;
-#X obj 413 87 comment 154 9 helvetica ? 35584 0 0 0 even takes scale
+#X obj 394 93 comment 154 9 helvetica ? 35584 0 0 0 even takes scale
 degree distances (in half steps);
 #X obj 522 324 % 12;
 #X obj 477 324 % 12;
@@ -27,8 +27,8 @@ degree distances (in half steps);
 #X floatatom 252 348 0 0 0 0 - - -;
 #X floatatom 207 348 0 0 0 0 - - -;
 #X obj 207 324 % 12;
-#X obj 936 327 receive modal_change_coll;
-#X msg 392 147 2 1 2 2 2 2 1;
+#X obj 992 336 receive modal_change_coll;
+#X msg 381 166 2 1 2 2 2 2 1;
 #X obj 1006 252 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
 #X obj 863 250 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
 #X obj 720 248 comment 125 9 helvetica ? 35584 0 0 0 Mode 7;
@@ -57,9 +57,9 @@ degree distances (in half steps);
 #X obj 863 21 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
 #X obj 720 19 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
 #X obj 625 21 comment 125 9 helvetica ? 35584 0 0 0 Mode 1;
-#X obj 1004 -21 comment 168 12 helvetica ? 35584 0 0 0 Melodic Minor
+#X obj 978 281 comment 168 12 helvetica ? 35584 0 0 0 Melodic Minor
 Modes;
-#X obj 864 -23 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Minor
+#X obj 866 -22 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Minor
 Modes;
 #X floatatom 157 142 0 0 11 0 - - -;
 #N canvas 188 148 435 482 coll_uses 0;
@@ -74,21 +74,21 @@ list;
 #X obj 119 77 comment 75 9 helvetica ? 35584 0 0 0 MIDI Note;
 #X obj 81 225 comment 50 9 helvetica ? 35584 0 0 0 octave register
 ;
-#X obj 185 196 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
-#X obj 182 262 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
-#X obj 23 354 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
-#X obj 58 77 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 185 196 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 23 171 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+#X obj 182 262 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 23 354 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 58 77 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 23 171 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
 #X obj 23 197 int;
-#X obj 23 233 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
-#X obj 23 291 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+#X obj 23 233 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 23 291 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
 #X obj 184 224 coll modal_scale;
 #C restore;
 #X obj 23 383 makenote 100 200;
@@ -111,7 +111,7 @@ list;
 #X connect 17 0 10 0;
 #X connect 18 0 19 0;
 #X connect 18 1 19 1;
-#X restore 708 362 pd coll_uses;
+#X restore 722 416 pd coll_uses;
 #X floatatom 522 290 0 0 0 0 - - -;
 #X floatatom 477 290 0 0 0 0 - - -;
 #X floatatom 432 290 0 0 0 0 - - -;
@@ -122,8 +122,8 @@ list;
 #X floatatom 207 290 0 0 0 0 - - -;
 #X obj 566 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 120 137 4;
-#X obj 9 385 comment 646 9 helvetica ? 35584 0 0 0 next send a message
+#X msg 134 166 4;
+#X obj 12 395 comment 646 9 helvetica ? 35584 0 0 0 next send a message
 box with a mode name in the right inlet. When sent \, a bang is sent
 from the outlet. The pitch class data is stored in a table called "table1"
 \, so put a table in your patch called [table table1] and you'll be
@@ -138,43 +138,43 @@ a message box with a capital letter. This will determine the tonic
 of the 7 note mode;
 #X obj 584 294 comment 79 9 helvetica ? 35584 0 0 0 bangs when done
 ;
-#X obj 7 438 comment 645 9 helvetica ? 35584 0 0 0 modes are named
+#X obj 13 475 comment 645 9 helvetica ? 35584 0 0 0 modes are named
 using traditional Greek names and variations of these names that reflect
 the least amount of chromatic inflections for the 7 modes of the Major
 Scale \, the Harmonic Minor Scale \, the Harmonic Major Scale \, and
 the Melodic Minor Scale;
-#X obj 190 0 comment 200 10 helvetica ? 35584 0 0 0 Part of the Modal
+#X obj 252 -20 comment 200 10 helvetica ? 35584 0 0 0 Part of the Modal
 Object Library by V.J. Manzo (c) 20067 / ported to Pure Data by V.J.
 Manzo (c) 2009;
 #X obj 152 8 comment 125 9 helvetica ? 35584 0 0 0 1;
-#X obj 634 -22 comment 168 12 helvetica ? 35584 0 0 0 Major Modes;
-#X obj 22 327 comment 240 9 helvetica ? 35584 0 0 0 pitch classes only
-(reduced to one octave);
+#X obj 621 -24 comment 168 12 helvetica ? 35584 0 0 0 Major Modes;
+#X obj -41 348 comment 240 9 helvetica ? 35584 0 0 0 pitch classes
+only (reduced to one octave);
 #X obj 45 102 comment 125 9 helvetica ? 35584 0 0 0 takes numbers or
 capital letters to establish tonic;
-#X obj 17 1 comment 571 20 helvetica ? 35584 0 0 0 modal_change;
+#X obj -1 -17 comment 571 20 helvetica ? 35584 0 0 0 modal_change;
 #X obj 402 258 comment 204 9 helvetica ? 35584 0 0 0 mode names in
 right inlet;
 #X obj 310 256 modal_change;
-#X obj 708 301 coll modal_scale;
+#X obj 740 321 coll modal_scale;
 #C restore;
-#X obj 706 400 comment 118 18 helvetica ? 35584 0 0 0 see also:;
-#X obj 720 -24 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Major
+#X obj 856 456 comment 118 18 helvetica ? 35584 0 0 0 see also:;
+#X obj 712 271 comment 168 12 helvetica ? 35584 0 0 0 Harmonic Major
 Modes;
-#X text 705 423 http://www.vincemanzo.com | vj@vjmanzo.com;
-#X obj 213 257 comment 204 9 helvetica ? 35584 0 0 0 tonic goes in
+#X text 857 483 http://www.vincemanzo.com | vj@vjmanzo.com;
+#X obj 128 255 comment 204 9 helvetica ? 35584 0 0 0 tonic goes in
 left inlet;
-#X obj 77 293 comment 204 9 helvetica ? 35584 0 0 0 pitches at each
+#X obj 23 291 comment 204 9 helvetica ? 35584 0 0 0 pitches at each
 scale degrees;
-#X msg 244 117 major;
-#X msg 63 136 C;
-#X msg 102 175 F#;
-#X msg 251 146 lydian_b7;
+#X msg 246 136 major;
+#X msg 42 181 C;
+#X msg 103 169 F#;
+#X msg 253 165 lydian_b7;
 #X msg 625 1 ionian;
 #X msg 625 39 dorian;
 #X msg 625 82 phrygian;
-#X msg 310 118 minor;
-#X msg 420 120 2 2 1 2 2 2 1;
+#X msg 312 137 minor;
+#X msg 400 136 2 2 1 2 2 2 1;
 #X msg 625 119 lydian;
 #X msg 625 154 mixolydian;
 #X msg 625 192 aeolian;
@@ -201,7 +201,7 @@ scale degrees;
 #X msg 1006 183 locrian_#2;
 #X msg 1006 232 locrian_b4;
 #X msg 67 166 Eb;
-#X obj 783 405 Modal_Object_Library;
+#X obj 968 465 Modal_Object_Library;
 #X connect 5 0 12 0;
 #X connect 6 0 13 0;
 #X connect 7 0 14 0;

@@ -1,0 +1,75 @@
+#N canvas 157 25 813 681 10;
+#X obj 168 76 tabdump padroes;
+#X obj 168 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 168 109 prepend set;
+#X msg 168 144 1 10 40 13 0 1 9 39 13 3 5 1;
+#X obj 39 62 r clock;
+#X obj 168 242 list-mean;
+#X floatatom 168 275 5 0 0 0 - - -;
+#X obj 61 513 list-drip;
+#X obj 61 334 list-math -;
+#X obj 61 363 prepend set;
+#X msg 61 392 -10.25 -1.25 28.75 1.75 -11.25 -10.25 -2.25 27.75 1.75
+-8.25 -6.25 -10.25;
+#X obj 10 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 61 553 moses 15;
+#X obj 138 589 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 160 584 estavel;
+#X obj 61 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 85 620 instavel;
+#X obj 39 95 t b b b b b;
+#X obj 288 486 f;
+#X obj 288 513 + 1;
+#X msg 315 457 0;
+#X floatatom 288 541 5 0 0 0 - - -;
+#X obj 288 573 sel 1 2;
+#X floatatom 205 622 5 0 0 0 - - -;
+#X text 261 624 puxar aqui uma lista e fazer uma media que seria \;
+o indice de instabilidade;
+#X msg 473 449 0;
+#X msg 417 449 1;
+#X obj 484 240 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X text 515 231 on: instavel;
+#X text 516 250 off: estavel;
+#X obj 685 334 vsl 15 128 0 30 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 671 469 sensibilidade \; de instabilidade;
+#X floatatom 653 525 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 17 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 1;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 17 0;
+#X connect 12 0 15 0;
+#X connect 12 1 13 0;
+#X connect 12 1 23 0;
+#X connect 13 0 18 0;
+#X connect 17 0 10 0;
+#X connect 17 1 3 0;
+#X connect 17 2 1 0;
+#X connect 17 3 18 0;
+#X connect 17 4 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 18 1;
+#X connect 19 0 21 0;
+#X connect 20 0 18 1;
+#X connect 21 0 22 0;
+#X connect 22 0 26 0;
+#X connect 22 1 25 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 30 0 12 1;
+#X connect 30 0 32 0;

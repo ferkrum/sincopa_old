@@ -1,4 +1,4 @@
-#N canvas 296 129 904 611 16;
+#N canvas 336 25 904 609 16;
 #N canvas 60 104 1078 660 um 0;
 #X msg 240 158 i VI iv;
 #X symbolatom 240 275 10 0 0 0 - - -;
@@ -153,7 +153,7 @@
 #X msg 289 330 iv6 ii VII;
 #X msg 256 364 i VI iv;
 #X obj 184 67 hradio 30 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 184 109 sel 0 1 2 3 4 5 6 7;
 #N canvas 302 66 685 698 tres 0;
 #X obj 390 45 receive segundo;
@@ -283,7 +283,7 @@
 #X connect 44 1 41 0;
 #X restore 230 295 pd tres;
 #X obj 457 484 prepend set;
-#X msg 456 518 iv6;
+#X msg 456 518 VI;
 #X msg 314 296 i v III;
 #N canvas 60 104 1078 660 quatro 0;
 #X symbolatom 241 332 10 0 0 0 - - -;
@@ -862,6 +862,7 @@
 #X obj 269 492 outlet~;
 #X obj 430 47 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
+#X obj 164 522 ezdac~;
 #X connect 0 0 7 0;
 #X connect 0 0 20 0;
 #X connect 1 0 7 0;
@@ -889,4 +890,6 @@
 #X connect 19 0 7 0;
 #X connect 19 0 20 0;
 #X connect 20 0 21 0;
+#X connect 20 0 23 0;
+#X connect 20 0 23 1;
 #X coords 0 -1 1 1 350 70 1 160 40;

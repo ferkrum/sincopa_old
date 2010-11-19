@@ -1,0 +1,82 @@
+#N canvas 326 91 881 693 10;
+#X text 389 17 A collection of abstractions made by Montreal pd users.
+;
+#N canvas 0 0 493 414 open 0;
+#X obj 64 80 inlet;
+#X obj 117 258 file.path.top;
+#X msg 77 319 \; pd open \$1 \$2;
+#X obj 65 284 pack s s;
+#X obj 72 127 t a b;
+#X obj 69 178 symbol;
+#X connect 0 0 4 0;
+#X connect 1 0 3 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 1 1 0;
+#X connect 5 0 3 0;
+#X restore 26 251 pd open;
+#X text 23 182 Click one of the following to browse the pdmtl abstractions.
+;
+#X text 390 94 Website: http://wiki.dataflow.ws/PdMtlAbstractions;
+#X text 391 141 Release: 2.1;
+#X text 390 126 Version: 2007-04-02;
+#X obj 152 558 dollarg;
+#X obj 26 483 msgfile;
+#X obj 25 433 MouseState;
+#X obj 28 533 gemhead;
+#X text 150 538 -- iemlib --;
+#X text 23 462 -- zexy --;
+#X text 23 412 -- cyclone --;
+#X text 24 513 -- Gem --;
+#X obj 151 484 folder_list;
+#X obj 434 500 arraysize;
+#X text 150 412 -- ggee --;
+#X obj 152 433 getdir;
+#X text 284 411 -- iemmatrix --;
+#X text 284 463 -- maxlib --;
+#X obj 286 484 dist;
+#X text 149 463 -- hcs --;
+#X obj 152 509 stat;
+#X text 451 348 Please check out the installation instructions at:
+http://wiki.dataflow.ws/PdMtlAbstractions/Installation;
+#X text 22 284 -- REQUIREMENTS --;
+#X obj 194 84 image medias/pdmtl_logo.gif;
+#X text 19 318 If any of the following externals are not found by Pure
+Data \, either you are missing (or did not install correctly) a library
+\, library folder or an external required by the pdmtl abstractions.
+Names of required libraries are included between the "-- --".;
+#X msg 26 205 1.browser.pd;
+#X msg 40 227 2.popup.pd;
+#X text 451 312 Almost all of the requirements can be found in Hans'
+Pd installers (http://at.or.at/hans/pd/installers.html).;
+#X obj 450 666 xgroove~;
+#X text 447 645 -- xsample --;
+#X text 388 40 This collection of abstractions is maintained by tof@danslchamp.org
+\, puredata@11h11.com and alexandre@quessy.net.;
+#X text 430 478 -- not part of a library (i.e. flatspace) --;
+#X obj 433 431 any2string;
+#X obj 433 452 string2any;
+#X text 433 528 -- creb --;
+#X obj 435 549 ead~;
+#X obj 564 664 wahwah~;
+#X text 560 645 -- unauthorised --;
+#X text 284 510 -- ext13 --;
+#X obj 286 534 catch13~;
+#X text 430 411 -- pdstring(moocow) --;
+#X text 20 301 Pure Data version >= 0.4;
+#X obj 24 666 pyext include/process sub;
+#X text 21 645 -- pyext -- * not included in pd-extended;
+#X text 27 558 -- tof --;
+#X text 330 645 -- freeverb --;
+#X obj 345 664 freeverb~;
+#X text 279 561 -- oscx --;
+#X obj 282 582 sendOSC;
+#X text 203 389 -------------------- REQUIRED ----------------------
+;
+#X text 203 616 -------------------- OPTIONNAL ----------------------
+;
+#X obj 27 584 folderpanel;
+#X text 210 666 (see linux.*);
+#X obj 286 431 mtx_mul;
+#X connect 27 0 1 0;
+#X connect 28 0 1 0;

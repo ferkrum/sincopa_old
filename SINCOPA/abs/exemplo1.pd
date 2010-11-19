@@ -1,0 +1,69 @@
+#N canvas 27 25 1191 693 10;
+#X floatatom 203 171 0 0 0 0 - - -;
+#X msg 174 171 F#;
+#X msg 144 171 C;
+#X msg 115 171 4;
+#X obj 150 254 modal_strictmod;
+#X obj 114 285 comment 125 9 helvetica ? -4.7104e+06 0 0 0 new tonic
+(pitch class 0-11);
+#X obj 150 222 modal_change;
+#X obj 1062 377 s midi;
+#X obj 268 468 prepend set;
+#X msg 266 501 58 0;
+#X obj 520 215 abs-sampler-sf2;
+#X obj 278 355 unpack;
+#X floatatom 278 380 0 0 0 0 - - -;
+#X floatatom 315 380 0 0 0 0 - - -;
+#X obj 278 334 r midi;
+#X obj 276 441 pack f f;
+#X obj 1067 175 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1029 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 277 412 +;
+#X floatatom 256 198 5 0 0 0 - - -;
+#X obj 204 22 abs-sampler-sf2ng;
+#X obj 303 2 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 404 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 256 -16 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 355 15 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 303 51 abs-sampler-sf2ng;
+#X msg 253 53 G;
+#X msg 352 75 G;
+#X obj 484 454 abs-sampler-sf2;
+#X obj 252 106 modal_change;
+#X floatatom 250 143 5 0 0 0 - - -;
+#X msg 797 381;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 18 1;
+#X connect 6 0 4 0;
+#X connect 8 0 9 0;
+#X connect 10 1 31 0;
+#X connect 10 2 7 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 12 0 18 0;
+#X connect 13 0 15 1;
+#X connect 14 0 11 0;
+#X connect 15 0 8 0;
+#X connect 15 0 28 0;
+#X connect 16 0 10 2;
+#X connect 17 0 28 2;
+#X connect 18 0 15 0;
+#X connect 19 0 4 1;
+#X connect 20 1 26 0;
+#X connect 20 2 25 0;
+#X connect 21 0 20 2;
+#X connect 22 0 25 2;
+#X connect 23 0 20 1;
+#X connect 24 0 25 1;
+#X connect 25 1 27 0;
+#X connect 26 0 29 0;
+#X connect 29 0 30 0;

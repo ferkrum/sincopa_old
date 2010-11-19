@@ -1,4 +1,4 @@
-#N canvas 158 79 943 644 12;
+#N canvas 251 25 943 644 12;
 #X msg 236 203 6 2 5 1;
 #X msg 222 181 1 5 6 4;
 #X obj 46 40 comment 865 12 helvetica ? 35584 0 0 0 the modal_prog
@@ -7,7 +7,7 @@ of common progressions.;
 #X obj 198 22 comment 58 9 helvetica ? 35584 0 0 0 (c) 2007;
 #X obj 246 258 comment 139 9 helvetica ? 35584 0 0 0 the outlet connects
 to the 1st inlet of the modal_triad object;
-#X obj 134 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 134 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 205 81 loadbang;
 #X obj 134 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -42,12 +42,19 @@ a bang to bang each chord from the progression;
 #X obj 134 114 metro 1000;
 #X msg 450 214 E;
 #X obj 330 422 abs-sampler-chordosc;
+#X obj 512 362 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 542 385 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 5;
+#X obj 129 302 prepend set;
+#X msg 129 325 3;
 #X connect 0 0 8 1;
 #X connect 1 0 8 1;
 #X connect 5 0 31 0;
 #X connect 6 0 21 0;
 #X connect 7 0 8 0;
 #X connect 8 0 19 0;
+#X connect 8 0 36 0;
 #X connect 9 0 10 0;
 #X connect 10 0 12 0;
 #X connect 10 0 11 0;
@@ -65,9 +72,13 @@ a bang to bang each chord from the progression;
 #X connect 18 6 19 8;
 #X connect 18 7 19 9;
 #X connect 19 0 17 0;
+#X connect 19 0 34 0;
 #X connect 19 1 16 0;
 #X connect 19 2 15 0;
 #X connect 21 0 8 1;
 #X connect 27 0 8 1;
 #X connect 31 0 7 0;
 #X connect 32 0 18 0;
+#X connect 34 0 33 3;
+#X connect 35 0 33 4;
+#X connect 36 0 37 0;
