@@ -1,0 +1,7 @@
+#N canvas 69 63 450 300 10;
+#X obj 209 98 abs_teste 2 3;
+#X obj 87 40 abs_teste 1 2;
+#X obj 210 134 prepend set;
+#X msg 213 167;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;

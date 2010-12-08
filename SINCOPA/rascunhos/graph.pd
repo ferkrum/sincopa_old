@@ -1,4 +1,4 @@
-#N canvas 352 93 624 448 10;
+#N canvas 352 93 854 602 10;
 #N canvas 6 51 450 300 (subpatch) 0;
 #X array array1 100 float 1;
 #A 0 6.99998 7.21426 7.49998 7.64283 7.92854 7.99997 8.14283 8.14283
@@ -30,7 +30,6 @@
 #X obj 351 278 random 10;
 #X obj 351 249 metro 300;
 #X obj 438 286 random 100;
-#X text 66 375 comment;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
 #X connect 4 0 6 0;
