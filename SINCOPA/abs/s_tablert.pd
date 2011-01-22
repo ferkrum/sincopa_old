@@ -1,4 +1,4 @@
-#N canvas 164 48 995 484 10;
+#N canvas 170 74 995 484 10;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-table 5000 float 2;
 #X coords 0 1 5000 -1 500 70 1 0 0;
@@ -9,7 +9,7 @@
 #X text 94 410 pitch;
 #X obj 28 210 sigmund~ -hop 4096 pitch env;
 #X obj 156 89 hsl 128 15 0 0.1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1800 1;
 #X obj 28 273 int;
 #X floatatom 28 306 5 0 0 0 - - -;
 #X obj 28 332 moses 0;
@@ -124,9 +124,9 @@
 -1 -1;
 #X obj 294 156 adc~;
 #X obj 312 -98 hsl 128 15 0 0.1 0 0 empty empty empty -2 -8 0 10 -73679
--1 -1 0 1;
+-1 -1 1800 1;
 #X obj 408 -75 hsl 128 15 40 53 0 0 empty empty empty -2 -8 0 10 -122584
--1 -1 0 1;
+-1 -1 2000 1;
 #X text 449 -104 volume de entrada;
 #X text 561 -103 (0 - 0.1);
 #X text 550 -75 sensibilidade do onset (40 - 53);
