@@ -1,0 +1,10 @@
+#N canvas 6 51 1005 671 10;
+#X obj 372 102 abs-sampler-tableid;
+#X text 48 70 [abs-sampler-tableid] abre arquivos de audio \; e analisa
+as informacoes desses arquivos e \; coloca essas informacoes em um
+arquivo de texto.;
+#X text 58 172 Modo de usar:;
+#X text 62 207 1) clique em "abrir wav" \; 2) clique em "tocar" \;
+3) clique em "grava txt" \; 4) clique em "le txt" \; 5) clique em "rewind
+txt" \; 6) clique em "linha por linha" para visualizar \; a analise
+de cada trecho \;;
