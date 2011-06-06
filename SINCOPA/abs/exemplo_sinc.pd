@@ -1,0 +1,8 @@
+#N canvas 542 81 818 580 10;
+#X obj 165 138 sinc-audioanalise;
+#X obj 166 95 sinc-sample;
+#X obj 166 57 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 396 138 sinc-audioanalise;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;

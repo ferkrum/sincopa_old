@@ -1,0 +1,91 @@
+#N canvas 0 22 662 720 10;
+#X msg 280 352 1;
+#X msg 312 352 0;
+#X obj 300 472 t l;
+#X obj 207 545 spigot 0;
+#X obj 288 452 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 207 472 list prepend;
+#X msg 280 529 0;
+#X msg 313 529 1;
+#X obj 141 492 + 1;
+#X obj 113 492 f 0;
+#X msg 138 472 0;
+#X obj 208 425 t l b;
+#X msg 386 221 64;
+#X obj 386 242 / 44100;
+#X obj 386 263 * 1000;
+#X floatatom 386 304 10 0 0 0 - - -;
+#X obj 386 198 loadbang;
+#X obj 208 112 inlet~;
+#X obj 280 165 inlet;
+#X text 279 147 Onset report from bonk~;
+#X obj 207 593 s graph;
+#N canvas 201 85 952 647 graph 0;
+#X msg 98 553 \; graph const 0 \;;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array graph 470 float 0;
+#X coords 0 1 469 -1 700 500 1;
+#X restore 98 35 graph;
+#X restore 67 248 pd graph;
+#X obj 207 569 list prepend 0;
+#X text 328 467 This accumulates the list of feature \; data as it
+is banged out successively.;
+#X obj 113 513 select 9;
+#X obj 116 627 outlet;
+#X text 23 -21 Identifying timbre based on a single analysis snapshot
+taken after an attack is not the best approach for every situation.
+Since timbre varies over time \, it makes sense to have an analysis
+strategy that captures that information. Here \, 10 successive analysis
+frames result in 10 BFCC analyses spaced apart by 64 samples (about
+1.5ms). This works extremely well with some sound sets \, and is much
+more accurate than attempting to classify with a single analysis taken
+immediately after an attack.;
+#X obj 386 283 * 9.5;
+#X obj 280 372 metro 1.45125;
+#X floatatom 441 279 10 0 0 0 - - -;
+#X obj 312 327 del 13.7868;
+#X text 397 319 Open the floodgate for metro \; and delay an appropriate
+\; amount before closing it to \; create 10 snapshots spaced 64 \;
+samples apart in time. Take \; fewer or more snapshots with \; different
+spacing if you like.;
+#X text 22 116 Connect an input signal \; to this subpatch in the \;
+parent window to try it \; out. The feature vector \; is graphed in
+real time \; in the graph subpatch \; below. Notice how \; consistent
+BFCCs are in \; terms of shape over all \; 10 frames.;
+#X obj 208 404 bfcc~ 1024 0.5;
+#X connect 0 0 28 0;
+#X connect 1 0 28 0;
+#X connect 2 0 5 1;
+#X connect 3 0 6 0;
+#X connect 3 0 10 0;
+#X connect 3 0 4 0;
+#X connect 3 0 22 0;
+#X connect 3 0 25 0;
+#X connect 4 0 5 1;
+#X connect 5 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 1;
+#X connect 7 0 3 1;
+#X connect 8 0 9 1;
+#X connect 9 0 8 0;
+#X connect 9 0 24 0;
+#X connect 10 0 9 1;
+#X connect 11 0 5 0;
+#X connect 11 1 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 27 0;
+#X connect 14 0 28 1;
+#X connect 14 0 29 0;
+#X connect 15 0 30 1;
+#X connect 16 0 12 0;
+#X connect 17 0 33 0;
+#X connect 18 0 0 0;
+#X connect 18 0 30 0;
+#X connect 22 0 20 0;
+#X connect 24 0 7 0;
+#X connect 27 0 15 0;
+#X connect 28 0 33 0;
+#X connect 30 0 1 0;
+#X connect 33 0 11 0;

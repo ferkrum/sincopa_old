@@ -1,0 +1,1 @@
+Drop the tID directory into Pd vanilla's Contents/Resources/extra folder. Open the Makefile and provide the location of Pd's source.  In a terminal window, cd to the tID directory and type "make". I build these externals on Macintosh and Fedora 11 without any issues.

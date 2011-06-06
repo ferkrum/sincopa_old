@@ -1,0 +1,79 @@
+#N canvas 307 91 936 665 10;
+#X obj 54 56 *~;
+#X obj 81 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 77 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 259 538 See timbreID helpfile:;
+#X obj 351 555 timbreID;
+#X msg 134 192 window 2048;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array barkSpec-graph 47 float 0;
+#X coords 0 1 46 0 200 140 1;
+#X restore 460 323 graph;
+#X floatatom 667 382 5 0 0 0 - - -;
+#X text 664 365 Resize graph if needed.;
+#X text 186 453 Construct a new filterbank \; with arbitrary Bark spacing.
+;
+#X obj 54 32 adc~;
+#X obj 54 556 list prepend 0;
+#X obj 157 238 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 157 258 window_function \$1;
+#X msg 179 335 power_spectrum \$1;
+#X text 132 174 Change analysis window size.;
+#X obj 179 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 223 215 Change windowing function. \; Blackman \, Cosine \,
+Hamming \, \; or Hann. Hann is the default.;
+#X obj 107 119 bang~;
+#X obj 107 140 spigot 0;
+#X obj 172 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 151 119 Bang repeatedly...;
+#X obj 54 490 barkSpec~ 1024 0.5;
+#X obj 54 578 s barkSpec-graph;
+#X msg 667 400 \; barkSpec-graph resize \$1 \;;
+#X msg 667 436 \; barkSpec-graph const 0;
+#X text 74 90 Bang to output barkSpec as a list.;
+#X text 166 288 Use power spectrum rather than \; magnitude spectrum
+to compute barkSpec.;
+#X text 63 524 Send barkSpec list to the classification external.;
+#X text 458 34 Bark-frequency spectrum is a warping of normal magnitude
+or power spectrum to the bark scale. This washes out some of the high
+frequency resolution while maintaining detail on the low end. When
+barkSpec~ receives a bang \, it spits out the Bark spectrum for the
+most recent analysis window as a list. \; \; This list can be sent
+to the timbreID external in order to identify percussive timbres in
+real time. \; \; Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message. The second creation argument specifies the Bark-spacing
+of the filterbank. This can also be changed later with the "filterbank"
+message. The default half-Bark spacing produces a 46-component vector
+regardless of window size. Bark spectrum components are normalized
+to be between 0 and 1.0.;
+#X msg 186 435 filterbank 1;
+#X obj 190 361 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 190 379 normalize \$1;
+#X text 194 396 Normalize spectrum before BFCC \; computation. Default:
+ON.;
+#X connect 0 0 22 0;
+#X connect 1 0 0 1;
+#X connect 2 0 22 0;
+#X connect 5 0 22 0;
+#X connect 7 0 24 0;
+#X connect 10 0 0 0;
+#X connect 11 0 23 0;
+#X connect 12 0 13 0;
+#X connect 13 0 22 0;
+#X connect 14 0 22 0;
+#X connect 16 0 14 0;
+#X connect 18 0 19 0;
+#X connect 19 0 22 0;
+#X connect 20 0 19 1;
+#X connect 22 0 11 0;
+#X connect 30 0 22 0;
+#X connect 31 0 32 0;
+#X connect 32 0 22 0;

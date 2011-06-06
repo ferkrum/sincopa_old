@@ -1,0 +1,72 @@
+#N canvas 307 91 958 474 10;
+#X obj 54 56 *~;
+#X obj 81 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 77 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 83 372 See timbreID helpfile:;
+#X obj 175 389 timbreID;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array mag-graph 1024 float 0;
+#X coords 0 0.1 1024 0 200 140 1;
+#X restore 460 283 graph;
+#X floatatom 667 342 5 0 0 0 - - -;
+#X obj 54 32 adc~;
+#X obj 54 406 list prepend 0;
+#X text 132 174 Change analysis window size.;
+#X obj 107 119 bang~;
+#X obj 107 140 spigot 0;
+#X obj 172 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 151 119 Bang repeatedly...;
+#X obj 54 428 s mag-graph;
+#X msg 134 192 window 1024;
+#X obj 54 300 magSpec~ 2048;
+#X text 674 274 Resize x & y range of graph.;
+#X msg 667 383 \; mag-graph resize \$1 \; mag-graph bounds 0 \$2 \$1
+0 \;;
+#X obj 667 360 pack f f;
+#X floatatom 718 310 5 0.01 1 0 - - -;
+#X obj 718 326 t b f;
+#X text 758 308 Y;
+#X text 678 325 X;
+#X text 74 90 Bang to output spectrum as a list.;
+#X text 82 343 Send magnitude spectrum list to \; the classification
+external.;
+#X obj 871 348 loadbang;
+#X obj 164 220 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 164 238 normalize \$1;
+#X text 167 258 Normalize spectrum. Default: ON.;
+#X msg 871 367 1024 0.1;
+#X text 458 34 Magnitude spectrum can be measured with a combination
+of basic Pd objects like fft~ \, *~ \, and +~. However \, those objects
+compute continuously \, and the final output is a signal vector. magSpec~
+does nothing until it receives a bang \, then it spits out the magnitude
+spectrum for the most recent analysis window as a list. \; \; This
+list can be sent to the timbreID external in order to identify percussive
+timbres in real time. \; \; Audio buffering and windowing are taken
+care of by the external \, so there is no need for tabreceive~ or block~.
+You can set the window size with a creation argument \, or change it
+with the "window" message. The length of the magnitude spectrum list
+will be one half of the specified window size. magSpec~'s output is
+optionally normalized to be between 0 and 1.0.;
+#X connect 0 0 16 0;
+#X connect 1 0 0 1;
+#X connect 2 0 16 0;
+#X connect 6 0 19 0;
+#X connect 7 0 0 0;
+#X connect 8 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 1;
+#X connect 15 0 16 0;
+#X connect 16 0 8 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 21 0 6 0;
+#X connect 21 1 19 1;
+#X connect 26 0 30 0;
+#X connect 27 0 28 0;
+#X connect 28 0 16 0;
+#X connect 30 0 18 0;

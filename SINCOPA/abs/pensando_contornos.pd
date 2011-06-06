@@ -1,0 +1,15 @@
+#N canvas 33 48 671 435 10;
+#X obj 69 81 tabletool;
+#X text 197 39 problema a ser resolvido:;
+#X text 195 74 1) quero juntar o contorno melodico;
+#X text 215 95 do que entra para influenciar o que sai;
+#X text 190 147 2) assim:;
+#X text 216 167 2 tabelas:;
+#X text 217 192 * probabilidades;
+#X text 219 212 * contorno do que entra;
+#X text 193 234 faco uma leitura na tabela da probabilidade e procuro
+na;
+#X text 195 258 tabela de contorno pego a oitava mais proxima desse
+pitch;
+#X text 88 302 outra solucao:;
+#X text 86 326 comment;

@@ -1,0 +1,116 @@
+#N canvas 216 33 952 770 10;
+#X obj 54 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array waveform 1024 float 0;
+#X coords 0 1 1023 -1 400 280 1;
+#X restore 51 21 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array barkSpec 47 float 0;
+#X coords 0 0.5 46 0 400 280 1;
+#X restore 477 21 graph;
+#X obj 54 716 list prepend 0;
+#X text 76 391 Bang to analyze the entire array.;
+#X text 107 463 Analyze a window starting at sample 44100 that is 1024
+samples long (samples 44100 - 45123). Window lengths that are not a
+power of 2 will result in zero-padded windows sized to the next largest
+power of two.;
+#N canvas 661 265 552 163 soundfile 0;
+#X obj 50 83 soundfiler;
+#X obj 50 24 loadbang;
+#X obj 185 100 table barkSpec-sample 140000;
+#X msg 50 58 read -skip 120000 testing.wav barkSpec-sample;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;
+#X restore 768 358 pd soundfile;
+#X msg 98 443 analyze 44100 1024;
+#X msg 111 569 analyze \$1 1024;
+#N canvas 928 519 251 314 waveform 0;
+#X obj 28 29 inlet;
+#X msg 28 82 1024;
+#X obj 28 103 until;
+#X obj 28 154 f 0;
+#X obj 68 154 + 1;
+#X msg 38 128 0;
+#X obj 28 259 tabwrite waveform;
+#X obj 28 175 t f f;
+#X obj 28 50 t b b f;
+#X obj 28 196 + 0;
+#X obj 28 226 tabread barkSpec-sample;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 1;
+#X connect 7 0 9 0;
+#X connect 7 1 6 1;
+#X connect 8 0 1 0;
+#X connect 8 1 5 0;
+#X connect 8 2 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X restore 263 569 pd waveform;
+#X obj 54 327 hsl 800 25 0 139000 0 0 scrub-bar empty Scrub-bar -2
+-8 0 12 -191407 -1 -1 0 1;
+#X obj 263 547 r scrub-bar;
+#X obj 111 547 r scrub-bar;
+#X obj 634 467 cnv 15 200 60 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#N canvas 159 240 938 401 other 0;
+#X obj 54 87 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 107 window_function \$1;
+#X text 120 64 Change windowing function. \; Blackman \, Cosine \,
+Hamming \, \; or Hann. Hann is the default.;
+#X obj 365 89 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 365 107 normalize \$1;
+#X text 364 70 Normalize spectrum. Default: ON.;
+#X msg 614 107 set another-sample-array;
+#X msg 54 214 samplerate 48000;
+#X text 57 193 Specify your sample's sampling rate (default: 44100)
+;
+#X msg 451 214 max_window 65536;
+#X text 452 177 Specify the largest power of 2 window size you want
+to allow. Default is 4.1943e+06 (about 10 seconds at 44.1 kHz);
+#X text 613 87 Read from a different array;
+#X obj 830 123 s bs;
+#X obj 830 230 s bs;
+#X text 390 303 Construct a new filterbank \; with arbitrary Bark spacing.
+;
+#X msg 54 285 power_spectrum \$1;
+#X obj 54 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 58 302 Use power spectrum rather than \; magnitude spectrum
+to compute BFCCs.;
+#X msg 390 285 filterbank 1;
+#X obj 830 301 s bs;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 6 0 12 0;
+#X connect 7 0 13 0;
+#X connect 9 0 13 0;
+#X connect 15 0 19 0;
+#X connect 16 0 15 0;
+#X connect 18 0 19 0;
+#X restore 669 490 pd other settings;
+#X obj 125 631 r bs;
+#X obj 54 737 s barkSpec;
+#X obj 578 601 barkSpec~;
+#X text 656 588 See the original real-time version \; of the extern
+for more information \; on Bark-weighted spectrum in general.;
+#X obj 54 680 barkSpec barkSpec-sample 0.5;
+#X text 270 673 Creation arguments are the name of the sample array
+to read from and spacing of the filterbank in Barks.;
+#X connect 0 0 19 0;
+#X connect 3 0 16 0;
+#X connect 7 0 19 0;
+#X connect 8 0 19 0;
+#X connect 11 0 9 0;
+#X connect 12 0 8 0;
+#X connect 15 0 19 0;
+#X connect 19 0 3 0;

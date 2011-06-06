@@ -1,0 +1,62 @@
+#N canvas 211 182 856 478 10;
+#X obj 192 221 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 85 427 10 0 0 0 - - -;
+#X text 203 317 Change window size.;
+#X text 540 282 See timbreID helpfile:;
+#X obj 542 302 timbreID;
+#X msg 205 335 window 2048;
+#X text 226 257 Bang continuously;
+#X obj 205 280 metro 250;
+#X obj 205 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 402 117 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X text 402 157 Audio buffering and Hann windowing are taken care of
+by the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#X obj 34 88 noise~;
+#X obj 34 119 *~;
+#X obj 70 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 131 79 *~;
+#X obj 167 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 85 394 specKurtosis~ 4096;
+#X obj 131 48 osc~ 440;
+#X text 402 27 Spectral kurtosis measures the peakedness of a spectrum.
+The kurtosis of a single sinusoid will be extremely high \, while that
+of noise will be extremely low. Start with a single sinusoid and add
+more at various frequencies to see how kurtosis reflects the changes.
+;
+#X obj 202 99 *~;
+#X obj 238 99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 272 119 *~;
+#X obj 308 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 202 68 osc~ 880;
+#X obj 272 89 osc~ 1760;
+#X obj 131 140 +~;
+#X obj 131 161 +~;
+#X text 215 219 Bang to output kurtosis;
+#X connect 0 0 16 0;
+#X connect 5 0 16 0;
+#X connect 7 0 16 0;
+#X connect 8 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 16 0;
+#X connect 13 0 12 1;
+#X connect 14 0 25 0;
+#X connect 15 0 14 1;
+#X connect 16 0 1 0;
+#X connect 17 0 14 0;
+#X connect 19 0 25 1;
+#X connect 20 0 19 1;
+#X connect 21 0 26 1;
+#X connect 22 0 21 1;
+#X connect 23 0 19 0;
+#X connect 24 0 21 0;
+#X connect 25 0 26 0;
+#X connect 26 0 16 0;

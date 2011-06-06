@@ -1,0 +1,232 @@
+#N canvas 288 220 748 451 10;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array table-1 32 float 1;
+#A 0 -0.811035 -0.768178 -0.768178 -0.868178 -0.953893 -0.925321 -0.668177
+-0.396747 -0.325318 -0.325318 -0.368175 -0.45389 -0.482461 -0.482461
+-0.482461 -0.311032 0.131828 0.203257 0.203257 0.1604 0.103256 -0.0396016
+-0.196745 -0.268174 -0.239603 -0.153888 0.0175416 0.60326 0.688974
+0.646117 0.488973 0.374687;
+#X coords 0 1 31 -1 200 140 1;
+#X restore 52 54 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array table-2 32 float 1;
+#A 0 0.757147 0.742861 0.71429 0.685718 0.642861 0.585718 0.528574
+0.485717 0.400002 0.342859 0.257144 0.214287 0.128572 0.0714287 0.0285712
+-0.0142862 -0.0571436 -0.114287 -0.157144 -0.228573 -0.271431 -0.328574
+-0.357145 -0.400003 -0.44286 -0.514289 -0.585718 -0.628576 -0.685719
+-0.771434 -0.814291 -0.842863;
+#X coords 0 1 31 -1 200 140 1;
+#X restore 262 54 graph;
+#X obj 628 304 print;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array tables-1-2 64 float 0;
+#X coords 0 1 63 -1 200 140 1;
+#X restore 472 54 graph;
+#X obj 512 228 r ttool;
+#X obj 512 276 tabletool table-1;
+#X text 50 226 [tabletool] manipulates \, searches \, and provides
+information about tables. When the response to a request is a single
+number \, it shows up at the left outlet. When the response is a list
+\, it is sent out the right outlet.;
+#N canvas 88 52 1194 636 manipulations 0;
+#X obj 18 262 s ttool;
+#X msg 18 37 offset 1;
+#X msg 112 177 shift -5;
+#X msg 98 157 shift 5;
+#X msg 31 57 offset -0.1;
+#X msg 748 381 smooth;
+#X obj 624 397 s ttool;
+#X msg 725 302 reverse;
+#X msg 748 341 invert;
+#X msg 646 201 sort;
+#X msg 49 380 copy_range 25 table-2 0 30;
+#X obj 18 428 s ttool;
+#X text 88 36 Add a positive or negative offset to all values.;
+#X text 187 161 Shift elements by index forward or back. The overflow
+wraps around to the beginning or end appropriately.;
+#X msg 58 97 scale 0.5;
+#X msg 71 117 scale 2;
+#X text 136 97 Multiply all values by a scalar;
+#X msg 624 173 scramble;
+#X text 694 172 Shuffle table elements in a random order.;
+#X text 116 329 Copy another table to the currently set table.;
+#X text 79 400 Copy part of another table to the currently set table.
+First argument is the starting index for writing to the target table.
+The remaining arguments are the table to copy from \, and the start
+and end indices of the desired range.;
+#X text 791 301 Reverse the order of all elements.;
+#X text 691 196 Sort values from low to high and reorder. For high
+to low ordering \, use "sort" \, then "reverse".;
+#X text 805 340 Flip all values. Low becomes high and vice versa.;
+#X msg 654 85 lace table-1 table-2;
+#X obj 624 126 s ttool;
+#X msg 624 53 set tables-1-2;
+#X text 809 84 Specify the two tables to lace from.;
+#X text 746 399 Smooth out hand-drawn curves by averaging with neighboring
+values.;
+#X text 622 19 To lace 2 tables together:;
+#X text 744 47 Set the current table to a target twice as big as the
+tables you're lacing from.;
+#X msg 58 557 normalize_sum;
+#X msg 18 497 normalize -1 1;
+#X obj 18 598 s ttool;
+#X text 164 550 Normalize so that all values are between 0 and 1 \,
+and the sum == 1;
+#X text 130 496 Normalize to a range with a specified minimum and maximum.
+;
+#X msg 18 330 copy table-2;
+#X msg 716 270 sort_range 7 15;
+#X text 835 269 Sort only a specific range.;
+#X msg 670 235 swap 0 31;
+#X text 748 234 Swap a pair of values.;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 14 0 0 0;
+#X connect 15 0 0 0;
+#X connect 17 0 6 0;
+#X connect 24 0 25 0;
+#X connect 26 0 25 0;
+#X connect 31 0 33 0;
+#X connect 32 0 33 0;
+#X connect 36 0 11 0;
+#X connect 37 0 6 0;
+#X connect 39 0 6 0;
+#X restore 52 310 pd manipulations;
+#N canvas 440 137 714 561 searching 0;
+#X obj 76 295 s ttool;
+#X msg 76 45 equals 0;
+#X text 223 103 Search for the number of values that are greater than
+a particular value \, and get the indices. If no values in the table
+are greater \, -1 shows up at the left outlet. Otherwise \, the number
+of greater values shows up at the left outlet \, and a list of their
+indices is spat out the right.;
+#X text 173 23 Search for the number of occurrences of a particular
+value \, and get the indices. If the requested value is not present
+in the table \, -1 shows up at the left outlet. Otherwise \, the number
+of occurrences shows up at the left outlet \, and a list of their indices
+is spat out the right.;
+#X obj 87 512 s ttool;
+#X msg 117 422 max;
+#X msg 87 391 min;
+#X text 125 390 Minimum value in table.;
+#X msg 147 451 nearest 0.5;
+#X text 244 445 Nearest value in table. The value itself appears at
+the left outlet \, and its index at the right.;
+#X msg 127 125 greater 0.3;
+#X text 263 203 Search for the number of values that are less than
+a particular value \, and get the indices. If no values in the table
+are lesser \, -1 shows up at the left outlet. Otherwise \, the number
+of lesser values shows up at the left outlet \, and a list of their
+indices is spat out the right.;
+#X msg 166 225 less -0.1;
+#X text 155 421 Maximum value in table.;
+#X connect 1 0 0 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 8 0 4 0;
+#X connect 10 0 0 0;
+#X connect 12 0 0 0;
+#X restore 194 310 pd searching;
+#N canvas 214 101 977 641 request-info 0;
+#X obj 253 601 s ttool;
+#X msg 33 65 set table-1;
+#X msg 73 86 set table-2;
+#X msg 273 77 length;
+#X msg 253 40 dump;
+#X msg 449 486 restore;
+#X msg 439 461 store;
+#X msg 460 510 wipe;
+#X msg 387 223 std;
+#X msg 410 261 integrate;
+#X msg 439 334 differentiate;
+#X msg 333 150 mean;
+#X msg 357 186 geomean;
+#X msg 304 113 sum;
+#X text 297 39 Dump all values to a list at the right outlet.;
+#X text 331 76 Ask for the length of the table.;
+#X msg 103 108 set tables-1-2;
+#X text 31 43 Specify the active table.;
+#X text 510 485 Restore the stored values after you've messsed them
+up.;
+#X text 503 510 Wipe all memory.;
+#X text 437 395 Store the table values to internal memory. Note that
+if you store a table \, then set to a different active table \, the
+internal memory will still contain the former table's values. Hit store
+again to update memory after setting to the new table.;
+#X text 338 112 Sum all values.;
+#X text 372 149 Take the arithmetic mean.;
+#X text 423 223 Calculate standard deviation.;
+#X text 487 257 If table size == N \, this creates a list of N values
+where term_i = tablevalue_i + tablevalue_i-1 ... tablevalue_0. This
+is useful when you have a table full of inter onset values and want
+the total duration at any given point.;
+#X text 543 332 This creates a list of N values where term_i = tablevalue_i
+- tablevalue_i-1.;
+#X obj 690 77 r info;
+#X text 421 185 Take the geometric mean (you may get nan's).;
+#X obj 690 98 nbx 6 36 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 36
+-262144 -1 -1 20 256;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
+#X connect 16 0 0 0;
+#X connect 26 0 28 0;
+#X restore 309 310 pd request-info;
+#X obj 512 350 nbx 6 24 -1e+37 1e+37 0 0 info empty empty 0 -8 0 24
+-262144 -1 -1 20 256;
+#N canvas 295 266 723 540 multi-table-math 0;
+#X msg 24 152 dot table-2;
+#X msg 74 172 euclid table-2;
+#X msg 124 192 taxi table-2;
+#X text 22 65 Dot product;
+#X text 22 85 Euclidean distance;
+#X text 22 105 Taxicab distance;
+#X text 22 125 Pearson correlation;
+#X msg 164 212 corr table-2;
+#X obj 24 273 s ttool;
+#X obj 190 487 s ttool;
+#X msg 190 364 set tables-1-2;
+#X text 303 363 Set a target table to which you'll write the result.
+;
+#X msg 220 396 add table-1 table-2;
+#X text 375 395 Add value pairs by index.;
+#X msg 230 416 subtract table-1 table-2;
+#X text 415 415 Subtract value pairs by index.;
+#X msg 240 436 multiply table-1 table-2;
+#X text 425 435 Multiply value pairs by index.;
+#X msg 250 456 divide table-1 table-2;
+#X text 418 455 Divide value pairs by index.;
+#X text 23 17 These four functions operate between the active table
+and the table passed with the message.;
+#X text 188 320 These functions perform arithmetic on 2 tables \, and
+write the results to the active table.;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 7 0 8 0;
+#X connect 10 0 9 0;
+#X connect 12 0 9 0;
+#X connect 14 0 9 0;
+#X connect 16 0 9 0;
+#X connect 18 0 9 0;
+#X restore 168 356 pd multi-table-math;
+#X connect 4 0 5 0;
+#X connect 5 0 10 0;
+#X connect 5 1 2 0;

@@ -1,0 +1,31 @@
+#N canvas 160 135 802 416 10;
+#X obj 134 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 85 377 10 0 0 0 - - -;
+#X text 148 178 Change window size.;
+#X text 490 262 See timbreID helpfile:;
+#X obj 492 282 timbreID;
+#X msg 150 196 window 2048;
+#X obj 85 74 +~;
+#X obj 85 20 osc~ 400;
+#X obj 103 43 osc~ 500;
+#X obj 85 304 specCentroid~ 1024;
+#X text 131 107 Bang to output centroid.;
+#X text 372 27 Spectral Centroid is the center of mass of magnitude
+spectrum \, and is a common low-level timbre feature. It is computed
+as the ratio of the sum of spectral magnitude weighted by frequency
+to the sum of spectral magnitude. Therefore \, it reports the frequency
+associated with spectral center of mass. This is clearly demonstrated
+at left \, where two perfect spikes in the spectrum at 400 Hz and 500
+Hz produce a centroid near 450 Hz. \; \; This feature can be sent to
+the timbreID external in order to identify percussive timbres in real
+time. \; \; Audio buffering and Hann windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#X connect 0 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 9 0 1 0;

@@ -1,0 +1,57 @@
+#N canvas 37 149 1126 378 12;
+#X msg 427 163 bang;
+#X msg 515 166 stop;
+#X text 383 323 GRAVADOR;
+#X obj 340 157 inlet~;
+#X obj 427 128 inlet;
+#X obj 515 129 inlet;
+#X obj 384 291 tabwrite~ grava;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array grava 441000 float 2;
+#X coords 0 1 440999 -1 200 140 1;
+#X restore 104 169 graph;
+#X obj 804 230 savepanel;
+#X obj 804 275 soundfiler;
+#X msg 804 172 salvar;
+#X obj 804 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 804 251 write \$1 grava;
+#X obj 804 139 inlet;
+#X text 806 109 bang p salvar;
+#X text 427 101 comeco;
+#X text 516 99 fim;
+#X text 338 114 audio;
+#X obj 624 303 dac~;
+#X obj 623 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 623 208 tabplay~ grava;
+#X obj 623 129 inlet;
+#X obj 624 275 *~ 1;
+#X obj 108 109 bng 30 250 50 0 empty empty start 17 7 0 10 -262144
+-1 -1;
+#X obj 163 110 bng 30 250 50 0 empty empty stop 17 7 0 10 -262144 -1
+-1;
+#X obj 217 112 bng 30 250 50 0 empty empty toca 17 7 0 10 -262144 -1
+-1;
+#X obj 258 128 bng 30 250 50 0 empty empty salva 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 8 0 12 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X connect 12 0 9 0;
+#X connect 13 0 10 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 21 0 19 0;
+#X connect 22 0 18 0;
+#X connect 22 0 18 1;
+#X connect 23 0 0 0;
+#X connect 24 0 1 0;
+#X connect 25 0 19 0;
+#X connect 26 0 10 0;
+#X coords 0 -1 1 1 220 220 1 100 100;

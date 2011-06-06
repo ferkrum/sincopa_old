@@ -1,0 +1,39 @@
+#N canvas 297 212 921 416 10;
+#X floatatom 494 283 10 0 0 0 - - -;
+#X msg 494 192 927.55 819.1 527.85 497.31 303.98;
+#X text 37 120 Suppose you take 32 spectral centroid measurements over
+the course of a 2 second sound \, and 16 centroid measurements over
+the course of a 1 second sound. A distance between these two feature
+vectors cannot be calculated because they have a different number of
+components.;
+#X text 37 290 Creating a larger feature vector composed of several
+time-varying timbre features summarized in this fashion will pack a
+great deal of information into one compact descriptor. In other words
+\, you can create a vector that describes how spectral centroid \,
+flatness \, flux \, and individual Bark-frequency cepstral coefficients
+vary over the course of a sound.;
+#X text 531 350 Also see:;
+#X text 37 200 Taking the mean and standard deviation for each of these
+centroid lists creates two 2-component lists that CAN be compared to
+compute a distance. All the precise detail of how centroid varied over
+the course of each sound is lost \, but mean and standard deviation
+do provide meaningful general information about a data set.;
+#X obj 603 350 std;
+#X text 37 30 [mean] calculates the arithmetic mean (average) of a
+list of numbers. The list must have at least 1 element. It is intended
+to be used for summarizing time-varying timbre attributes that are
+measured with other timbreID externals. This provides one way to compare
+the spectro-temporal characteristics of sounds with different durations.
+;
+#X obj 493 30 cnv 15 100 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 511 32 **NOTE**;
+#X text 491 52 If you're using Pd-extended \, typing "mean" into an
+object box will bring up a mean external from the cyclone library.
+It functions slightly differently \, so be sure you're invoking the
+correct one. You could be sure of this by always invoking the timbreID
+mean like this:;
+#X obj 494 127 tID/mean;
+#X obj 494 238 tID/mean;
+#X connect 1 0 12 0;
+#X connect 12 0 0 0;

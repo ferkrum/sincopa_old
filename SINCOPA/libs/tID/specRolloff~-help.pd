@@ -1,0 +1,43 @@
+#N canvas 328 287 829 417 10;
+#X obj 121 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 85 367 10 0 0 0 - - -;
+#X text 156 136 Change window size.;
+#X text 490 273 See timbreID helpfile:;
+#X obj 492 293 timbreID;
+#X msg 158 154 window 2048;
+#X obj 33 62 *~;
+#X obj 62 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 85 62 *~;
+#X obj 114 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 33 31 noise~;
+#X text 118 93 Bang to output brightness.;
+#X obj 85 31 osc~ 440;
+#X obj 85 331 specRolloff~ 1024 0.85;
+#X msg 185 218 concentration 0.9;
+#X text 372 26 Spectral Roll-off is the frequency below which a certain
+amount of total spectral energy is concentrated. The default concentration
+is 0.85 \, but you can change this with the concentration message below.
+Keep in mind that roll-off reports the frequency associated with the
+spectral bin in question. Bin frequency resolution depends on window
+size (N) and sampling rate (SR) \, and all bin frequencies will be
+multiples of SR/N. The rolloff for the single 440 Hz sinusoid at left
+is actually 473.73 Hz when N=1024 and SR=44100. \; \; This feature
+can be sent to the timbreID external in order to identify percussive
+timbres in real time. \; \; Audio buffering and Hann windowing are
+taken care of by the external \, so there is no need for tabreceive~
+or block~. You can set the window size with a creation argument \,
+or change it with the "window" message.;
+#X text 184 200 Set concentration.;
+#X connect 0 0 13 0;
+#X connect 5 0 13 0;
+#X connect 6 0 13 0;
+#X connect 7 0 6 1;
+#X connect 8 0 13 0;
+#X connect 9 0 8 1;
+#X connect 10 0 6 0;
+#X connect 12 0 8 0;
+#X connect 13 0 1 0;
+#X connect 14 0 13 0;

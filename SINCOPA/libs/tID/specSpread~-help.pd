@@ -1,0 +1,38 @@
+#N canvas 211 182 856 478 10;
+#X obj 175 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 85 427 10 0 0 0 - - -;
+#X text 186 289 Change window size.;
+#X text 540 282 See timbreID helpfile:;
+#X obj 542 302 timbreID;
+#X msg 188 307 window 2048;
+#X text 198 191 Bang to output spread.;
+#X text 209 229 Bang continuously;
+#X obj 188 252 metro 250;
+#X obj 188 230 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 402 27 Spectral spread is a measure of the concentration of
+a spectrum's energy around its centroid. A sinusoid will have a very
+low spread value because all of the energy in its spectrum is in one
+place. Try changing the frequencies of the three oscillators at left
+to see how the changes affect spread.;
+#X text 402 117 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X text 402 157 Audio buffering and Hann windowing are taken care of
+by the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#X obj 85 354 specSpread~;
+#X obj 9 102 bp~;
+#X obj 9 51 noise~;
+#X floatatom 90 52 5 0 0 0 - - -;
+#X floatatom 167 59 5 0 0 0 - - -;
+#X connect 0 0 13 0;
+#X connect 5 0 13 0;
+#X connect 8 0 13 0;
+#X connect 9 0 8 0;
+#X connect 13 0 1 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 17 0 14 2;

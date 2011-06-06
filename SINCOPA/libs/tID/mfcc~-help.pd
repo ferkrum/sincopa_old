@@ -1,0 +1,66 @@
+#N canvas 278 99 911 546 10;
+#X obj 54 66 *~;
+#X obj 81 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 77 115 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 130 189 Change window size.;
+#X text 259 450 See timbreID helpfile:;
+#X obj 351 467 timbreID;
+#X msg 132 207 window 2048;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array mfcc-graph 38 float 0;
+#X coords 0 1 37 -1 200 140 1;
+#X restore 460 363 graph;
+#X floatatom 667 422 5 0 0 0 - - -;
+#X obj 54 412 mfcc~ 1024 100;
+#X text 74 98 Bang to output MFCCs as a list.;
+#X text 664 405 Resize graph if needed.;
+#X text 63 436 Send list of MFCCs to the classification external.;
+#X text 146 265 Construct a new filterbank \; with arbitrary mel spacing.
+;
+#X obj 54 481 list prepend 0;
+#X obj 54 32 adc~;
+#X obj 54 502 s mfcc-graph;
+#X msg 667 440 \; mfcc-graph resize \$1 \;;
+#X msg 667 476 \; mfcc-graph const 0;
+#X obj 110 127 bang~;
+#X obj 110 148 spigot;
+#X obj 160 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 157 126 Bang repeatedly...;
+#X obj 150 309 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 150 327 normalize \$1;
+#X text 154 344 Normalize spectrum before MFCC \; computation. Default:
+ON.;
+#X msg 146 247 filterbank 150;
+#X text 458 34 Mel-frequency cepstrum is actually much different than
+raw cepstrum. The most significant differences are an emphasis on lower
+spectral content and the use of a DCT rather than an FT in the final
+step of the process. When mfcc~ receives a bang \, it spits out the
+MFCCs for the most recent analysis window as a list. \; \; This list
+can be sent to the timbreID external in order to identify percussive
+timbres in real time. \; \; Audio buffering and Hann windowing are
+taken care of by the external \, so there is no need for tabreceive~
+or block~. You can set the window size with a creation argument \,
+or change it with the "window" message. The second creation argument
+specifies the mel-spacing of the filterbank. This can also be changed
+later with the "filterbank" message. The default 100 mel spacing produces
+a 37-component MFCC vector regardless of window size. By default \,
+MFCC components are normalized to be between 0 and 1 \, and the first
+MFCC will have a value of 1.0.;
+#X connect 0 0 9 0;
+#X connect 1 0 0 1;
+#X connect 2 0 9 0;
+#X connect 6 0 9 0;
+#X connect 8 0 17 0;
+#X connect 9 0 14 0;
+#X connect 14 0 16 0;
+#X connect 15 0 0 0;
+#X connect 19 0 20 0;
+#X connect 20 0 9 0;
+#X connect 21 0 20 1;
+#X connect 23 0 24 0;
+#X connect 24 0 9 0;
+#X connect 26 0 9 0;

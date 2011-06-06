@@ -1,0 +1,56 @@
+#N canvas 169 43 871 475 10;
+#X floatatom 329 140 8 0 0 3 chosen_ED - -;
+#X floatatom 168 140 4 0 0 3 row_index - -;
+#X obj 7 68 tgl 15 0 empty empty start/stop 0 -6 0 8 -262144 -1 -1
+1 1;
+#X floatatom 87 74 4 0 0 2 min_ED - -;
+#X floatatom 167 74 4 0 0 2 max_ED - -;
+#X floatatom 327 74 4 0 0 2 brownian_factor - -;
+#X floatatom 247 74 4 0 0 2 ED-values - -;
+#X obj 460 74 vsl 15 128 0 12 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 3175 1;
+#X text 481 56 display;
+#X text 487 75 max. ED;
+#X text 487 177 min. ED;
+#X obj 460 13 lb 12;
+#X obj 7 107 brown-rhythm 100 1000 12 0.25;
+#X obj 49 151 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 460 38 range 0 \$1;
+#X obj 7 176 QT-PercPlayer;
+#X msg 7 140 60;
+#X obj 227 347 tabwrite brown;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array brown 100 float 1;
+#A 0 231.013 151.991 100 231.013 1232.85 657.933 284.804 284.804 100
+151.991 1000 100 284.804 1232.85 123.285 432.876 100 100 1000 100 231.013
+100 657.933 284.804 123.285 1000 533.67 657.933 187.382 1232.85 231.013
+151.991 100 432.876 657.933 187.382 657.933 284.804 657.933 187.382
+100 533.67 1232.85 351.119 1232.85 231.013 100 231.013 1232.85 351.119
+811.131 432.876 100 533.67 533.67 100 1000 432.876 100 1000 533.67
+151.991 284.804 100 231.013 100 151.991 1000 811.131 100 432.876 100
+811.131 151.991 100 100 533.67 187.382 657.933 100 533.67 151.991 432.876
+100 123.285 432.876 187.382 231.013 187.382 284.804 100 351.119 100
+231.013 100 1000 533.67 100 432.876 151.991;
+#X coords 0 2000 99 0 200 140 1;
+#X restore 525 302 graph;
+#X obj 308 316 counter 100;
+#X obj 322 201 t f b;
+#X connect 0 0 20 0;
+#X connect 1 0 7 0;
+#X connect 2 0 12 0;
+#X connect 3 0 12 1;
+#X connect 4 0 12 2;
+#X connect 5 0 12 4;
+#X connect 6 0 12 3;
+#X connect 6 0 14 0;
+#X connect 11 0 14 0;
+#X connect 12 0 16 0;
+#X connect 12 0 13 0;
+#X connect 12 1 1 0;
+#X connect 12 2 0 0;
+#X connect 14 0 7 0;
+#X connect 16 0 15 0;
+#X connect 19 0 17 1;
+#X connect 20 0 17 0;
+#X connect 20 1 19 0;

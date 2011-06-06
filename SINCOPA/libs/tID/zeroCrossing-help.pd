@@ -1,0 +1,39 @@
+#N canvas 216 33 845 675 10;
+#X obj 53 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array zero-sample 354017 float 0;
+#X coords 0 1 354016 -1 200 140 1;
+#X restore 596 65 graph;
+#X text 74 151 Bang to analyze the entire array.;
+#X msg 92 190 analyze 44100 1024;
+#X text 101 210 Analyze a window starting at sample 44100 that is 1024
+samples long (samples 44100 - 45123). Window lengths that are not a
+power of 2 will result in zero-padded windows sized to the next largest
+power of two.;
+#X text 338 364 Read from a different array;
+#N canvas 661 265 460 137 soundfile 0;
+#X obj 50 83 soundfiler;
+#X obj 50 24 loadbang;
+#X msg 50 58 read -resize testing.wav zero-sample;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X restore 710 212 pd soundfile;
+#X msg 157 365 set another-sample-array;
+#X obj 53 579 nbx 5 32 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 32
+-262144 -1 -1 43777 256;
+#X msg 114 308 analyze \$1 1024;
+#X text 251 532 Creation argument is the name of the sample array to
+read from.;
+#X text 489 442 See the original real-time version \; of the extern
+for more information \; on zero crossing rate in general.;
+#X obj 359 456 zeroCrossing~;
+#X obj 53 540 zeroCrossing zero-sample;
+#X obj 117 285 hsl 400 15 0 352993 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X connect 0 0 13 0;
+#X connect 3 0 13 0;
+#X connect 7 0 13 0;
+#X connect 9 0 13 0;
+#X connect 13 0 8 0;
+#X connect 14 0 9 0;

@@ -1,0 +1,54 @@
+#N canvas 216 33 952 770 10;
+#X obj 93 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array rolloff-sample 354017 float 0;
+#X coords 0 1 354016 -1 200 140 1;
+#X restore 596 65 graph;
+#X obj 54 87 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 107 window_function \$1;
+#X text 120 64 Change windowing function. \; Blackman \, Cosine \,
+Hamming \, \; or Hann. Hann is the default.;
+#X text 114 151 Bang to analyze the entire array.;
+#X msg 132 190 analyze 44100 1024;
+#X text 141 210 Analyze a window starting at sample 44100 that is 1024
+samples long (samples 44100 - 45123). Window lengths that are not a
+power of 2 will result in zero-padded windows sized to the next largest
+power of two.;
+#X msg 191 359 samplerate 48000;
+#X text 318 357 Specify your sample's sampling rate (default: 44100)
+;
+#X msg 245 413 max_window 65536;
+#X text 372 413 Specify the largest power of 2 window size you want
+to allow. Default is 4.1943e+06 (about 10 seconds at 44.1 kHz);
+#X text 468 468 Read from a different array;
+#N canvas 661 265 460 137 soundfile 0;
+#X obj 50 83 soundfiler;
+#X obj 50 24 loadbang;
+#X msg 50 58 read -resize testing.wav rolloff-sample;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X restore 709 212 pd soundfile;
+#X msg 287 469 set another-sample-array;
+#X obj 54 719 nbx 5 32 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 32
+-262144 -1 -1 20585.7 256;
+#X obj 360 596 specRolloff~;
+#X text 490 582 See the original real-time version \; of the extern
+for more information \; on spectral rolloff in general.;
+#X text 326 673 Creation arguments are the name of the sample array
+to read from \, and a spectral energy concentration target.;
+#X msg 154 308 analyze \$1 1024;
+#X obj 54 680 specRolloff rolloff-sample 0.85;
+#X obj 157 287 hsl 400 15 0 352993 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X connect 0 0 20 0;
+#X connect 2 0 3 0;
+#X connect 3 0 20 0;
+#X connect 6 0 20 0;
+#X connect 8 0 20 0;
+#X connect 10 0 20 0;
+#X connect 14 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 15 0;
+#X connect 21 0 19 0;

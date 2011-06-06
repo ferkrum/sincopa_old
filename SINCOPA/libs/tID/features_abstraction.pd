@@ -1,0 +1,45 @@
+#N canvas 0 22 846 513 10;
+#X obj 77 452 outlet;
+#X obj 186 27 inlet;
+#X obj 77 266 specCentroid~;
+#X obj 275 266 specFlux~;
+#X obj 176 266 specFlatness~;
+#X obj 549 266 zeroCrossing~;
+#X text 231 27 An onset bang from bonk~ should come in here.;
+#X obj 345 266 specRolloff~;
+#X obj 436 266 specBrightness~;
+#X obj 77 395 pack f f f f f f;
+#X obj 186 50 t b b b b b b;
+#X obj 77 37 inlet~;
+#X obj 509 430 cepstrum~;
+#X obj 580 430 mfcc~;
+#X obj 623 430 bfcc~;
+#X text 394 104 Pack arbitrary lists of features together and send
+to timbreID.;
+#X obj 374 430 magSpec~;
+#X text 373 349 See each feature's help file for details. In addition
+to plain magnitude spectrum and Bark spectrum \, there are three cepstrum-based
+feature externals that are much more effective than the low level features
+above. bfcc~ seems to be the best. Combining cepstral features with
+low level features is also effective.;
+#X obj 438 430 barkSpec~;
+#X connect 1 0 10 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 2;
+#X connect 4 0 9 1;
+#X connect 5 0 9 5;
+#X connect 7 0 9 3;
+#X connect 8 0 9 4;
+#X connect 9 0 0 0;
+#X connect 10 0 2 0;
+#X connect 10 1 4 0;
+#X connect 10 2 3 0;
+#X connect 10 3 7 0;
+#X connect 10 4 8 0;
+#X connect 10 5 5 0;
+#X connect 11 0 2 0;
+#X connect 11 0 4 0;
+#X connect 11 0 3 0;
+#X connect 11 0 7 0;
+#X connect 11 0 8 0;
+#X connect 11 0 5 0;

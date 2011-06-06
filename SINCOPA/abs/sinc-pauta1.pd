@@ -1,0 +1,59 @@
+#N canvas 412 67 622 491 10;
+#X obj 10 53 gemhead;
+#X floatatom 53 242 5 0 100 1 size - -;
+#X msg 221 155 text \$1;
+#X msg 221 91 ===========================;
+#X obj 221 124 l2s;
+#X obj 188 -7 loadbang;
+#X obj 53 270 send size;
+#X obj 67 405 r size;
+#X msg 48 210 55;
+#X obj 290 339 comment 0 24 Typewriter ? 0 0 0 0 carregue;
+#X obj 293 362 comment 0 24 Typewriter ? 0 0 0 0 a fonte antes;
+#X obj 150 379 send fonte;
+#X text 4 22 pauta:;
+#X obj 85 181 bng 15 250 50 0 empty update empty 17 7 0 10 -262144
+-1 -1;
+#X text 103 199 comment;
+#X obj 10 434 text2d;
+#X floatatom 141 150 5 0 0 0 - - -;
+#X msg 121 320 font pgjazz.ttf;
+#X obj 34 145 translateXYZ;
+#X obj 197 26 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
+-1 0 1;
+#X obj 197 46 hsl 128 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017 -1
+-1 0 1;
+#X obj 197 66 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017 -1
+-1 0 1;
+#X text 195 7 translate;
+#X text 192 79 rotate;
+#X obj 367 8 pack f f f;
+#X obj 498 3 prepend set;
+#X msg 499 34 -8 -0.708661 -6;
+#X obj 367 -15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 18 0;
+#X connect 1 0 6 0;
+#X connect 2 0 15 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 5 0 8 0;
+#X connect 5 0 17 0;
+#X connect 7 0 15 1;
+#X connect 8 0 6 0;
+#X connect 13 0 8 0;
+#X connect 17 0 11 0;
+#X connect 17 0 15 0;
+#X connect 18 0 15 0;
+#X connect 19 0 18 1;
+#X connect 19 0 24 0;
+#X connect 20 0 18 2;
+#X connect 20 0 24 1;
+#X connect 20 0 27 0;
+#X connect 21 0 18 3;
+#X connect 21 0 24 2;
+#X connect 21 0 27 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 27 0 24 0;

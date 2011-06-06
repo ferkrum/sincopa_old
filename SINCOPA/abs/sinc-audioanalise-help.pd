@@ -1,0 +1,17 @@
+#N canvas 633 25 487 563 10;
+#X obj 121 71 ezdac~;
+#X obj -93 20 sinc-sample;
+#X obj -93 60 sinc-audioanalise;
+#X obj -64 273 sinc-prob;
+#X obj 62 -10 bng 15 250 50 0 empty empty abrir_arquiv -6 -5 0 5 -262144
+-1 -1;
+#X obj -93 -10 hradio 10 1 0 12 empty empty navega_pasta 0 -8 0 8 -262144
+-1 -1 10;
+#X obj -21 323 sinc-cenas;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 0;

@@ -1,4 +1,4 @@
-#N canvas 21 51 1171 713 10;
+#N canvas 21 51 1171 689 10;
 #X obj 124 -92 openpanel;
 #X obj 193 -100 f \$0;
 #X obj 124 -40 pack s s;
@@ -33,7 +33,7 @@
 #X obj 535 0 cnv 1 1 93 from_K1 to_K empty 1 13 2 14 -1 -123526 0;
 #X obj 563 78 bng 15 250 50 0 empty empty toca 17 7 0 10 -262144 -1
 -1;
-#N canvas 133 144 1041 578 audioin 0;
+#N canvas 133 77 1041 578 audioin 0;
 #X obj 29 23 inlet~;
 #X obj 128 22 inlet;
 #X text 537 45 1- entrada de audio;
@@ -77,6 +77,7 @@
 #X obj 119 519 send \$0-nota;
 #X obj 349 515 send \$0-vol;
 #X obj 577 523 send \$0-tempo;
+#X text 83 225 refazer usando note;
 #X connect 0 0 35 0;
 #X connect 1 0 35 1;
 #X connect 5 0 11 0;

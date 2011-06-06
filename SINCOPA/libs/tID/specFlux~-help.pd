@@ -1,0 +1,103 @@
+#N canvas 156 101 1091 587 10;
+#X obj 134 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 883 412 See timbreID helpfile:;
+#X obj 885 432 timbreID;
+#X obj 137 41 osc~ 440;
+#X obj 85 72 *~;
+#X obj 114 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 137 72 *~;
+#X obj 166 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 85 263 10 0 0 0 - - specFlux;
+#X obj 208 246 list split 5;
+#X text 180 288 Split off a specific part of the difference list so
+that we don't try to print 512 values to Pd's post window.;
+#X text 128 191 Creation arguments are window size and separation in
+samples.;
+#X text 105 402 Change window size.;
+#X msg 107 423 window 1024;
+#X text 254 390 Change distance between \; analysis windows in samples.
+;
+#X obj 376 475 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 376 493 normalize \$1;
+#X text 374 453 Normalize spectrum. Default: ON.;
+#X obj 510 522 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 508 500 Squared difference vs. Absolute value of difference.
+;
+#X msg 510 540 squaredDiff \$1;
+#X obj 377 556 s sF;
+#X obj 21 207 r sF;
+#X obj 85 223 specFlux~ 1024 128;
+#X msg 256 423 separation 512;
+#X obj 208 267 print;
+#X obj 85 41 noise~;
+#N canvas 402 55 517 376 attack-detection 0;
+#X obj 33 258 > 0.5;
+#X obj 33 279 select 1;
+#X obj 33 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 65 234 5 0 0 0 - - -;
+#X obj 33 69 adc~;
+#X text 108 231 If 0.5 is too low or high \, try a different threshhold.
+;
+#X obj 33 187 specFlux~ 1024 128;
+#X obj 66 127 bang~;
+#X obj 66 148 spigot 0;
+#X obj 139 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 161 148 Turn on for continuous analysis;
+#X text 25 8 Spectral flux can be used as a basic attack detector.
+Turn on the spigot below to check it out.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 1;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 1;
+#X restore 410 79 pd attack-detection;
+#X text 131 135 Activate a signal above and bang to output its flux.
+;
+#X text 642 27 Typically \, spectral flux is the sum of squared difference
+between two successive magnitude spectra. specFlux~ gives you the option
+of taking the absolute value of differences rather than squaring so
+that the final result is a bit larger. This is the default configuration.
+The range of values for flux depends on frame separation. With the
+default frame separation of 128 samples \, the flux of noise~ is higher
+than that of a sinusoid. \; \; specFlux~ reports the full list of differences
+(i.e. \, N/2 bins) at the right outlet \, and the sum of that list
+at the left outlet. You get a lot more detailed information about how
+a spectrum is changing with the right outlet if you have a reason to
+use it. \; \; In the [attack-detection] sub-patch \, the left outlet
+is used as an attack detector. bonk~ is much better designed for this
+purpose - the sub-patch is more of a proof of concept. \; \; This feature
+can be sent to the timbreID external in order to identify percussive
+timbres in real time. \; \; Audio buffering and Hann windowing are
+taken care of by the external \, so there is no need for tabreceive~
+or block~. You can set the window size with a creation argument \,
+or change it with the "window" message. The second creation argument
+specifies the separation between the two analysis windows in samples.
+This does not need to be a power of two. It can be changed on the fly
+with the "separation" message.;
+#X connect 0 0 23 0;
+#X connect 3 0 6 0;
+#X connect 4 0 23 0;
+#X connect 5 0 4 1;
+#X connect 6 0 23 0;
+#X connect 7 0 6 1;
+#X connect 9 0 25 0;
+#X connect 13 0 21 0;
+#X connect 15 0 16 0;
+#X connect 16 0 21 0;
+#X connect 18 0 20 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 23 0 8 0;
+#X connect 23 1 9 0;
+#X connect 24 0 21 0;
+#X connect 26 0 4 0;

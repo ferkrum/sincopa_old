@@ -1,0 +1,39 @@
+#N canvas 327 258 803 382 10;
+#X obj 134 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 85 337 10 0 0 0 - - -;
+#X text 158 178 Change window size.;
+#X text 505 242 See timbreID helpfile:;
+#X obj 507 262 timbreID;
+#X msg 160 196 window 2048;
+#X obj 85 304 specFlatness~ 1024;
+#X obj 85 31 osc~ 440;
+#X obj 33 62 *~;
+#X obj 62 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 85 62 *~;
+#X obj 114 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 33 31 noise~;
+#X text 131 95 Activate a signal above and \; bang to output its flatness.
+;
+#X text 372 27 Spectral Flatness is the ratio of the geometric mean
+of magnitude spectrum to the arithmetic mean of magnitude spectrum.
+A very noisy spectrum without clear shape (e.g. that of white noise)
+should have a high flatness value \, where 1 is perfect flatness. The
+flatness of noise~ is about 0.85 \, while the flatness of a sinusoid
+only gets as high as about 2e-05 (basically zero). \; \; This feature
+can be sent to the timbreID external in order to identify percussive
+timbres in real time. \; \; Audio buffering and Hann windowing are
+taken care of by the external \, so there is no need for tabreceive~
+or block~. You can set the window size with a creation argument \,
+or change it with the "window" message.;
+#X connect 0 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 10 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 1;
+#X connect 10 0 6 0;
+#X connect 11 0 10 1;
+#X connect 12 0 8 0;
