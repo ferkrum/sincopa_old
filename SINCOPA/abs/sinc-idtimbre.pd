@@ -1,0 +1,13 @@
+#N canvas 352 53 872 543 16;
+#X obj 43 116 sinc-sample;
+#X obj 43 42 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144 -1
+-1 8;
+#X obj 106 90 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 43 68 t f b;
+#X obj 42 167 sinc-audioanalise;
+#X obj 307 166 s;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 2;
+#X connect 3 0 0 0;
