@@ -1,6 +1,6 @@
-#N canvas 341 94 960 713 12;
-#N canvas 279 480 292 248 dsp 0;
-#N canvas 199 40 821 693 fft-analysis 0;
+#N canvas 222 53 960 689 12;
+#N canvas 281 465 292 248 dsp 0;
+#N canvas 200 53 821 689 fft-analysis 0;
 #X obj 51 477 *~;
 #X obj 18 477 *~;
 #X obj 18 499 -~;
@@ -33,7 +33,7 @@
 #X obj 591 563 loadbang;
 #X msg 426 619 set \$1 4;
 #X obj 97 425 q8_rsqrt~;
-#N canvas 139 101 1006 799 read-windows 0;
+#N canvas 140 53 1006 799 read-windows 0;
 #X obj 18 693 *~;
 #X obj 364 448 r window-size;
 #X obj 156 300 f;
@@ -377,11 +377,11 @@ bang;
 #X connect 4 0 1 1;
 #X restore 27 670 pd dsp;
 #X obj 508 468 hsl 128 15 0 100 0 1 master-volume empty Master-volume
--2 -8 0 12 -262144 -1 -1 10700 1;
-#N canvas 345 240 786 413 pvoc-controls 0;
+-2 -8 0 12 -262144 -1 -1 10800 1;
+#N canvas 347 298 786 413 pvoc-controls 0;
 #X floatatom 154 166 3 0 0 0 - speed-set -;
 #X floatatom 42 168 7 0 0 0 - location-set -;
-#N canvas 260 23 647 768 phase-tables 0;
+#N canvas 261 53 647 768 phase-tables 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array prev-imag 4096 float 0;
 #X coords 0 1000 4096 -1000 400 300 1;
@@ -443,10 +443,10 @@ and window-msec (analysis window size in seconds and msec).;
 #X connect 19 1 4 0;
 #X connect 19 1 18 0;
 #X restore 427 311 pd hann-window;
-#N canvas 88 199 702 494 insample 0;
+#N canvas 89 228 702 494 insample 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-sample 354017 float 0;
-#X coords 0 1 354016 -1 400 150 1;
+#X array \$0-sample 2.36237e+06 float 0;
+#X coords 0 1 2.36237e+06 -1 400 150 1;
 #X restore 282 104 graph;
 #X obj 28 133 r read-sample;
 #X obj 28 184 unpack s f;
@@ -535,9 +535,9 @@ and window-msec (analysis window size in seconds and msec).;
 #X restore 27 647 pd pvoc-controls;
 #X obj 27 627 bng 15 250 50 0 open-file empty Open-file 17 7 0 12 -262144
 -1 -1;
-#X obj 30 565 hsl 768 30 0 8026.6 0 0 location-set-set location-set-set-properties
-Scrub-bar -2 -8 0 12 -262144 -1 -1 0 1;
-#N canvas 231 22 1048 798 analyses 0;
+#X obj 30 565 hsl 768 30 0 53567.4 0 0 location-set-set location-set-set-properties
+Scrub-bar -2 -8 0 12 -262144 -1 -1 4626 1;
+#N canvas 231 53 1048 798 analyses 0;
 #X obj 47 164 list prepend 0;
 #X obj 47 187 s mag-spec-graph;
 #X obj 297 164 list prepend 0;
@@ -721,36 +721,56 @@ Scrub-bar -2 -8 0 12 -262144 -1 -1 0 1;
 #X array cepstrum-graph 1024 float 0;
 #X coords 0 0.25 1023 -0.25 200 140 1;
 #X restore 729 42 graph;
-#X obj 39 255 nbx 5 32 -1e+37 1e+37 0 0 empty brightness-graph empty
-0 -8 0 32 -262144 -1 -1 0.890223 256;
+#X obj 36 258 nbx 5 32 -1e+37 1e+37 0 0 empty brightness-graph empty
+0 -8 0 32 -262144 -1 -1 0.134666 256;
 #X text 37 235 Brightness;
 #X obj 269 255 nbx 5 32 -1e+37 1e+37 0 0 empty centroid-graph empty
-0 -8 0 32 -262144 -1 -1 13224.5 256;
+0 -8 0 32 -262144 -1 -1 923.911 256;
 #X obj 499 255 nbx 5 32 -1e+37 1e+37 0 0 empty flatness-graph empty
-0 -8 0 32 -262144 -1 -1 0.6759 256;
+0 -8 0 32 -262144 -1 -1 0.0450357 256;
 #X obj 729 255 nbx 5 32 -1e+37 1e+37 0 0 empty flux-graph empty 0 -8
-0 32 -262144 -1 -1 0.0275496 256;
+0 32 -262144 -1 -1 2.41676 256;
 #X text 267 235 Centroid;
 #X text 497 235 Flatness;
 #X text 727 235 Flux;
 #X obj 39 345 nbx 5 32 -1e+37 1e+37 0 0 empty kurtosis-graph empty
-0 -8 0 32 -262144 -1 -1 1.79405 256;
+0 -8 0 32 -262144 -1 -1 39.0715 256;
 #X obj 269 345 nbx 5 32 -1e+37 1e+37 0 0 empty rolloff-graph empty
-0 -8 0 32 -262144 -1 -1 20628.8 256;
+0 -8 0 32 -262144 -1 -1 1076.66 256;
 #X obj 499 345 nbx 5 32 -1e+37 1e+37 0 0 empty skewness-graph empty
-0 -8 0 32 -262144 -1 -1 -0.4808 256;
+0 -8 0 32 -262144 -1 -1 6.81291 256;
 #X obj 729 345 nbx 5 32 -1e+37 1e+37 0 0 empty spread-graph empty 0
--8 0 32 -262144 -1 -1 7554.37 256;
+-8 0 32 -262144 -1 -1 2030.94 256;
 #X text 37 325 Kurtosis;
 #X text 267 325 Rolloff;
 #X text 497 325 Skewness;
 #X text 727 325 Spread;
 #X obj 39 435 nbx 5 32 -1e+37 1e+37 0 0 empty zero-crossing-graph empty
-0 -8 0 32 -262144 -1 -1 1290 256;
+0 -8 0 32 -262144 -1 -1 25 256;
 #X text 37 415 Zero-crossing;
 #X obj 505 517 nbx 10 32 -1e+37 1e+37 0 0 location-set location-set-set
-empty 0 -8 0 32 -262144 -1 -1 0 256;
+empty 0 -8 0 32 -262144 -1 -1 3230.81 256;
 #X text 502 496 Position (milliseconds);
 #X obj 269 435 nbx 5 32 -1e+37 1e+37 0 0 empty irregularity-graph empty
-0 -8 0 32 -262144 -1 -1 0.255875 256;
+0 -8 0 32 -262144 -1 -1 0.629117 256;
 #X text 267 415 Irregularity;
+#X obj 33 533 line;
+#X msg 32 510 \$1 10;
+#X obj 143 520 metro;
+#X obj 144 490 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 860 397 vsl 40 128 0 50 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 614 1;
+#X obj 811 399 vsl 40 128 0 1 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 1710 1;
+#X obj 203 480 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 32 489 counter 50002;
+#X connect 10 0 37 0;
+#X connect 14 0 36 0;
+#X connect 32 0 4 0;
+#X connect 33 0 32 0;
+#X connect 34 0 39 0;
+#X connect 35 0 34 0;
+#X connect 38 0 39 2;
+#X connect 39 0 33 0;

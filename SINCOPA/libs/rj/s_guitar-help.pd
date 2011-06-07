@@ -1,4 +1,4 @@
-#N canvas 185 305 935 524 10;
+#N canvas 232 189 935 524 10;
 #X msg 334 175 pitch \$1;
 #X floatatom 308 126 5 0 0 0 - - -;
 #X obj 218 296 soundoutput;

@@ -1,4 +1,4 @@
-#N canvas 235 30 526 489 10;
+#N canvas 246 114 526 489 10;
 #X obj 6 346 readsf~;
 #X msg 6 233 start;
 #X msg 21 278 stop;
@@ -7,7 +7,7 @@ black red;
 #X msg -89 -32 location /home/livre/pesquisa/SINCOPA/samples;
 #X msg -89 351 open \$1;
 #X obj -89 382 prepend set;
-#X msg -89 410 open /home/livre/pesquisa/SINCOPA/samples/guit2-copia1.wav
+#X msg -89 410 open /home/livre/pesquisa/SINCOPA/samples/marcha_stravinsky.wav
 ;
 #X obj -89 -55 loadbang;
 #X obj -73 236 delay 10;
@@ -21,20 +21,20 @@ black red;
 #X obj 6 384 outlet~;
 #X msg 109 194 open \$1;
 #X obj 109 113 openpanel;
-#X obj 226 25 bng 15 250 50 0 empty empty abrir_arquiv -6 -5 0 5 -262144
+#X obj 226 111 bng 15 250 50 0 empty empty abrir_arquiv -6 -5 0 5 -262144
 -1 -1;
 #X obj 109 222 prepend set;
 #X msg 109 248 open /home/livre/pd-externals/a_caetano/img/0001.wav
 ;
-#X obj 90 34 hradio 10 1 0 12 empty empty navega_pasta 0 -8 0 8 -262144
--1 -1 1;
-#X msg 90 52 seek \$1;
-#X obj 90 -6 inlet;
-#X obj 226 -10 inlet;
+#X obj 93 43 hradio 15 1 0 20 empty empty navega_pasta 0 -8 0 8 -262144
+-1 -1 8;
+#X msg 91 77 seek \$1;
+#X obj 94 -5 inlet;
+#X obj 226 76 inlet;
 #X obj 68 345 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 307 0 inlet;
-#X obj 274 73 spigot;
+#X obj 326 95 inlet;
+#X obj 292 132 spigot;
 #X obj 295 399 outlet;
 #X connect 0 0 14 0;
 #X connect 0 1 24 0;

@@ -1,4 +1,4 @@
-#N canvas 0 24 1022 657 10;
+#N canvas 74 53 1022 657 10;
 #N canvas 0 0 765 587 harmonizador 0;
 #N canvas 0 25 1257 641 textura 0;
 #X msg 377 352 \$1;
@@ -40512,9 +40512,9 @@ ou m);
 #X floatatom 170 391 5 0 0 0 - - -;
 #X obj 494 282 list prepend 0;
 #X obj 932 375 vsl 15 135 50 1000 0 0 empty \$0-gmean gm 0 -9 0 10
--262144 -1 -1 6552 1;
+-262144 -1 -1 5096 1;
 #X obj 948 375 vsl 15 135 50 1000 0 0 empty \$0-mean mean 0 -9 0 10
--262144 -1 -1 8465 1;
+-262144 -1 -1 5764 1;
 #X obj 505 538 cnv 15 100 60 empty \$0-quality instavel 20 10 0 15
 -191407 -1 0;
 #X obj 207 534 s \$0-quality;
@@ -40523,7 +40523,7 @@ ou m);
 #X obj 158 322 s \$0-gmean;
 #X obj 149 236 t a a a;
 #X obj 173 419 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 10050 1;
+-1 -1 11387 1;
 #X obj 494 312 s \$0-taps;
 #N canvas 534 229 450 300 show-bpm 0;
 #X floatatom 107 144 5 0 0 1 IOI_in_bpm - -;
@@ -40593,8 +40593,8 @@ ou m);
 #X floatatom 790 90 5 0 0 0 - - -;
 #X msg 790 64 8;
 #X msg 827 63 16;
-#X msg 595 308 1764.72 557.279 557.279 557.279 557.279 557.279 557.279
-92.8798;
+#X msg 595 308 597.333 938.667 256 426.667 341.333 597.333 256 256
+;
 #N canvas 76 136 778 583 last-x 0;
 #X obj 153 175 cnv 15 150 80 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -40763,8 +40763,7 @@ da lista(f).;
 #X obj 150 13 inlet;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-taps 8 float 3;
-#A 0 1764.72 557.279 557.279 557.279 557.279 557.279 557.279 92.8798
-;
+#A 0 597.333 938.667 256 426.667 341.333 597.333 256 256;
 #X coords 0 1000 8 50 100 60 1;
 #X restore 505 537 graph;
 #X obj 150 42 t b b;
@@ -40830,8 +40829,8 @@ da lista(f).;
 #X coords 0 -1 1 1 200 100 1 500 500;
 #X restore 764 43 pd calcula/estoca ritmo entrada;
 #X obj 3 246 sinc-sample;
-#X obj 3 172 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+#X obj 3 172 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144 -1
+-1 8;
 #X floatatom 2 454 5 0 0 0 - - -;
 #X floatatom 78 474 5 0 0 0 - - -;
 #X obj 66 220 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 0 1
@@ -40854,11 +40853,11 @@ da lista(f).;
 #X obj 289 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 231 228 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 48 256;
-#X obj 318 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+-262144 -1 -1 0 256;
+#X obj 318 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 201 329 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 55 256;
+-262144 -1 -1 54 256;
 #X obj 748 249 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 641 294 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -40866,7 +40865,7 @@ da lista(f).;
 #X obj 778 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 661 413 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 64 256;
 #N canvas 20 38 566 284 gerador 0;
 #X obj 108 66 inlet;
 #X obj 108 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -40889,7 +40888,7 @@ da lista(f).;
 #X connect 7 0 8 0;
 #X restore 641 273 pd gerador ritmico3;
 #X obj 453 133 tgl 30 0 empty empty normal 5 -6 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 487 132 tgl 30 0 empty empty empty 5 -6 0 10 -4160 -1 -1 0 1
 ;
 #X obj 521 132 tgl 30 0 empty empty empty 5 -6 0 10 -4032 -1 -1 0 1
@@ -40897,7 +40896,7 @@ da lista(f).;
 #X obj 556 132 tgl 30 0 empty empty empty 5 -6 0 10 -4034 -1 -1 0 1
 ;
 #X obj 548 187 nbx 3 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 40
--262144 -1 -1 55 256;
+-262144 -1 -1 64 256;
 #X obj 457 25 select 0 1 2 3;
 #X obj 457 6 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
@@ -40908,17 +40907,17 @@ da lista(f).;
 #X obj 457 -39 inlet;
 #X obj 548 430 outlet;
 #N canvas 396 354 702 323 gerador 0;
-#X obj 267 81 probalizer 400 100 127 30 1 0 0 1 0 2 0 3 0 4 1 5 1 6
-1 7 0 8 0 9 2 10 0 11 0 12 0 13 0 14 6 15 15 16 12 17 1 18 0 19 5 20
-12 21 30 22 30 23 0 24 0 25 2 26 3 27 30 28 5 29 0 30 3 31 9 32 17
-33 30 34 30 35 21 36 0 37 1 38 2 39 30 40 30 41 11 42 30 43 14 44 30
-45 22 46 22 47 30 48 1 49 30 50 6 51 30 52 30 53 8 54 30 55 8 56 30
-57 11 58 30 59 30 60 15 61 30 62 17 63 30 64 30 65 17 66 30 67 6 68
-30 69 16 70 30 71 30 72 2 73 21 74 1 75 21 76 2 77 0 78 12 79 0 80
-4 81 1 82 0 83 0 84 0 85 0 86 0 87 0 88 1 89 1 90 0 91 6 92 0 93 0
-94 0 95 0 96 0 97 0 98 0 99 0 100 2 101 0 102 0 103 1 104 0 105 0 106
-0 107 0 108 0 109 0 110 0 111 2 112 2 113 2 114 0 115 0 116 0 117 0
-118 0 119 0 120 0 121 1 122 0 123 0 124 1 125 0 126 7;
+#X obj 267 81 probalizer 400 100 127 30 1 0 0 1 0 2 0 3 0 4 1 5 2 6
+1 7 0 8 1 9 2 10 0 11 1 12 0 13 0 14 6 15 15 16 13 17 4 18 1 19 5 20
+13 21 30 22 30 23 17 24 1 25 2 26 3 27 30 28 7 29 1 30 4 31 9 32 30
+33 30 34 30 35 30 36 3 37 9 38 30 39 30 40 30 41 22 42 30 43 30 44
+30 45 30 46 30 47 30 48 6 49 30 50 13 51 30 52 30 53 30 54 30 55 30
+56 30 57 30 58 30 59 30 60 30 61 30 62 28 63 30 64 30 65 21 66 30 67
+14 68 30 69 18 70 30 71 30 72 5 73 30 74 1 75 21 76 2 77 2 78 12 79
+0 80 4 81 1 82 0 83 0 84 1 85 0 86 0 87 0 88 1 89 1 90 0 91 6 92 0
+93 0 94 0 95 0 96 0 97 0 98 8 99 0 100 3 101 0 102 0 103 1 104 1 105
+1 106 1 107 0 108 0 109 2 110 0 111 2 112 2 113 2 114 0 115 0 116 0
+117 0 118 0 119 0 120 0 121 1 122 1 123 0 124 1 125 0 126 30;
 #X msg 445 40 zero;
 #X obj 414 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -41043,7 +41042,7 @@ da lista(f).;
 #X restore 661 385 pd gerador melodico2;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-gerador_mel 8 float 3;
-#A 0 55 50 52 53 55 57 59 60;
+#A 0 57 44 44 45 57 57 35 54;
 #X coords 0 127 8 0 80 60 1;
 #X restore 589 120 graph;
 #X obj 141 -21 inlet pede nota;
@@ -41051,7 +41050,7 @@ da lista(f).;
 #X symbolatom 418 379 7 0 0 0 - - -;
 #X msg 418 404 label \$1;
 #X obj 418 434 s \$0-nota_saida;
-#X obj 453 175 cnv 15 20 20 empty \$0-nota_saida G3 20 12 1 40 -233017
+#X obj 453 175 cnv 15 20 20 empty \$0-nota_saida E4 20 12 1 40 -233017
 -1 0;
 #X msg 8 181 copy \$1;
 #X text 33 124 atualiza array manipulações;
@@ -41491,7 +41490,7 @@ possibilidades:;
 #X connect 1 0 4 0;
 #X connect 2 0 1 1;
 #X coords 0 -1 1 1 100 100 1 200 100;
-#X restore 141 87 pd sinc-audioin;
+#X restore 177 88 pd sinc-audioin;
 #X obj 165 492 counter 8;
 #X obj 165 515 sel 7;
 #X obj 165 539 s end;
@@ -41519,7 +41518,7 @@ possibilidades:;
 #X obj 260 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 371 216 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 557.279 256;
+-262144 -1 -1 0 256;
 #N canvas 62 32 559 652 gerador 0;
 #X obj 51 26 inlet;
 #X obj 78 427 counter 8;
@@ -41606,7 +41605,7 @@ possibilidades:;
 #X obj 267 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 378 307 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 557.279 256;
+-262144 -1 -1 938.667 256;
 #N canvas 20 38 329 438 gerador 0;
 #X obj 51 26 inlet;
 #X obj 78 128 delay;
@@ -41652,11 +41651,11 @@ possibilidades:;
 #X obj 634 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 747 289 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 460.732 256;
+-262144 -1 -1 0 256;
 #X obj 628 327 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 739 376 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 326.474 256;
 #N canvas 157 188 598 498 gerador 0;
 #X obj 128 330 brown-rhythm;
 #X floatatom 145 178 4 0 0 2 min_ED - -;
@@ -41795,8 +41794,7 @@ possibilidades:;
 #X obj 48 7 inlet;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-ritmo_manip 8 float 3;
-#A 0 557.279 557.279 557.279 557.279 557.279 557.279 92.8798 557.279
-;
+#A 0 938.667 256 426.667 341.333 597.333 256 256 512;
 #X coords 0 1000 8 50 80 60 1;
 #X restore 589 122 graph;
 #X msg 48 91 copy \$1;
@@ -41812,7 +41810,7 @@ possibilidades:;
 #X obj 458 169 bng 50 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X obj 517 187 nbx 4 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 40
--262144 -1 -1 460.732 256;
+-262144 -1 -1 326.474 256;
 #X obj 457 25 select 0 1 2 3;
 #X obj 457 6 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
@@ -41906,13 +41904,12 @@ possibilidades:;
 #X obj 382 181 t b b b;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-nota 8 float 3;
-#A 0 55 50 52 53 55 57 59 48;
+#A 0 57 44 44 45 101 57 35 54;
 #X coords 0 127 8 0 90 50 1;
 #X restore 508 132 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-amp_attack 8 float 3;
-#A 0 71.8562 71.2857 69.8684 66.5738 69.758 63.8497 66.1872 8.33783
-;
+#A 0 63.5 48.8306 52.7878 48.0023 0 61.9355 17.9088 65.8559;
 #X coords 0 100 8 0 90 50 1;
 #X restore 621 132 graph;
 #X obj 407 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -41973,6 +41970,7 @@ possibilidades:;
 #X obj 693 167 r reset;
 #X text 348 469 teste;
 #X obj 584 172 r amp_attack;
+#X obj 550 501 + 1;
 #X connect 2 1 11 0;
 #X connect 3 0 15 0;
 #X connect 3 0 45 0;
@@ -41989,7 +41987,7 @@ possibilidades:;
 #X connect 16 0 15 1;
 #X connect 17 0 53 0;
 #X connect 18 0 51 0;
-#X connect 19 0 23 0;
+#X connect 19 0 57 0;
 #X connect 23 0 20 0;
 #X connect 24 0 20 2;
 #X connect 25 0 20 1;
@@ -42017,4 +42015,5 @@ possibilidades:;
 #X connect 53 1 52 0;
 #X connect 54 0 51 2;
 #X connect 56 0 51 1;
+#X connect 57 0 23 0;
 #X coords 0 0 1 1 310 75 0;

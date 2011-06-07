@@ -17,16 +17,20 @@
 #X text 598 209 vs 3.2;
 #X obj 245 309 noteout;
 #X obj 523 62 route float;
-#X obj 59 71 hsl 64 15 0 1 0 0 empty empty volume 20 6 0 8 -262144
--1 -1 0 1;
+#X obj 57 87 hsl 64 15 0 1 0 0 empty empty volume 20 6 0 8 -262144
+-1 -1 1700 1;
 #X obj 352 110 * 1;
 #X obj 430 262 fluid~;
 #X msg 148 152 load \$1;
 #X obj 148 127 openpanel;
-#X obj 132 71 bng 15 250 50 0 empty empty load_sf2 20 6 0 8 -262144
+#X obj 56 68 bng 15 250 50 0 empty empty load_sf2 20 6 0 8 -262144
 -1 -1;
 #X msg 38 212 load /usr/share/sounds/sf2/FluidR3_GM.sf2;
 #X obj 39 188 loadbang;
+#X obj 131 86 hradio 15 1 0 2 empty empty nouteout/fluid~ 0 -6 0 8
+-262144 -1 -1 0;
+#X msg 36 156 0;
+#X msg 74 155 0.5;
 #X connect 0 0 16 2;
 #X connect 1 0 10 0;
 #X connect 2 0 10 2;
@@ -55,4 +59,9 @@
 #X connect 23 0 22 0;
 #X connect 24 0 20 0;
 #X connect 25 0 24 0;
-#X coords 0 -1 1 1 160 40 1 50 50;
+#X connect 25 0 27 0;
+#X connect 25 0 28 0;
+#X connect 26 0 7 0;
+#X connect 27 0 26 0;
+#X connect 28 0 18 0;
+#X coords 0 -1 1 1 160 55 1 50 50;

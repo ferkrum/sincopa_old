@@ -1,5 +1,5 @@
-#N canvas 175 13 853 734 10;
-#X obj 25 63 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#N canvas 354 24 853 689 10;
+#X obj 25 63 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
 #X obj 23 85 gems.win 600 600;
 #X obj 23 108 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
@@ -10,7 +10,7 @@
 #X obj 36 402 rotateXYZ;
 #X obj 23 129 gems.win @dimen 1024 768 @offset 1280 0 @border 0;
 #X obj 76 201 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 10922 1;
+-1 -1 0 1;
 #X floatatom 73 219 5 0 0 0 - - -;
 #X obj 215 591 list.make;
 #X msg 220 562 3;
@@ -19,7 +19,7 @@
 #X obj 205 625 unpack f f f;
 #X obj 330 621 / 255;
 #X floatatom 124 225 5 0 0 0 - - -;
-#X obj 225 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 225 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 216 524 metro 1000;
 #X obj 213 488 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -75,6 +75,7 @@ snapshots of the rendering window.;
 #X obj 293 51 gems.win @dimen 320 240;
 #X obj 302 16 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
 1;
+#X msg 387 480 2;
 #X connect 0 0 1 0;
 #X connect 2 0 7 0;
 #X connect 3 0 20 0;
@@ -116,3 +117,4 @@ snapshots of the rendering window.;
 #X connect 47 0 1 0;
 #X connect 49 0 39 0;
 #X connect 51 0 50 0;
+#X connect 52 0 46 1;
