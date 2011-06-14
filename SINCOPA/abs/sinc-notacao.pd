@@ -1,3 +1,4 @@
+#X text 100 100 teste;
 #N canvas 558 110 674 579 16;
 #X obj 3 2 cnv 15 145 35 empty empty sinc-notaÃ§Ã£o 20 6 0 14 -262130
 -66577 0;
@@ -28,7 +29,7 @@
 #X text 345 27 translate;
 #X msg 636 36 -0.692913 -0.519685 2.69291;
 #X msg 299 453 41;
-#X text 346 281 usar essa msg para guardar preset de posição;
+#X text 346 281 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
@@ -79,7 +80,7 @@
 #X obj 635 63 unpack f f f;
 #X text 345 27 translate;
 #X msg 301 441 41;
-#X text 376 313 usar essa msg para guardar preset de posição;
+#X text 376 313 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
@@ -129,7 +130,7 @@
 #X obj 635 63 unpack f f f;
 #X text 345 27 translate;
 #X msg 301 441 41;
-#X text 376 313 usar essa msg para guardar preset de posição;
+#X text 376 313 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X msg 242 413 text &;
 #X msg 636 36 -1.19685 0.80315 2.69291;
 #X connect 0 0 3 0;
@@ -183,7 +184,7 @@
 #X obj 635 63 unpack f f f;
 #X text 345 27 translate;
 #X msg 299 453 41;
-#X text 346 281 usar essa msg para guardar preset de posição;
+#X text 346 281 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X msg 290 411 text &;
 #X msg 636 36 -1.19685 -0.519685 2.69291;
 #X connect 0 0 2 0;
@@ -234,7 +235,7 @@
 #X msg 378 292 -0.692913 1.1811 2.69291;
 #X obj 635 63 unpack f f f;
 #X text 345 27 translate;
-#X text 376 313 usar essa msg para guardar preset de posição;
+#X text 376 313 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X msg 242 413 text notas de entrada;
 #X msg 301 441 23;
 #X msg 636 36 -0.692913 1.1811 2.69291;
@@ -282,8 +283,8 @@
 #X msg 344 260 -0.188976 -0.141732 2.69291;
 #X obj 635 63 unpack f f f;
 #X text 345 27 translate;
-#X text 346 281 usar essa msg para guardar preset de posição;
-#X msg 290 411 text notas de saída geradas pelo sistema;
+#X text 346 281 usar essa msg para guardar preset de posiï¿½ï¿½o;
+#X msg 290 411 text notas de saï¿½da geradas pelo sistema;
 #X msg 299 453 23;
 #X msg 636 36 -0.188976 -0.141732 2.69291;
 #X connect 0 0 2 0;
@@ -334,7 +335,7 @@
 #X msg 646 116 -0.692913 0.80315 2.69291;
 #X obj 645 143 unpack f f f;
 #X msg 311 521 41;
-#X text 464 381 usar essa msg para guardar preset de posição;
+#X text 464 381 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #N canvas 405 24 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
 #X text 330 383 d =;
@@ -387,7 +388,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -532,7 +533,7 @@
 #X obj 645 73 unpack f f f;
 #X text 494 134 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -586,7 +587,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -737,7 +738,7 @@
 #X obj 645 73 unpack f f f;
 #X text 355 86 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -791,7 +792,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -940,7 +941,7 @@
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -994,7 +995,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -1145,7 +1146,7 @@
 #X obj 645 73 unpack f f f;
 #X text 362 74 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -1199,7 +1200,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -1462,7 +1463,7 @@
 #X obj 645 73 unpack f f f;
 #X text 511 117 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -1516,7 +1517,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -1667,7 +1668,7 @@
 #X obj 645 73 unpack f f f;
 #X text 355 73 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -1721,7 +1722,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -1870,7 +1871,7 @@
 #X obj 645 73 unpack f f f;
 #X text 514 128 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -1924,7 +1925,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X connect 0 0 31 0;
 #X connect 0 0 40 0;
 #X connect 0 1 36 0;
@@ -2097,7 +2098,7 @@
 #X msg 646 116 -0.692913 0.80315 2.69291;
 #X obj 645 143 unpack f f f;
 #X msg 311 521 41;
-#X text 464 381 usar essa msg para guardar preset de posição;
+#X text 464 381 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #N canvas 405 24 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
 #X text 330 383 d =;
@@ -2137,7 +2138,7 @@
 #X obj 141 592 outlet;
 #X text 148 616 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
+#X text 513 599 posiï¿½ï¿½o Y;
 #X obj 431 565 f;
 #X msg 375 386 -0.55;
 #X msg 421 355 -0.55;
@@ -2295,7 +2296,7 @@
 #X obj 645 73 unpack f f f;
 #X text 494 134 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 463 93 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -2336,7 +2337,7 @@
 #X obj 161 612 outlet;
 #X text 168 636 acidente;
 #X obj 451 621 outlet;
-#X text 533 619 posição Y;
+#X text 533 619 posiï¿½ï¿½o Y;
 #X obj 451 585 f;
 #X msg 395 406 -0.55;
 #X msg 441 375 -0.55;
@@ -2499,7 +2500,7 @@
 #X obj 645 73 unpack f f f;
 #X text 355 86 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 493 123 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -2540,7 +2541,7 @@
 #X obj 191 642 outlet;
 #X text 198 666 acidente;
 #X obj 481 651 outlet;
-#X text 563 649 posição Y;
+#X text 563 649 posiï¿½ï¿½o Y;
 #X obj 481 615 f;
 #X msg 425 436 -0.55;
 #X msg 471 405 -0.55;
@@ -2703,7 +2704,7 @@
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 503 133 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -2744,7 +2745,7 @@
 #X obj 201 652 outlet;
 #X text 208 676 acidente;
 #X obj 491 661 outlet;
-#X text 573 659 posição Y;
+#X text 573 659 posiï¿½ï¿½o Y;
 #X obj 491 625 f;
 #X msg 435 446 -0.55;
 #X msg 481 415 -0.55;
@@ -2908,7 +2909,7 @@
 #X obj 645 73 unpack f f f;
 #X text 362 74 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X text 199 10 pitch class;
 #X obj 134 10 inlet;
 #X obj 69 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -2995,7 +2996,7 @@
 #X obj 211 662 outlet;
 #X text 218 686 acidente;
 #X obj 501 671 outlet;
-#X text 583 669 posição Y;
+#X text 583 669 posiï¿½ï¿½o Y;
 #X obj 501 635 f;
 #X msg 445 456 -0.55;
 #X msg 491 425 -0.55;
@@ -3225,7 +3226,7 @@
 #X obj 645 73 unpack f f f;
 #X text 511 117 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 453 83 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -3266,7 +3267,7 @@
 #X obj 151 602 outlet;
 #X text 158 626 acidente;
 #X obj 441 611 outlet;
-#X text 523 609 posição Y;
+#X text 523 609 posiï¿½ï¿½o Y;
 #X obj 441 575 f;
 #X msg 385 396 -0.55;
 #X msg 431 365 -0.55;
@@ -3429,7 +3430,7 @@
 #X obj 645 73 unpack f f f;
 #X text 355 73 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 483 113 sel 0 1 2 3 4 5 6 7 8 9 10 11;
 #X text 370 423 d =;
@@ -3469,7 +3470,7 @@
 #X obj 181 632 outlet;
 #X text 188 656 acidente;
 #X obj 471 641 outlet;
-#X text 553 639 posição Y;
+#X text 553 639 posiï¿½ï¿½o Y;
 #X obj 471 605 f;
 #X msg 415 426 -0.55;
 #X msg 461 395 -0.55;
@@ -3633,7 +3634,7 @@
 #X obj 645 73 unpack f f f;
 #X text 514 128 translate;
 #X msg 311 451 41;
-#X text 464 311 usar essa msg para guardar preset de posição;
+#X text 464 311 usar essa msg para guardar preset de posiï¿½ï¿½o;
 #X obj 194 175 translateXYZ;
 #N canvas 0 0 875 647 escolhe 0;
 #X obj 473 103 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -3674,7 +3675,7 @@
 #X obj 171 622 outlet;
 #X text 178 646 acidente;
 #X obj 461 631 outlet;
-#X text 543 629 posição Y;
+#X text 543 629 posiï¿½ï¿½o Y;
 #X obj 461 595 f;
 #X msg 405 416 -0.55;
 #X msg 451 385 -0.55;
