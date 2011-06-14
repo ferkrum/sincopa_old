@@ -1,4 +1,4 @@
-#N canvas 0 590 399 160 10;
+#N canvas 40 376 399 160 10;
 #N canvas 217 80 583 520 CODE 0;
 #N canvas 102 310 999 691 patch 0;
 #X obj 289 16 inlet;
@@ -168,45 +168,45 @@
 #X connect 18 0 19 0;
 #X restore 228 2 pd CODE;
 #X obj 183 24 vsl 15 131 0 175 0 0 \$0slider_s \$0slider_r empty 0
--8 0 8 -1 -262144 -1 13000 0;
-#X obj 1 38 hradio 15 1 0 12 \$0hr_0_s \$0hr_0_r *(all) 2 8 0 10 -1
--1 -262140 0;
-#X obj 1 53 hradio 15 1 0 12 \$0hr_1_s \$0hr_1_r 2d(4) 2 8 0 10 -1
--1 -262140 0;
-#X obj 1 68 hradio 15 1 0 12 \$0hr_2_s \$0hr_2_r 3d(12) 2 8 0 10 -1
--1 -262140 0;
-#X obj 1 83 hradio 15 1 0 12 \$0hr_3_s \$0hr_3_r ambi(25) 2 8 0 10
--1 -1 -262140 0;
-#X obj 1 98 hradio 15 1 0 12 \$0hr_4_s \$0hr_4_r anal(7) 2 8 0 10 -1
--1 -262140 0;
-#X obj 1 113 hradio 15 1 0 12 \$0hr_5_s \$0hr_5_r convert(43) 2 8 0
+-8 0 8 -1 -262144 -1 12600 0;
+#X obj 1 38 hradio 15 1 0 12 \$0hr_0_s \$0hr_0_r 2d(4) 2 8 0 10 -1
+-1 -262140 1;
+#X obj 1 53 hradio 15 1 0 12 \$0hr_1_s \$0hr_1_r 3d(12) 2 8 0 10 -1
+-1 -258049 1;
+#X obj 1 68 hradio 15 1 0 12 \$0hr_2_s \$0hr_2_r ambi(31) 2 8 0 10
+-1 -1 -262140 1;
+#X obj 1 83 hradio 15 1 0 12 \$0hr_3_s \$0hr_3_r anal(7) 2 8 0 10 -1
+-1 -262140 2;
+#X obj 1 98 hradio 15 1 0 12 \$0hr_4_s \$0hr_4_r convert(43) 2 8 0
 10 -1 -1 -262140 0;
-#X obj 1 128 hradio 15 1 0 12 \$0hr_6_s \$0hr_6_r count(5) 2 8 0 10
--1 -1 -262140 0;
-#X obj 1 143 hradio 15 1 0 12 \$0hr_7_s \$0hr_7_r data(5) 2 8 0 10
--1 -1 -262140 0;
+#X obj 1 113 hradio 15 1 0 12 \$0hr_5_s \$0hr_5_r count(5) 2 8 0 10
+-1 -1 -262140 2;
+#X obj 1 128 hradio 15 1 0 12 \$0hr_6_s \$0hr_6_r data(5) 2 8 0 10
+-1 -1 -262140 1;
+#X obj 1 143 hradio 15 1 0 12 \$0hr_7_s \$0hr_7_r debug(5) 2 8 0 10
+-1 -1 -262140 3;
 #X obj 1 22 cnv 15 180 15 empty \$0hider pdmtl 3 9 0 8 -128992 -262144
 0;
 #X obj 382 24 vsl 15 131 0 175 0 0 \$0_slider_s \$0_slider_r empty
-0 -8 0 8 -1 -262144 -1 0 0;
-#X obj 200 38 hradio 15 1 0 12 \$0_hr_0_s \$0_hr_0_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 53 hradio 15 1 0 12 \$0_hr_1_s \$0_hr_1_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 68 hradio 15 1 0 12 \$0_hr_2_s \$0_hr_2_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 83 hradio 15 1 0 12 \$0_hr_3_s \$0_hr_3_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 98 hradio 15 1 0 12 \$0_hr_4_s \$0_hr_4_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 113 hradio 15 1 0 12 \$0_hr_5_s \$0_hr_5_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 128 hradio 15 1 0 12 \$0_hr_6_s \$0_hr_6_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 143 hradio 15 1 0 12 \$0_hr_7_s \$0_hr_7_r empty 2 8 0 10
--1 -1 -262144 0;
-#X obj 200 22 cnv 15 180 15 empty \$0_hider abstractions 3 9 0 8 -128992
--262144 0;
+0 -8 0 8 -1 -262144 -1 13000 0;
+#X obj 200 38 hradio 15 1 0 12 \$0_hr_0_s \$0_hr_0_r 3d.add 2 8 0 10
+-1 -1 -262140 0;
+#X obj 200 53 hradio 15 1 0 12 \$0_hr_1_s \$0_hr_1_r 3d.angle 2 8 0
+10 -1 -1 -262140 0;
+#X obj 200 68 hradio 15 1 0 12 \$0_hr_2_s \$0_hr_2_r 3d.cross 2 8 0
+10 -1 -1 -262140 0;
+#X obj 200 83 hradio 15 1 0 12 \$0_hr_3_s \$0_hr_3_r 3d.distance 2
+8 0 10 -1 -1 -262140 0;
+#X obj 200 98 hradio 15 1 0 12 \$0_hr_4_s \$0_hr_4_r 3d.dot 2 8 0 10
+-1 -1 -262140 0;
+#X obj 200 113 hradio 15 1 0 12 \$0_hr_5_s \$0_hr_5_r 3d.magnitude
+2 8 0 10 -1 -1 -262140 0;
+#X obj 200 128 hradio 15 1 0 12 \$0_hr_6_s \$0_hr_6_r 3d.move 2 8 0
+10 -1 -1 -262140 0;
+#X obj 200 143 hradio 15 1 0 12 \$0_hr_7_s \$0_hr_7_r 3d.normalize
+2 8 0 10 -1 -1 -262140 0;
+#X obj 200 22 cnv 15 180 15 empty \$0_hider 3d 3 9 0 8 -128992 -262144
+0;
 #X obj 1 0 hradio 20 1 0 9 \$0refresh empty pdmtl.help.browser 4 10
 0 8 -1 -1 -262144 0;
 #X obj 182 0 cnv 15 215 20 empty empty empty 20 12 0 14 -1 -66577 0

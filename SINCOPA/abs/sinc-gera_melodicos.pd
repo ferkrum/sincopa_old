@@ -1,0 +1,275 @@
+#N canvas 0 0 925 537 10;
+#X obj 299 192 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 241 238 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 328 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 211 339 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 758 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 651 304 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 788 372 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 671 423 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 463 133 tgl 30 0 empty empty normal 5 -6 0 10 -262144 -1 -1
+0 1;
+#X obj 497 132 tgl 30 0 empty empty empty 5 -6 0 10 -4160 -1 -1 0 1
+;
+#X obj 531 132 tgl 30 0 empty empty empty 5 -6 0 10 -4032 -1 -1 0 1
+;
+#X obj 566 132 tgl 30 0 empty empty empty 5 -6 0 10 -4034 -1 -1 0 1
+;
+#X obj 558 187 nbx 3 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 40
+-262144 -1 -1 0 256;
+#X obj 491 -7 select 0 1 2 3;
+#X obj 491 -26 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 492 58 0;
+#X msg 538 56 0;
+#X msg 579 54 0;
+#X msg 622 54 0;
+#X obj 491 -50 inlet;
+#X obj 558 440 outlet;
+#N canvas 396 354 702 323 gerador 0;
+#X obj 267 81 probalizer 400 100 127 30 1 0 0 1 0 2 0 3 0 4 1 5 2 6
+2 7 0 8 1 9 2 10 1 11 1 12 1 13 1 14 7 15 15 16 13 17 4 18 1 19 5 20
+16 21 30 22 30 23 18 24 1 25 4 26 4 27 30 28 7 29 3 30 4 31 9 32 30
+33 30 34 30 35 30 36 4 37 12 38 30 39 30 40 30 41 30 42 30 43 30 44
+30 45 30 46 30 47 30 48 14 49 30 50 30 51 30 52 30 53 30 54 30 55 30
+56 30 57 30 58 30 59 30 60 30 61 30 62 30 63 30 64 30 65 30 66 30 67
+30 68 30 69 28 70 30 71 30 72 6 73 30 74 1 75 21 76 3 77 2 78 13 79
+3 80 4 81 6 82 3 83 0 84 1 85 0 86 1 87 0 88 1 89 4 90 0 91 6 92 0
+93 0 94 0 95 0 96 1 97 0 98 8 99 0 100 3 101 0 102 0 103 1 104 1 105
+1 106 1 107 0 108 0 109 2 110 0 111 3 112 2 113 2 114 0 115 0 116 0
+117 0 118 0 119 0 120 0 121 1 122 3 123 0 124 2 125 0 126 30;
+#X msg 445 40 zero;
+#X obj 414 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 322 39 r gera_prob;
+#X obj 98 49 inlet;
+#X obj 98 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 98 122 spigot;
+#X obj 160 22 inlet;
+#X obj 160 47 sel 0 1;
+#X msg 160 91 0;
+#X msg 179 70 1;
+#X obj 98 187 s gera_prob;
+#X floatatom 267 227 5 0 0 0 - - -;
+#X obj 267 262 outlet;
+#X text 28 245 * fazer o contador de notas;
+#X text 41 255 que zera a tabela;
+#X obj 267 13 inlet;
+#X connect 0 0 12 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 6 1;
+#X connect 10 0 6 1;
+#X connect 12 0 13 0;
+#X connect 16 0 0 0;
+#X restore 241 212 pd gerador melodico1;
+#N canvas 20 38 329 438 gerador 0;
+#X obj 78 59 inlet;
+#X floatatom 78 316 5 0 0 0 - - -;
+#X obj 78 369 outlet;
+#X obj 78 247 counter 8;
+#X obj 78 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 132 spigot;
+#X obj 140 32 inlet;
+#X obj 140 57 sel 0 1;
+#X msg 140 101 0;
+#X msg 159 80 1;
+#X obj 78 278 tabread \$0-gerador_mel;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 3 0 10 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 8 0 5 1;
+#X connect 9 0 5 1;
+#X connect 10 0 1 0;
+#X restore 211 312 pd gerador melodico0;
+#N canvas 489 24 617 378 gerador 0;
+#X obj -102 217 brown-melody 36 84 0.25;
+#X msg 169 181 min;
+#X msg 216 184 max;
+#X obj 161 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 142 306 spigot;
+#X msg 173 278 0;
+#X msg 204 278 1;
+#X obj 245 305 spigot;
+#X msg 276 277 0;
+#X msg 307 277 1;
+#X obj 161 84 t b b b b b b;
+#X obj 169 228 tabletool gerador_melodico;
+#X obj 142 328 s low_note;
+#X obj 245 329 s high_note;
+#X obj -57 154 r low_note;
+#X obj -12 181 r high_note;
+#X obj -102 43 inlet;
+#X obj -102 116 spigot;
+#X obj -41 16 inlet;
+#X obj -41 41 sel 0 1;
+#X msg -41 85 0;
+#X msg -22 64 1;
+#X obj -102 143 t b b;
+#X floatatom -102 254 5 0 0 0 - - -;
+#X obj -81 181 s b;
+#X obj 161 23 r b;
+#X obj -102 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -102 291 outlet;
+#X connect 0 0 23 0;
+#X connect 1 0 11 0;
+#X connect 2 0 11 0;
+#X connect 3 0 10 0;
+#X connect 4 0 12 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 1;
+#X connect 7 0 13 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 1;
+#X connect 10 0 8 0;
+#X connect 10 1 2 0;
+#X connect 10 2 9 0;
+#X connect 10 3 5 0;
+#X connect 10 4 1 0;
+#X connect 10 5 6 0;
+#X connect 11 0 4 0;
+#X connect 11 0 7 0;
+#X connect 14 0 0 1;
+#X connect 15 0 0 2;
+#X connect 16 0 26 0;
+#X connect 17 0 22 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 19 1 21 0;
+#X connect 20 0 17 1;
+#X connect 21 0 17 1;
+#X connect 22 0 0 0;
+#X connect 22 1 24 0;
+#X connect 23 0 27 0;
+#X connect 25 0 3 0;
+#X connect 26 0 17 0;
+#X restore 671 395 pd gerador melodico2;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-gerador_mel 8 float 3;
+#A 0 46 47 47 48 34 26 34 34;
+#X coords 0 127 8 0 80 60 1;
+#X restore 599 120 graph;
+#X obj 151 -11 inlet pede nota;
+#X obj 422 361 pitch;
+#X symbolatom 428 389 7 0 0 0 - - -;
+#X msg 428 414 label \$1;
+#X obj 428 444 s \$0-nota_saida;
+#X obj 463 175 cnv 15 20 20 empty \$0-nota_saida D1 20 12 1 40 -233017
+-1 0;
+#X msg 18 191 copy \$1;
+#X text 43 134 atualiza array manipulações;
+#X obj 400 -16 inlet;
+#X obj 18 169 symbol \$1;
+#X obj 18 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 18 215 tabletool \$0-gerador_mel;
+#X obj 18 -9 inlet;
+#X obj 18 53 t b f;
+#N canvas 20 38 566 284 gerador 0;
+#X obj 108 66 inlet;
+#X obj 108 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 108 139 spigot;
+#X obj 170 39 inlet;
+#X obj 170 64 sel 0 1;
+#X msg 170 108 0;
+#X msg 189 87 1;
+#X obj 108 201 random.integer 20 100;
+#X obj 108 247 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 7 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 2 1;
+#X connect 6 0 2 1;
+#X connect 7 0 8 0;
+#X restore 651 283 pd gerador melodico3;
+#X connect 0 0 21 1;
+#X connect 1 0 12 0;
+#X connect 2 0 22 1;
+#X connect 3 0 12 0;
+#X connect 4 0 39 1;
+#X connect 5 0 12 0;
+#X connect 6 0 23 1;
+#X connect 7 0 12 0;
+#X connect 8 0 2 0;
+#X connect 9 0 0 0;
+#X connect 10 0 6 0;
+#X connect 11 0 4 0;
+#X connect 12 0 20 0;
+#X connect 12 0 26 0;
+#X connect 13 0 8 0;
+#X connect 13 0 15 0;
+#X connect 13 1 9 0;
+#X connect 13 1 16 0;
+#X connect 13 2 10 0;
+#X connect 13 2 17 0;
+#X connect 13 3 11 0;
+#X connect 13 3 18 0;
+#X connect 13 4 15 0;
+#X connect 13 4 16 0;
+#X connect 13 4 17 0;
+#X connect 13 4 18 0;
+#X connect 14 0 13 0;
+#X connect 15 0 9 0;
+#X connect 15 0 10 0;
+#X connect 15 0 11 0;
+#X connect 15 0 8 0;
+#X connect 16 0 8 0;
+#X connect 16 0 10 0;
+#X connect 16 0 11 0;
+#X connect 16 0 9 0;
+#X connect 17 0 8 0;
+#X connect 17 0 9 0;
+#X connect 17 0 11 0;
+#X connect 17 0 10 0;
+#X connect 18 0 8 0;
+#X connect 18 0 9 0;
+#X connect 18 0 10 0;
+#X connect 18 0 11 0;
+#X connect 19 0 14 0;
+#X connect 21 0 1 0;
+#X connect 22 0 3 0;
+#X connect 23 0 7 0;
+#X connect 25 0 21 0;
+#X connect 25 0 22 0;
+#X connect 25 0 23 0;
+#X connect 25 0 39 0;
+#X connect 26 1 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 31 0 36 0;
+#X connect 33 0 34 1;
+#X connect 34 0 31 0;
+#X connect 35 0 34 0;
+#X connect 37 0 38 0;
+#X connect 38 0 35 0;
+#X connect 38 1 21 2;
+#X connect 39 0 5 0;
+#X coords 0 -1 1 1 240 120 1 450 100;

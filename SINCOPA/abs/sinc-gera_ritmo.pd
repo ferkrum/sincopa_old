@@ -1,0 +1,376 @@
+#N canvas 0 0 952 504 10;
+#X obj 454 105 cnv 15 215 110 empty empty sinc-gera_ritmo 20 12 0 14
+-262130 -66577 0;
+#X obj 270 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 381 226 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 341.333 256;
+#N canvas 62 32 559 652 gerador 0;
+#X obj 51 26 inlet;
+#X obj 78 427 counter 8;
+#X obj 78 128 delay;
+#X floatatom 78 496 5 0 0 0 - - -;
+#X obj 78 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 193 spigot;
+#X msg 91 165 0;
+#X msg 121 165 1;
+#X obj 51 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 51 79 sel 0 1;
+#X obj 78 105 t b b;
+#X obj 118 524 s tag;
+#X text 158 522 tag: tempo atual gerador;
+#X obj 126 106 r tag;
+#X obj 252 430 random 8;
+#X obj 90 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 108 402 muda direção de leitura;
+#X obj 90 272 random 2;
+#X obj 90 298 sel 0 1;
+#X obj 252 382 spigot;
+#X msg 300 357 0;
+#X msg 270 354 1;
+#X obj 78 369 spigot;
+#X msg 110 343 0;
+#X msg 151 341 1;
+#X obj 157 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 183 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 240 202 Esse patch tem as seguintes funções:;
+#X text 246 225 1) fazer uma cópia do array de durações;
+#X text 246 242 2) ler esse array respeitando as durações com 3 \;
+possibilidades:;
+#X text 283 276 *)na ordem normal;
+#X text 283 298 *)randomico;
+#X text 283 287 *)ao contrário;
+#X obj 78 549 outlet;
+#X obj 25 551 outlet;
+#X obj 25 524 delay;
+#X obj 25 500 int;
+#X obj 78 458 tabread \$0-ritmo_manip;
+#X connect 0 0 8 0;
+#X connect 1 0 37 0;
+#X connect 2 0 5 0;
+#X connect 3 0 11 0;
+#X connect 3 0 33 0;
+#X connect 3 0 36 0;
+#X connect 4 0 17 0;
+#X connect 4 0 19 0;
+#X connect 4 0 22 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 1;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 9 1 10 0;
+#X connect 10 0 2 0;
+#X connect 10 1 7 0;
+#X connect 13 0 2 0;
+#X connect 14 0 37 0;
+#X connect 15 0 1 1;
+#X connect 17 0 18 0;
+#X connect 18 0 15 0;
+#X connect 18 0 24 0;
+#X connect 18 0 20 0;
+#X connect 18 0 25 0;
+#X connect 18 1 21 0;
+#X connect 18 1 23 0;
+#X connect 18 1 26 0;
+#X connect 19 0 14 0;
+#X connect 20 0 19 1;
+#X connect 21 0 19 1;
+#X connect 22 0 1 0;
+#X connect 23 0 22 1;
+#X connect 24 0 22 1;
+#X connect 35 0 34 0;
+#X connect 36 0 35 0;
+#X connect 37 0 3 0;
+#X restore 270 202 pd gerador ritmico1;
+#X obj 277 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 388 317 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 341.333 256;
+#N canvas 20 38 329 438 gerador 0;
+#X obj 51 26 inlet;
+#X obj 78 128 delay;
+#X floatatom 78 316 5 0 0 0 - - -;
+#X obj 78 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 193 spigot;
+#X msg 91 165 0;
+#X msg 121 165 1;
+#X obj 51 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 51 79 sel 0 1;
+#X obj 78 105 t b b;
+#X text 158 342 tag: tempo atual gerador;
+#X obj 78 369 outlet;
+#X obj 78 247 counter 8;
+#X obj 118 344 s tag0;
+#X obj 126 106 r tag0;
+#X obj 27 368 outlet;
+#X obj 27 341 delay;
+#X obj 27 315 int;
+#X obj 78 278 tabread \$0-ritmo_manip;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 11 0;
+#X connect 2 0 13 0;
+#X connect 3 0 12 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 8 1 9 0;
+#X connect 9 0 1 0;
+#X connect 9 1 6 0;
+#X connect 12 0 18 0;
+#X connect 14 0 1 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 18 0 2 0;
+#X connect 18 0 17 0;
+#X restore 277 291 pd gerador ritmico0;
+#X obj 644 254 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 757 299 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 638 337 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 749 386 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#N canvas 524 129 598 498 gerador 0;
+#X obj 128 330 brown-rhythm;
+#X floatatom 145 178 4 0 0 2 min_ED - -;
+#X floatatom 168 199 6 0 0 2 max_ED - -;
+#X floatatom 215 156 4 0 100 2 brownian_factor - -;
+#X floatatom 191 231 4 0 0 2 ED-values - -;
+#X obj 145 266 pack f f f f;
+#X obj 145 291 unpack f f f f;
+#X obj 152 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 197 367 5 0 0 0 - - -;
+#X obj 215 176 / 100;
+#X obj 128 5 inlet;
+#X obj 128 369 outlet;
+#X obj 145 35 r min_ritmo;
+#X obj 168 57 r max_ritmo;
+#X obj 191 81 loadbang;
+#X msg 191 110 10;
+#X msg 243 109 50;
+#X msg 359 221 min;
+#X msg 406 224 max;
+#X obj 351 95 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 332 368 s min_ritmo;
+#X obj 435 369 s max_ritmo;
+#X obj 332 346 spigot;
+#X msg 363 318 0;
+#X msg 394 318 1;
+#X obj 435 345 spigot;
+#X msg 466 317 0;
+#X msg 497 317 1;
+#X obj 351 124 t b b b b b b;
+#X text 173 5 manda tocar;
+#X obj 351 9 inlet;
+#X text 390 8 atualiza;
+#X obj 128 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 197 396 outlet;
+#X obj 359 268 tabletool \$0-ritmo_manip;
+#X connect 0 0 11 0;
+#X connect 0 2 8 0;
+#X connect 1 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 5 1;
+#X connect 2 0 7 0;
+#X connect 3 0 7 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 2;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 1;
+#X connect 6 1 0 2;
+#X connect 6 2 0 3;
+#X connect 6 3 0 4;
+#X connect 7 0 5 0;
+#X connect 8 0 33 0;
+#X connect 9 0 5 3;
+#X connect 10 0 32 0;
+#X connect 12 0 1 0;
+#X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 4 0;
+#X connect 16 0 3 0;
+#X connect 17 0 34 0;
+#X connect 18 0 34 0;
+#X connect 19 0 28 0;
+#X connect 22 0 20 0;
+#X connect 23 0 22 1;
+#X connect 24 0 22 1;
+#X connect 25 0 21 0;
+#X connect 26 0 25 1;
+#X connect 27 0 25 1;
+#X connect 28 0 26 0;
+#X connect 28 1 18 0;
+#X connect 28 2 27 0;
+#X connect 28 3 23 0;
+#X connect 28 4 17 0;
+#X connect 28 5 24 0;
+#X connect 30 0 19 0;
+#X connect 32 0 0 0;
+#X connect 34 0 22 0;
+#X connect 34 0 25 0;
+#X restore 638 360 pd gerador ritmico2;
+#X obj 638 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 270 227 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 277 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 20 38 559 652 gerador 0;
+#X obj 8 310 tgl 15 0 empty empty start/stop 0 -6 0 8 -262144 -1 -1
+0 1;
+#X text 183 294 periodicity of min.ED;
+#X text 219 316 periodicity of max.ED;
+#X floatatom 221 348 4 0 0 0 - - -;
+#X floatatom 186 320 4 0 0 0 - - -;
+#X floatatom 151 214 4 0 0 2 max_chord_size - -;
+#X floatatom 115 311 4 0 0 2 ED-values - -;
+#X floatatom 79 337 4 0 0 2 max_ED - -;
+#X floatatom 43 327 4 0 0 2 min_ED - -;
+#X floatatom 69 417 4 0 0 3 chord_size - -;
+#X obj 131 412 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 193 417 5 0 0 3 ED - -;
+#X floatatom 255 417 4 0 0 3 ED_index - -;
+#X obj 8 376 repchord-rhythm 50 2000 12 6 0.8 0.2;
+#X obj 29 424 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 29 499 outlet;
+#X obj 193 496 outlet;
+#X obj 8 70 inlet;
+#X obj 43 240 r min_ritmo;
+#X obj 79 265 r max_ritmo;
+#X text 255 200 esse parametro recebera a analise de densidade;
+#X connect 0 0 13 0;
+#X connect 3 0 13 6;
+#X connect 4 0 13 5;
+#X connect 5 0 13 4;
+#X connect 6 0 13 3;
+#X connect 7 0 13 2;
+#X connect 8 0 13 1;
+#X connect 11 0 16 0;
+#X connect 13 0 14 0;
+#X connect 13 1 9 0;
+#X connect 13 2 10 0;
+#X connect 13 3 11 0;
+#X connect 13 4 12 0;
+#X connect 14 0 15 0;
+#X connect 17 0 0 0;
+#X connect 18 0 8 0;
+#X connect 19 0 7 0;
+#X restore 644 274 pd gerador ritmico3;
+#X obj 58 17 inlet;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-ritmo_manip 8 float 3;
+#A 0 341.333 85.3333 341.333 85.3333 341.333 426.667 426.667 426.667
+;
+#X coords 0 1000 8 50 80 60 1;
+#X restore 588 121 graph;
+#X msg 58 101 copy \$1;
+#X text 105 19 atualiza array manipulações;
+#X obj 452 134 tgl 30 0 empty empty normal 5 -6 0 10 -262144 -1 -1
+0 1;
+#X obj 484 134 tgl 30 0 empty empty empty 5 -6 0 10 -257985 -1 -1 1
+1;
+#X obj 517 134 tgl 30 0 empty empty empty 5 -6 0 10 -260097 -1 -1 0
+1;
+#X obj 549 134 tgl 30 0 empty empty empty 5 -6 0 10 -258113 -1 -1 0
+1;
+#X obj 457 168 bng 50 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 516 186 nbx 4 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 40
+-262144 -1 -1 341.333 256;
+#X obj 456 24 select 0 1 2 3;
+#X obj 456 5 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 464 51 0;
+#X msg 503 54 0;
+#X msg 536 52 0;
+#X msg 570 52 0;
+#X obj 456 -18 inlet;
+#X obj 457 362 outlet;
+#X obj 516 361 outlet;
+#X obj 643 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 457 377 ataque;
+#X text 517 377 dur;
+#X obj 282 19 inlet;
+#X obj 58 79 symbol \$1;
+#X obj 58 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 58 125 tabletool \$0-ritmo_manip;
+#X obj 749 336 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 747 15 inlet reset;
+#X connect 1 0 3 0;
+#X connect 2 0 25 0;
+#X connect 3 0 13 0;
+#X connect 3 1 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 25 0;
+#X connect 6 0 14 0;
+#X connect 6 1 5 0;
+#X connect 7 0 15 0;
+#X connect 8 0 25 0;
+#X connect 9 0 11 0;
+#X connect 10 0 25 0;
+#X connect 11 0 12 0;
+#X connect 11 1 10 0;
+#X connect 12 0 24 0;
+#X connect 13 0 24 0;
+#X connect 14 0 24 0;
+#X connect 15 0 35 0;
+#X connect 15 1 8 0;
+#X connect 16 0 40 0;
+#X connect 18 0 41 0;
+#X connect 20 0 4 0;
+#X connect 21 0 1 0;
+#X connect 22 0 9 0;
+#X connect 23 0 7 0;
+#X connect 24 0 33 0;
+#X connect 25 0 34 0;
+#X connect 26 0 20 0;
+#X connect 26 0 28 0;
+#X connect 26 1 21 0;
+#X connect 26 1 29 0;
+#X connect 26 2 22 0;
+#X connect 26 2 30 0;
+#X connect 26 3 23 0;
+#X connect 26 3 31 0;
+#X connect 27 0 26 0;
+#X connect 28 0 21 0;
+#X connect 28 0 22 0;
+#X connect 28 0 23 0;
+#X connect 29 0 20 0;
+#X connect 29 0 22 0;
+#X connect 29 0 23 0;
+#X connect 30 0 20 0;
+#X connect 30 0 21 0;
+#X connect 30 0 23 0;
+#X connect 31 0 20 0;
+#X connect 31 0 21 0;
+#X connect 31 0 22 0;
+#X connect 32 0 27 0;
+#X connect 35 0 24 0;
+#X connect 38 0 39 1;
+#X connect 39 0 18 0;
+#X connect 40 0 39 0;
+#X connect 42 0 11 1;
+#X connect 43 0 42 0;
+#X coords 0 -1 1 1 225 120 2 450 100;

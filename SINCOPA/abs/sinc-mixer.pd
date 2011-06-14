@@ -1,0 +1,85 @@
+#N canvas 161 70 961 505 10;
+#X obj 197 343 +~;
+#X obj 198 468 dac~;
+#X obj 204 32 cnv 15 240 210 empty empty sinc-mixer 20 12 0 14 -262130
+-66577 0;
+#X obj 219 54 vsl 30 128 0 1 0 0 empty empty entrada 0 140 0 10 -204800
+-1 -1 5500 1;
+#X obj 269 54 vsl 30 128 0 1 0 0 empty empty soundfont 0 140 0 10 -204800
+-1 -1 11900 1;
+#X obj 329 54 vsl 30 128 0 1 0 0 empty empty looper 0 140 0 10 -204800
+-1 -1 0 1;
+#X obj 221 200 knob 28 28 -45 45 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 1500 1;
+#X obj 247 348 +~;
+#X obj 176 271 pan~;
+#X obj 197 428 *~;
+#X obj 247 428 *~;
+#X obj 9 125 inlet~;
+#X obj 272 201 knob 28 28 -45 45 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 2200 1;
+#X obj 227 272 pan~;
+#X obj 60 126 inlet~;
+#X obj 331 201 knob 28 28 -45 45 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 286 272 pan~;
+#X obj 119 126 inlet~;
+#X obj 381 54 vsl 30 128 0 2 0 0 empty empty main_volume 0 140 0 10
+-203904 -1 -1 12700 1;
+#X obj 385 202 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 2100 1;
+#X obj 360 381 scale.linear 0 1 1 0;
+#X obj 197 388 *~;
+#X obj 247 388 *~;
+#X obj 205 -16 inlet cenario_mixer;
+#N canvas 731 309 450 300 cenario 0;
+#X obj 115 27 inlet;
+#X obj 14 215 outlet;
+#X obj 59 215 outlet;
+#X obj 103 215 outlet;
+#X obj 147 215 outlet;
+#X obj 204 215 outlet;
+#X obj 249 215 outlet;
+#X obj 293 215 outlet;
+#X obj 337 215 outlet;
+#X restore 205 6 pd cenario -----------------------------------;
+#X obj 101 234 *~;
+#X obj 171 224 *~;
+#X obj 284 251 *~;
+#X connect 0 0 21 0;
+#X connect 3 0 25 1;
+#X connect 4 0 26 1;
+#X connect 5 0 27 1;
+#X connect 6 0 8 1;
+#X connect 7 0 22 0;
+#X connect 8 0 0 0;
+#X connect 8 1 7 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 1;
+#X connect 11 0 25 0;
+#X connect 12 0 13 1;
+#X connect 13 0 0 1;
+#X connect 13 1 7 1;
+#X connect 14 0 26 0;
+#X connect 15 0 16 1;
+#X connect 16 0 0 1;
+#X connect 16 1 7 1;
+#X connect 17 0 27 0;
+#X connect 18 0 21 1;
+#X connect 18 0 22 1;
+#X connect 19 0 10 1;
+#X connect 19 0 20 0;
+#X connect 20 0 9 1;
+#X connect 21 0 9 0;
+#X connect 22 0 10 0;
+#X connect 23 0 24 0;
+#X connect 24 0 3 0;
+#X connect 24 1 4 0;
+#X connect 24 2 5 0;
+#X connect 24 4 6 0;
+#X connect 24 5 12 0;
+#X connect 24 6 15 0;
+#X connect 25 0 8 0;
+#X connect 26 0 13 0;
+#X connect 27 0 16 0;
+#X coords 0 -1 1 1 250 215 2 200 30;

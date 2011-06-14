@@ -1,4 +1,4 @@
-#N canvas 70 156 1069 292 16;
+#N canvas 158 87 1069 292 16;
 #X obj 657 14 bng 60 250 50 0 baoum empty Cliquez-moi!! 0 -6 0 8 -250685
 -99865 -1;
 #X obj 833 75 time;
@@ -21,9 +21,9 @@
 -1 -1;
 #X floatatom 122 112 5 0 0 0 - - -;
 #X floatatom 253 112 5 0 0 0 - - -;
-#N canvas 99 53 537 562 noise 0;
+#N canvas 695 60 537 562 noise 0;
 #X obj 438 303 vsl 15 60 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2200 1;
 #X obj 9 233 noise~;
 #X obj 74 328 vcf~;
 #X obj 83 165 *~ 0.5;
@@ -99,8 +99,8 @@
 #X connect 33 0 9 0;
 #X connect 34 0 13 0;
 #X connect 35 0 18 0;
-#X restore 448 -24 pd noise;
-#N canvas 231 151 660 517 clip 0;
+#X restore 439 31 pd noise;
+#N canvas 434 81 660 517 clip 0;
 #X obj 199 183 *~ 0.2;
 #X obj 46 -28 tgl 30 0 empty baoum empty 0 -6 0 8 -241291 -1 -1 0 1
 ;
@@ -123,7 +123,7 @@
 #X obj 200 245 +~;
 #X obj 198 406 dac~;
 #X obj 402 338 vsl 15 60 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 2700 1;
+-1 -1 4300 1;
 #X obj 459 96 metro 2000;
 #X floatatom 459 190 5 0 0 0 - - -;
 #X obj 316 29 osc~ 1;
@@ -186,8 +186,8 @@
 #X connect 36 0 29 0;
 #X connect 37 0 31 0;
 #X connect 38 0 8 0;
-#X restore 448 3 pd clip;
-#N canvas 3 111 554 539 phasor 0;
+#X restore 439 58 pd clip;
+#N canvas 7 133 554 539 phasor 0;
 #X obj 242 261 phasor~;
 #X obj 120 504 dac~;
 #X obj 242 228 mtof;
@@ -269,8 +269,8 @@
 #X connect 33 0 4 0;
 #X connect 34 0 35 0;
 #X connect 35 0 2 0;
-#X restore 448 30 pd phasor;
-#N canvas 2 69 466 652 aditiva 0;
+#X restore 439 85 pd phasor;
+#N canvas 628 53 466 652 aditiva 0;
 #X obj 220 261 + 11;
 #X obj 158 260 + 7;
 #X obj 158 173 random 100;
@@ -286,7 +286,7 @@
 ;
 #X obj 196 567 dac~;
 #X obj 353 526 vsl 15 60 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 800 1;
+-1 -1 400 1;
 #X obj 99 273 mtof;
 #X obj 158 287 mtof;
 #X obj 220 288 mtof;
@@ -350,8 +350,8 @@
 #X connect 31 0 33 0;
 #X connect 32 0 1 1;
 #X connect 33 0 0 1;
-#X restore 448 57 pd aditiva;
-#N canvas 200 53 575 664 aditiva2 1;
+#X restore 439 112 pd aditiva;
+#N canvas 208 74 575 664 aditiva2 0;
 #X obj 53 48 random 3000;
 #X obj 26 87 metro;
 #X obj 26 181 random 127;
@@ -371,7 +371,7 @@
 #X obj 451 309 / 10;
 #X obj 27 339 +~;
 #X obj 151 498 /~ 2;
-#X obj 26 -47 tgl 30 0 empty baoum empty 0 -6 0 8 -258699 -1 -1 1 1
+#X obj 26 -47 tgl 30 0 empty baoum empty 0 -6 0 8 -258699 -1 -1 0 1
 ;
 #X obj 403 419 vsl 15 60 0 1 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 0 1;
@@ -443,7 +443,7 @@
 #X connect 37 0 14 0;
 #X connect 39 0 12 1;
 #X connect 40 0 39 0;
-#X restore 448 82 pd aditiva2;
+#X restore 439 137 pd aditiva2;
 #X obj 249 81 random 400;
 #X msg 233 -35 seed 2;
 #X connect 1 0 2 0;
